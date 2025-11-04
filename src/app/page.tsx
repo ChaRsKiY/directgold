@@ -10,14 +10,12 @@ import { PrinciplesSection } from "@/components/sections/PrinciplesSection";
 export default function Home() {
   return (
     <main className="min-h-screen font-montserrat">
-      <Header />
       <Hero />
       <AboutSection />
       <InfoSection />
       <GoldBarSection />
       <CTASection />
       <PrinciplesSection />
-      <Footer />
     </main>
   );
 }
