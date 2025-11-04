@@ -25,7 +25,6 @@ export default function SammelEinzellagerungPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 }

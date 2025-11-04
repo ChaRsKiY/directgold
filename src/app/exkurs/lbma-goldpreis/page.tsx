@@ -29,7 +29,6 @@ export default function LBMAGoldpreisPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 }

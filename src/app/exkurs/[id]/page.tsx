@@ -38,7 +38,6 @@ export default async function ExkursPage({ params }: PageProps) {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 }

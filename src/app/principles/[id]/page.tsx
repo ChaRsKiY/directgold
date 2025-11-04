@@ -106,7 +106,6 @@ export default async function PrinciplePage({ params }: PageProps) {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 }

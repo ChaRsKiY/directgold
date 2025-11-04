@@ -26,7 +26,6 @@ export default function KaufgebuhrPage() {
           </div>
         </div>
       </main>
-      <Footer />
     </>
   )
 }
