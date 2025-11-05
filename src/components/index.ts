@@ -3,6 +3,9 @@ export { default as Button } from './ui/Button';
 export { Container } from './ui/Container';
 export { ImagePlaceholder } from './ui/ImagePlaceholder';
 
+// Motion Components
+export * from './motion';
+
 // Section Components
 export { Header } from './sections/Header';
 export { HeroSection } from './sections/HeroSection';
