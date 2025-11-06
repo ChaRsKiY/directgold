@@ -21,7 +21,7 @@ export default function Button({
   const variantClasses =
     variant === "primary"
       ? "text-[var(--color-primary-text)] bg-[var(--color-primary-gold)]"
-      : "bg-transparent border-2 border-[var(--color-primary-gold-light)] text-[var(--color-primary-gold-light)] hover:bg-[var(--color-primary-gold-light)] hover:text-[var(--color-primary-text)]";
+      : "border-2 border-[var(--color-primary-gold)] text-[var(--color-primary-gold)] hover:bg-[var(--color-primary-gold)] hover:text-[var(--color-primary-text)]";
 
   return (
     <button

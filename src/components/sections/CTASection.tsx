@@ -1,8 +1,10 @@
 import Button from "../ui/Button";
 import DBadge from "../ui/DBadge";
 import { MotionSection, MotionDiv, MotionH2, MotionP } from "../motion";
+import { getTranslations } from "next-intl/server";
 
-export default function CTASection() {
+export default async function CTASection() {
+  const t = await getTranslations("cta");
   return (
     <MotionSection
       className="py-12 md:py-16 lg:py-12 absolute bottom-0 left-0 w-full"
@@ -26,7 +28,7 @@ export default function CTASection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}
             >
-              Dein Gold.
+              {t("title1")}
             </MotionP>
             <MotionP
               initial={{ x: 20, opacity: 0 }}
@@ -34,7 +36,7 @@ export default function CTASection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.8 }}
             >
-              Neu definiert.
+              {t("title2")}
             </MotionP>
           </MotionH2>
           <MotionDiv

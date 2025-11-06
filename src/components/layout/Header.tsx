@@ -5,17 +5,20 @@ import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
 import Logo from "../ui/Logo";
 import Navigation from "../ui/Navigation";
-
-const navItems = [
-  { href: "#home", label: "HOME" },
-  { href: "#about", label: "ABOUT" },
-  { href: "#contact", label: "CONTACT US" },
-];
+import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const headerRef = useRef(null);
   const mobileMenuRef = useRef(null);
+  const t = useTranslations("navigation");
+
+  const navItems = [
+    { href: "#home", label: t("home") },
+    { href: "#about", label: t("about") },
+    { href: "#contact", label: t("contact") },
+  ];
 
   // Прозрачность и фон при скролле
   useEffect(() => {
@@ -69,7 +72,9 @@ export default function Header() {
   return (
     <header ref={headerRef} className="fixed top-0 left-0 right-0 z-100">
       <div className="flex items-center justify-between p-8">
-        <Logo variant="header" />
+        <Link href="/">
+          <Logo variant="header" />
+        </Link>
         <Navigation items={navItems} className="hidden md:flex" />
         {/* Mobile menu button */}
         <button

@@ -57,8 +57,8 @@ export default function Footer() {
               )}
               {column.links && (
                 <div className="space-y-2">
-                  {column.links.map((link) => (
-                    <Link href={link.href} className="text-sm block text-white">
+                  {column.links.map((link, index) => (
+                    <Link key={index} href={link.href} className="text-sm block text-white">
                       {link.label}
                     </Link>
                   ))}

@@ -4,8 +4,10 @@ import Link from "next/link"
 import { principlesData } from '@/data/principles'
 import Button from '../ui/Button'
 import { MotionSection, MotionDiv, MotionH3, MotionP } from '../motion'
+import { useTranslations } from "next-intl";
 
 export function PrinciplesSection() {
+  const t = useTranslations("principles");
   return (
     <MotionSection
       id="principles"
@@ -49,7 +51,7 @@ export function PrinciplesSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.3 }}
                 >
-                  {principle.short}
+                  {t(principle.short)}
                 </MotionP>
                 <MotionP
                   className="text-[var(--color-primary-gold-light)] mb-6 flex-grow text-pretty font-bold text-md"
@@ -58,7 +60,7 @@ export function PrinciplesSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.4 }}
                 >
-                  {principle.long}
+                  {t(principle.long)}
                 </MotionP>
                 <MotionDiv
                   initial={{ y: 20, opacity: 0 }}
@@ -68,7 +70,7 @@ export function PrinciplesSection() {
                 >
                   <Link href={`/principles/${principle.id}`}>
                     <Button variant="primary" className="w-full">
-                      Read More
+                      {t("readMore")}
                     </Button>
                   </Link>
                 </MotionDiv>

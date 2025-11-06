@@ -2,8 +2,10 @@ import Image from "next/image";
 import CTASection from "./CTASection";
 import { IoMdArrowDropright } from "react-icons/io";
 import { MotionSection, MotionDiv, MotionH2, MotionH3 } from "../motion";
+import { getTranslations } from "next-intl/server";
 
-export default function GoldBarSection() {
+export default async function GoldBarSection() {
+  const t = await getTranslations("goldBar");
   return (
     <section
       className="bg-[var(--color-light-bg)] pb-8 relative overflow-x-hidden min-h-screen"
@@ -33,7 +35,7 @@ export default function GoldBarSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
             >
-              Zu welchem Preis kauf und verkaufe ich?
+              {t("question1")}
             </MotionH2>
             <MotionH3
               className="text-5xl text-[var(--color-primary-gold)] max-lg:hidden"
@@ -42,7 +44,7 @@ export default function GoldBarSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.7 }}
             >
-              Transparent. <br /> Gegenwärtig. <br /> In der Zukunft.
+              {t("answer1")} <br /> {t("answer2")} <br /> {t("answer3")}
             </MotionH3>
             <MotionH3
               className="text-5xl text-[var(--color-primary-gold)] hidden max-lg:block max-md:text-3xl"
@@ -51,7 +53,7 @@ export default function GoldBarSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.7 }}
             >
-              Transparent. Gegenwärtig. In der Zukunft.
+              {t("answer1")} {t("answer2")} {t("answer3")}
             </MotionH3>
           </div>
           <MotionDiv
