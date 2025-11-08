@@ -7,7 +7,7 @@ export default async function CTASection() {
   const t = await getTranslations("cta");
   return (
     <MotionSection
-      className="py-12 md:py-16 lg:py-12 absolute bottom-0 left-0 w-full"
+      className="py-12 md:py-16 lg:py-12 w-full"
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -15,13 +15,13 @@ export default async function CTASection() {
     >
       <div className="container mx-auto px-4 md:px-6 lg:px-8">
         <MotionDiv
-          className="flex flex-col items-center text-center"
+          className="flex flex-col items-center text-center max-w-7xl mx-auto"
           initial={{ y: 30, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <MotionH2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[var(--color-primary-text-dark)] mb-8 md:mb-10 max-w-4xl flex gap-2 flex-wrap items-center justify-center">
+          <MotionH2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[var(--color-primary-text-dark)] mb-8 md:mb-10 max-w-4xl mx-auto flex gap-2 flex-wrap items-center justify-center">
             <MotionP
               initial={{ x: -20, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}

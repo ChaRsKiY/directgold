@@ -45,22 +45,46 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12">
           {footerColumns.map((column, index) => (
             <div key={index}>
-              <h3 className="text-[var(--color-primary-gold)] font-bold text-lg mb-4 uppercase">
+              <h3 className="text-white font-bold text-lg mb-4 uppercase">
                 {column.title}
               </h3>
               {column.content && (
                 <div className="space-y-2 text-sm">
-                  {column.content.map((item, itemIndex) => (
-                    <p key={itemIndex}>{item}</p>
-                  ))}
+                  {column.content.map((item, itemIndex) => {
+                    // Check if item is email and make it a link
+                    if (item.includes("Email:") || item.includes("@")) {
+                      const emailMatch = item.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/);
+                      if (emailMatch) {
+                        const email = emailMatch[1];
+                        const prefix = item.replace(email, "");
+                        return (
+                          <p key={itemIndex}>
+                            {prefix}
+                            <a 
+                              href={`mailto:${email}`} 
+                              className="text-gray-400 hover:text-gray-300 footer-link"
+                            >
+                              {email}
+                            </a>
+                          </p>
+                        );
+                      }
+                    }
+                    return <p key={itemIndex} className="text-gray-400">{item}</p>;
+                  })}
                 </div>
               )}
               {column.links && (
                 <div className="space-y-2">
-                  {column.links.map((link, index) => (
-                    <Link key={index} href={link.href} className="text-sm block text-white">
-                      {link.label}
-                    </Link>
+                  {column.links.map((link, linkIndex) => (
+                    <div key={linkIndex}>
+                    <Link 
+                        href={link.href} 
+                        className="text-sm text-gray-400 footer-link"
+                      >
+                        {link.label}
+                      </Link>
+                    </div>
                   ))}
                 </div>
               )}
@@ -69,19 +93,19 @@ export default function Footer() {
 
 
         <div>
-            <h3 className="text-[var(--color-primary-gold)] font-bold text-lg mb-4 uppercase">
+            <h3 className="text-white font-bold text-lg mb-4 uppercase">
               Newsletter
             </h3>
-            <form className="flex gap-3">
+            <form className="relative">
               <input
                 type="email"
                 placeholder="Email Address"
-                className="flex-1 px-4 py-2 bg-[var(--color-input-bg)] text-[var(--color-input-text)] rounded focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-gold)]"
+                className="w-full px-6 py-3 pr-16 bg-[var(--color-input-bg)] text-[var(--color-input-text)] rounded-full focus:outline-none focus:ring-2 focus:ring-[var(--color-primary-gold)]"
               />
               <button
                 type="submit"
                 aria-label="Submit newsletter"
-                className="w-10 h-10 bg-[var(--color-dark-bg)] border border-[var(--color-primary-gold)] rounded flex items-center justify-center hover:bg-[var(--color-primary-gold)] transition-colors text-[var(--color-primary-gold)] hover:text-white ring-offset-[var(--color-dark-bg)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-gold)]"
+                className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[var(--color-primary-gold)] rounded-full flex items-center justify-center hover:bg-[var(--color-primary-gold-dark)] transition-colors text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-gold)]"
               >
                 <BsSend />
               </button>
@@ -89,19 +113,18 @@ export default function Footer() {
           </div>
         </div>
 
-        
-
-        <div className="border-t border-[var(--color-dark-bg)] pt-8">
+        <div className="border-t border-gray-400 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-[var(--color-secondary-text)] text-center md:text-left">
-              Copyright ©{new Date().getFullYear()} All rights reserved | DIRECTGOLD
+            <p className="text-xs text-gray-400 text-center md:text-left">
+              Copyright ©{new Date().getFullYear()} All rights reserved |{" "}
+              <span className="text-[var(--color-primary-gold)] font-bold">DIRECTGOLD</span>
             </p>
             <div className="flex gap-4">
               {socialLinks.map((social) => (
                 <a
                   key={social.name}
                   href="#"
-                  className="text-[var(--color-secondary-text)] hover:text-[var(--color-primary-gold)] transition-colors"
+                  className="text-white hover:text-[var(--color-primary-gold)] transition-colors"
                   aria-label={social.name}
                 >
                   <svg

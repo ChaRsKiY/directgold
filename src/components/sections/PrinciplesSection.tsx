@@ -29,7 +29,7 @@ export function PrinciplesSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
               <div className="flex p-6 pb-0">
-                <MotionH3 className="text-[2.5rem] font-extrabold text-[var(--color-primary-gold)]">
+                <MotionH3 className="text-[2.5rem] font-bold text-[var(--color-primary-gold)]">
                   {principle.title.split(" ").map((word, wordIndex) => (
                     <MotionDiv
                       key={wordIndex}

@@ -16,7 +16,7 @@ export default function Button({
   variant = "primary",
   type = "button",
 }: ButtonProps) {
-  const baseClasses = "px-8 py-3 md:px-10 md:py-4 rounded-lg font-bold uppercase tracking-wide transition-all duration-200 hover:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-[var(--color-primary-gold)]";
+  const baseClasses = "px-8 py-3 md:px-10 md:py-4 rounded-lg font-bold uppercase tracking-wide transition-all duration-200 hover:outline-none hover:ring-2 hover:ring-offset-2 hover:ring-[var(--color-primary-gold)] cursor-pointer";
   
   const variantClasses =
     variant === "primary"

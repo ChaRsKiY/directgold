@@ -4,7 +4,6 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { NextIntlClientProvider } from "next-intl";
-import { ReactNode } from "react";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",

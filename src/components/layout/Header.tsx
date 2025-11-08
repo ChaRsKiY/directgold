@@ -2,9 +2,9 @@
 
 import { useState, useRef, useEffect } from "react";
 import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
 import Logo from "../ui/Logo";
 import Navigation from "../ui/Navigation";
+import LanguageSwitcher from "../ui/LanguageSwitcher";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 
@@ -70,54 +70,62 @@ export default function Header() {
   }, [isMobileMenuOpen]);
 
   return (
-    <header ref={headerRef} className="fixed top-0 left-0 right-0 z-100">
-      <div className="flex items-center justify-between p-8">
-        <Link href="/">
+    <header ref={headerRef} className="fixed top-0 left-0 right-0 z-100 overflow-x-hidden max-w-full">
+      <div className="flex items-center justify-between p-4 md:p-8 max-w-full w-full min-w-0">
+        <Link href="/" className="shrink-0 min-w-0">
           <Logo variant="header" />
         </Link>
-        <Navigation items={navItems} className="hidden md:flex" />
-        {/* Mobile menu button */}
-        <button
-          className="md:hidden text-primary-gold"
-          aria-label="Toggle menu"
-          type="button"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          {isMobileMenuOpen ? (
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+        <div className="flex items-center gap-6 md:gap-10 shrink-0 min-w-0">
+          <Navigation items={navItems} className="hidden md:flex" />
+          <div className="hidden md:block">
+            <LanguageSwitcher />
+          </div>
+          {/* Mobile menu button */}
+          <button
+            className="md:hidden text-primary-gold shrink-0"
+            aria-label="Toggle menu"
+            type="button"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg
+                className="w-6 h-6"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
       {/* Mobile menu с анимацией */}
       <div
         ref={mobileMenuRef}
         style={{ display: isMobileMenuOpen ? "block" : "none", opacity: 0, pointerEvents: "none", backgroundColor: "rgba(26,26,26,0.95)", backdropFilter: "blur(6px)" }}
-        className="md:hidden border-t border-dark-bg bg-dark-bg/95 backdrop-blur-sm"
+        className="md:hidden border-t border-dark-bg bg-dark-bg/95 backdrop-blur-sm w-full overflow-x-hidden max-w-full"
       >
-        <div className="container mx-auto px-4 py-4">
-          <Navigation items={navItems} className="flex flex-col gap-3" isMobile={true} />
+        <div className="w-full max-w-full px-4 py-4 overflow-x-hidden box-border">
+          <Navigation items={navItems} className="flex flex-col gap-3 w-full" isMobile={true} />
+          <div className="mt-4 pt-4 border-t border-gray-700 flex justify-center w-full box-border">
+            <LanguageSwitcher />
+          </div>
         </div>
       </div>
     </header>

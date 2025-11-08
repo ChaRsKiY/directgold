@@ -18,7 +18,7 @@
   --color-dark-bg: #1a1a1a;
   --color-light-bg: #F3F3F1;
   --color-primary-gold: #D5BE7E;
-  --color-primary-gold-light: #EBDECF;
+  --color-primary-gold-light: #dcc7ad;
   --color-primary-text: #333333;
   --color-secondary-text: #aaaaaa;
   --color-primary-text-dark: #2E1806;
@@ -113,10 +113,14 @@ body {
   font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
 }
 
 /* Custom utility classes for DIRECTGOLD colors */
@@ -185,4 +189,27 @@ html {
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Footer link hover effect - underline from left to right */
+.footer-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
 }
