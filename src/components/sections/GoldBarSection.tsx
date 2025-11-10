@@ -1,17 +1,17 @@
 import Image from "next/image";
 import CTASection from "./CTASection";
 import { IoMdArrowDropright } from "react-icons/io";
-import { MotionSection, MotionDiv, MotionH2, MotionH3 } from "../motion";
+import { MotionDiv, MotionH2, MotionH3 } from "../motion";
 import { getTranslations } from "next-intl/server";
 
 export default async function GoldBarSection() {
   const t = await getTranslations("goldBar");
   return (
     <section
-      className="relative overflow-hidden h-screen bg-gradient-to-r from-[var(--color-light-bg)] via-[var(--color-light-bg)] to-[#DEDBD5] max-md:px-[10%]"
+      className="relative overflow-hidden min-h-[700px] h-screen bg-gradient-to-r from-[var(--color-light-bg)] via-[var(--color-light-bg)] to-[#DEDBD5] max-md:px-[10%]"
     >
       {/* Gold bar image - positioned right, ~50% width, slightly overlapping screen */}
-      <div className="absolute right-0 top-0 bottom-0 w-[50%] max-md:w-[75%] max-sm:w-[85%] max-w-[800px] h-full flex items-center justify-end pointer-events-none z-10">
+      <div className="absolute right-0 top-0 bottom-0 w-[50%] max-md:w-[75%] max-sm:w-[85%] h-full flex items-center justify-end pointer-events-none z-10">
         <div className="relative w-full h-full">
           <Image 
             src="/goldbarbg.png" 

@@ -6,7 +6,7 @@ export default async function AboutSection() {
   const t = await getTranslations("about");
   return (
     <MotionSection
-      className="min-h-[80vh] max-md:min-h-[75vh] max-sm:min-h-[65vh] relative bg-linear-to-r from-light-bg via-light-bg to-[#DEDBD5]"
+      className="min-h-[700px] h-[80vh] max-md:h-[75vh] max-sm:h-[65vh] relative bg-linear-to-r from-light-bg via-light-bg to-[#DEDBD5]"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}

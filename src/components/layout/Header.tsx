@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { gsap } from "gsap";
+import { useState, useRef } from "react";
 import Logo from "../ui/Logo";
 import Navigation from "../ui/Navigation";
 import LanguageSwitcher from "../ui/LanguageSwitcher";
@@ -20,57 +19,8 @@ export default function Header() {
     { href: "#contact", label: t("contact") },
   ];
 
-  // Прозрачность и фон при скролле
-  useEffect(() => {
-    const handleScroll = () => {
-      const y = window.scrollY;
-      gsap.to(headerRef.current, {
-        backgroundColor: y > 20 ? "rgba(26,26,26,0.95)" : "rgba(26,26,26,0)",
-        backdropFilter: y > 20 ? "blur(6px)" : "none",
-        boxShadow: y > 20 ? "0 6px 24px rgba(0,0,0,0.20)" : "none",
-        duration: 1,
-        ease: "power2.out",
-      });
-    };
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  // Анимация открытия/закрытия мобильного меню
-  useEffect(() => {
-    if (!mobileMenuRef.current) return;
-    if (isMobileMenuOpen) {
-      gsap.fromTo(
-        mobileMenuRef.current,
-        { y: -24, opacity: 0, pointerEvents: "none" },
-        {
-          y: 0,
-          opacity: 1,
-          pointerEvents: "auto",
-          duration: 1,
-          display: "block",
-          ease: "power3.out",
-        }
-      );
-    } else {
-      gsap.to(mobileMenuRef.current, {
-        y: -24,
-        opacity: 0,
-        pointerEvents: "none",
-        duration: 1,
-        onComplete: () => {
-          if (mobileMenuRef.current) {
-            // @ts-ignore
-            mobileMenuRef.current.style.display = "none";
-          }
-        },
-      });
-    }
-  }, [isMobileMenuOpen]);
-
   return (
-    <header ref={headerRef} className="fixed top-0 left-0 right-0 z-100 overflow-x-hidden max-w-full">
+    <header ref={headerRef} className="fixed top-0 left-0 right-0 z-100 overflow-x-hidden max-w-full bg-[rgba(26,26,26,0.9)]">
       <div className="flex items-center justify-between p-4 md:p-8 max-w-full w-full min-w-0">
         <Link href="/" className="shrink-0 min-w-0">
           <Logo variant="header" />
@@ -82,14 +32,18 @@ export default function Header() {
           </div>
           {/* Mobile menu button */}
           <button
-            className="md:hidden text-primary-gold shrink-0"
+            className="md:hidden text-primary-gold shrink-0 transition-transform duration-300 ease-in-out hover:scale-110"
             aria-label="Toggle menu"
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? (
+            <div className="relative w-6 h-6">
               <svg
-                className="w-6 h-6"
+                className={`absolute inset-0 w-6 h-6 transition-all duration-300 ease-in-out ${
+                  isMobileMenuOpen
+                    ? "opacity-100 rotate-0 scale-100"
+                    : "opacity-0 rotate-90 scale-0"
+                }`}
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -99,9 +53,12 @@ export default function Header() {
               >
                 <path d="M6 18L18 6M6 6l12 12" />
               </svg>
-            ) : (
               <svg
-                className="w-6 h-6"
+                className={`absolute inset-0 w-6 h-6 transition-all duration-300 ease-in-out ${
+                  isMobileMenuOpen
+                    ? "opacity-0 rotate-90 scale-0"
+                    : "opacity-100 rotate-0 scale-100"
+                }`}
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -111,20 +68,37 @@ export default function Header() {
               >
                 <path d="M4 6h16M4 12h16M4 18h16" />
               </svg>
-            )}
+            </div>
           </button>
         </div>
       </div>
       {/* Mobile menu с анимацией */}
       <div
-        ref={mobileMenuRef}
-        style={{ display: isMobileMenuOpen ? "block" : "none", opacity: 0, pointerEvents: "none", backgroundColor: "rgba(26,26,26,0.95)", backdropFilter: "blur(6px)" }}
-        className="md:hidden border-t border-dark-bg bg-dark-bg/95 backdrop-blur-sm w-full overflow-x-hidden max-w-full"
+        className={`md:hidden grid transition-all duration-500 ease-out overflow-hidden ${
+          isMobileMenuOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+        }`}
       >
-        <div className="w-full max-w-full px-4 py-4 overflow-x-hidden box-border">
-          <Navigation items={navItems} className="flex flex-col gap-3 w-full" isMobile={true} />
-          <div className="mt-4 pt-4 border-t border-gray-700 flex justify-center w-full box-border">
-            <LanguageSwitcher />
+        <div className="min-h-0">
+          <div
+            ref={mobileMenuRef}
+            className="w-full bg-transparent"
+          >
+            <div className="w-full max-w-full px-4 py-4 overflow-x-hidden box-border">
+              <div
+                className={`transition-all duration-300 ease-out ${
+                  isMobileMenuOpen ? "opacity-100 translate-y-0 delay-100" : "opacity-0 -translate-y-2 delay-0"
+                }`}
+              >
+                <Navigation items={navItems} className="flex flex-col gap-3 w-full" isMobile={true} />
+              </div>
+              <div
+                className={`mt-4 pt-4 border-t border-gray-700 flex justify-center w-full box-border transition-all duration-300 ease-out ${
+                  isMobileMenuOpen ? "opacity-100 translate-y-0 delay-200" : "opacity-0 -translate-y-2 delay-0"
+                }`}
+              >
+                <LanguageSwitcher />
+              </div>
+            </div>
           </div>
         </div>
       </div>
