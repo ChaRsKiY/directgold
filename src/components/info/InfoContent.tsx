@@ -70,7 +70,7 @@ export default function InfoContent({
               {
                 initial: { opacity: 0, scale: 0.95 },
                 whileInView: { opacity: 1, scale: 1 },
-                transition: { duration: 0.8, ease: "easeOut" },
+                transition: { duration: 0.8, ease: "easeOut" as any },
                 className: "mb-32 last:mb-0 pr-8 md:pr-12 py-8 px-6 md:px-10 bg-[var(--color-primary-gold)]/5 rounded-sm",
                 titleClassName: "text-2xl md:text-3xl font-light text-[var(--color-primary-text-dark)] mb-8 tracking-tight"
               },
@@ -86,7 +86,7 @@ export default function InfoContent({
               {
                 initial: { opacity: 0, y: 40, scale: 0.98 },
                 whileInView: { opacity: 1, y: 0, scale: 1 },
-                transition: { duration: 0.6, ease: "easeOut" },
+                transition: { duration: 0.6, ease: "easeOut" } as any,
                 className: "mb-32 last:mb-0 max-w-4xl mx-auto",
                 titleClassName: "text-2xl md:text-3xl font-light text-[var(--color-primary-text-dark)] mb-8 tracking-tight text-center"
               }
@@ -101,7 +101,7 @@ export default function InfoContent({
                 initial={variant.initial}
                 whileInView={variant.whileInView}
                 viewport={{ once: true, margin: "-100px" }}
-                transition={variant.transition}
+                transition={variant.transition as any}
               >
                 {section.title && (
                   <MotionH2 className={variant.titleClassName}>
