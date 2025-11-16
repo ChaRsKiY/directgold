@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server"
-import ExkursContent from "@/components/exkurs/ExkursContent"
+import InfoThekLayout from "@/components/infothek/InfoThekLayout"
+import InfoThekContent from "@/components/infothek/InfoThekContent"
 
 export default async function LBMAGoldpreisPage() {
   const t = await getTranslations("lbmagoldprice")
@@ -33,13 +34,11 @@ export default async function LBMAGoldpreisPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-[var(--color-light-bg)]">
-      <ExkursContent
+    <InfoThekLayout>
+      <InfoThekContent
         title={t("exkurs1")}
         sections={sections}
-        backLink="/#principles"
-        backButtonText={t("backToTheTextInMenu")}
       />
-    </main>
+    </InfoThekLayout>
   )
 }

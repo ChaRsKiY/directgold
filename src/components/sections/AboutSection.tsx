@@ -21,9 +21,9 @@ export default async function AboutSection() {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <div className="max-w-7xl mx-auto w-full">
+        <div className="max-w-7xl w-full">
         <MotionDiv
-          className="flex justify-center"
+          className="flex"
           initial={{ scale: 0.5, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
@@ -33,16 +33,16 @@ export default async function AboutSection() {
         </MotionDiv>
         <div className="text-[var(--color-primary-gold)] max-md:mt-10">
           <MotionP
-            className="text-[9rem] max-[1300px]:text-[7rem] max-md:text-[5rem] max-sm:text-[2.5rem] font-bold"
+            className="text-[8rem] max-[1300px]:text-[7rem] max-md:text-[5rem] max-sm:text-[2.5rem] font-bold"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            {t("title1")}
+            DIRECTGOLD.&#8482;
           </MotionP>
           <MotionP
-            className="text-[9rem] max-[1300px]:text-[7rem] max-md:text-[5rem] max-sm:text-[2.5rem] font-bold mt-[-60px] max-lg:mt-[-40px] max-md:mt-[-20px] max-sm:mt-[-10px]"
+            className="text-[8rem] max-[1300px]:text-[7rem] max-md:text-[5rem] max-sm:text-[2.5rem] font-bold mt-[-60px] max-lg:mt-[-40px] max-md:mt-[-20px] max-sm:mt-[-10px]"
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -58,15 +58,6 @@ export default async function AboutSection() {
             transition={{ duration: 0.6, delay: 0.9 }}
           >
             {t("title3")}
-          </MotionP>
-          <MotionP
-            className="text-3xl max-lg:text-2xl max-md:text-xl max-sm:text-xl font-semibold"
-            initial={{ y: 30, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-          >
-            {t("title4")}
           </MotionP>
         </div>
         </div>

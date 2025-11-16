@@ -1,7 +1,8 @@
 import { notFound } from "next/navigation"
 import { getExkursById } from "@/data/exkurs"
 import { getTranslations } from "next-intl/server"
-import ExkursContent from "@/components/exkurs/ExkursContent"
+import InfoThekLayout from "@/components/infothek/InfoThekLayout"
+import InfoThekContent from "@/components/infothek/InfoThekContent"
 
 interface PageProps {
   params: { id: string }
@@ -21,13 +22,11 @@ export default async function ExkursPage({ params }: PageProps) {
   }))
 
   return (
-    <main className="min-h-screen bg-[var(--color-light-bg)]">
-      <ExkursContent
+    <InfoThekLayout>
+      <InfoThekContent
         title={t(exkurs.title)}
         sections={translatedSections}
-        backLink="/#principles"
-        backButtonText={t("backToTheTextInMenu")}
       />
-    </main>
+    </InfoThekLayout>
   )
 }

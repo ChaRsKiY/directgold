@@ -1,8 +1,8 @@
 import { notFound } from "next/navigation"
 import { getPrincipleById } from "@/data/principles"
 import { getTranslations } from "next-intl/server"
-import PrincipleHero from "@/components/principles/PrincipleHero"
-import PrincipleContent from "@/components/principles/PrincipleContent"
+import InfoThekLayout from "@/components/infothek/InfoThekLayout"
+import InfoThekContent from "@/components/infothek/InfoThekContent"
 
 interface PageProps {
   params: {
@@ -18,35 +18,27 @@ export default async function PrinciplePage({ params }: PageProps) {
     notFound()
   }
 
-  // Prepare translated data for client component
-  const translatedPrinciple = {
-    ...principle,
-    shortTranslated: t(principle.short),
-    fullContentTranslated: t(principle.fullContent),
-    sections: principle.sections?.map((section) => ({
-      ...section,
-      titleTranslated: section.title ? t(section.title) : undefined,
-      contentTranslated: section.content ? t(section.content) : undefined,
-      itemsTranslated: section.items ? section.items.map((item) => t(item)) : undefined,
-    })),
-    links: principle.links?.map((link) => ({
-      ...link,
-      textTranslated: t(link.text),
-    })),
-  }
+  // Convert principle sections to InfoThekContent format
+  const sections = principle.sections?.map((section) => ({
+    title: section.title ? t(section.title) : undefined,
+    content: section.content ? t(section.content) : undefined,
+    items: section.items ? section.items.map((item) => t(item)) : undefined,
+  })) || []
+
+  const links = principle.links?.map((link) => ({
+    text: t(link.text),
+    href: link.href,
+  })) || []
 
   return (
-    <main className="min-h-screen bg-[var(--color-light-bg)]">
-      {/* Hero Section with Image */}
-      <PrincipleHero image={principle.image} title={principle.title} />
-
-      {/* Content Section */}
-      <PrincipleContent
-        principle={translatedPrinciple}
-        backToPage={t("backTo1Page")}
-        backToAllPrinciples={t("backToAllPrinciples")}
-        moreInfo={t("moreInfo")}
+    <InfoThekLayout>
+      <InfoThekContent
+        title={principle.title}
+        description={t(principle.short)}
+        fullContent={t(principle.fullContent)}
+        sections={sections}
+        links={links}
       />
-    </main>
+    </InfoThekLayout>
   )
 }

@@ -1,5 +1,6 @@
 import { getTranslations } from "next-intl/server"
-import InfoContent from "@/components/info/InfoContent"
+import InfoThekLayout from "@/components/infothek/InfoThekLayout"
+import InfoThekContent from "@/components/infothek/InfoThekContent"
 
 export default async function SammelEinzellagerungPage() {
   const t = await getTranslations("principles")
@@ -19,13 +20,11 @@ export default async function SammelEinzellagerungPage() {
   ]
 
   return (
-    <main className="min-h-screen bg-[var(--color-light-bg)]">
-      <InfoContent
+    <InfoThekLayout>
+      <InfoThekContent
         title="Warum DIRECTGOLD anteiliges Eigentum an einer sammelverwahrten Menge von Goldbarren anbietet"
         sections={sections}
-        backLink="/#principles"
-        backButtonText={t("backToAllPrinciples")}
       />
-    </main>
+    </InfoThekLayout>
   )
 }
