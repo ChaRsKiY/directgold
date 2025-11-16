@@ -199,14 +199,6 @@ export const principlesData: Principle[] = [
     links: [
       { text: "integrityLink1", href: "/exkurs/axedras" }
     ]
-  },
-  {
-    id: "delivery",
-    title: "DIRECT Delivery",
-    short: "deliveryShort",
-    long: "deliveryLong",
-    fullContent: "deliveryFullContent",
-    image: "https://placehold.co/600x400"
   }
 ];
 

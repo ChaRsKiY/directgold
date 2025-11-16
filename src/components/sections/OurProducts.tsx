@@ -43,7 +43,14 @@ const OurProducts = () => {
             <p className="text-[var(--color-secondary-text)] leading-relaxed">
               {t("goldkaufplanDescription")}
             </p>
-            <Button className="w-full">{t("learnMore")}</Button>
+            <div className="bg-[var(--color-primary-gold)] py-2 px-10 rounded-md flex justify-center items-center group cursor-pointer transition-all duration-300">
+              <div className="flex items-center justify-center gap-1">
+                <Image src="/DG Icon White.png" alt="DBadge" width={40} height={40} className="shrink-0" />
+                <span className="text-white font-bold text-lg opacity-0 group-hover:opacity-100 max-w-0 group-hover:max-w-[200px] overflow-hidden transition-all duration-300 whitespace-nowrap -ml-1">
+                  irect weiter
+                </span>
+              </div>
+            </div>
         </MotionDiv>
         <MotionDiv
           className="p-6 border-3 border-[var(--color-primary-gold)] rounded-md flex flex-col justify-between gap-6 h-full"
@@ -61,11 +68,15 @@ const OurProducts = () => {
             <p className="text-[var(--color-secondary-text)] leading-relaxed">
               {t("einzelkaufDescription")}
             </p>
-            <Button className="w-full">{t("learnMore")}</Button>
+            <div className="bg-[var(--color-primary-gold)] py-2 px-20 rounded-md flex justify-center items-center group cursor-pointer transition-all duration-300">
+              <div className="flex items-center justify-center gap-1">
+                <Image src="/DG Icon White.png" alt="DBadge" width={40} height={40} className="shrink-0" />
+                <span className="text-white font-bold text-lg opacity-0 group-hover:opacity-100 max-w-0 group-hover:max-w-[200px] overflow-hidden transition-all duration-300 whitespace-nowrap -ml-1">
+                  irect weiter
+                </span>
+              </div>
+            </div>
         </MotionDiv>
-      </div>
-      <div className="mt-24 flex justify-center">
-        <DBadge />
       </div>
     </MotionSection>
   );

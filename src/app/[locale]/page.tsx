@@ -21,6 +21,7 @@ export default function Home() {
       <QuestionsSection />
       <WhyDirectGold />
       <OurProducts />
+      <PrinciplesSection />
       <ImageBlock side="left" image="/mockups/mock2.jpg" titleKey="kaufVerkaufTitle" descriptionKey="kaufVerkaufDescription" />
       <ImageBlock side="right" image="/mockups/mock3.png" titleKey="lagerungTitle" descriptionKey="lagerungDescription" />
       <ImageBlock side="left" image="/mockups/mock4.jpg" titleKey="lieferungTitle" descriptionKey="lieferungDescription" />

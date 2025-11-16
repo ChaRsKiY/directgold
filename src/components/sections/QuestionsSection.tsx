@@ -44,23 +44,25 @@ const QuestionsSection = () => {
         >
           <Image src="/mockups/mock1.jpg" alt="Questions Section 1" width={500} height={500} className="max-md:w-full" />
         </MotionDiv>
-        <div id="questions" className="flex flex-col justify-evenly h-full flex-1 items-end gap-8 max-md:items-start">
+        <div id="questions" className="flex justify-evenly h-full flex-1 items-end max-md:items-start">
+            <MotionDiv
+              initial={{ y: 30, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="bg-[var(--color-primary-gold)] h-full min-w-2 rounded-full hidden max-md:block"
+            >
+            </MotionDiv>
+            <div className="flex flex-col gap-8 pl-6 justify-evenly h-full flex-1">
             {questions.map((question, index) => (
               <MotionDiv
                 key={index}
-                className="flex gap-4 text-right text-[var(--color-primary-gold)] items-center max-md:text-left w-full justify-end"
+                className="flex gap-4 text-right text-[var(--color-primary-gold)] items-center max-md:text-left w-full justify-end max-md:justify-start"
                 initial={{ x: 50, opacity: 0 }}
                 whileInView={{ x: 0, opacity: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 + index * 0.1 }}
               >
-                <MotionDiv
-                  className="min-w-3 bg-[var(--color-primary-gold)] rounded-lg h-[120%] hidden max-md:block"
-                  initial={{ scaleY: 0 }}
-                  whileInView={{ scaleY: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: 0.4 + index * 0.1 }}
-                />
                 <p>
                   <span className="font-bold">{t(question.boldKey)}</span> {t(question.textKey).replace(t(question.boldKey), "").trim().replace(/^[-]?\s*/, "")}
                 </p>
@@ -73,6 +75,7 @@ const QuestionsSection = () => {
                 />
               </MotionDiv>
             ))}
+            </div>
         </div>
       </div>
       <div className="mt-20 flex flex-col items-center gap-4">

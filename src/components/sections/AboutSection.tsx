@@ -21,7 +21,7 @@ export default async function AboutSection() {
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, delay: 0.2 }}
       >
-        <div className="max-w-7xl w-full">
+        <div className="w-full mx-auto max-w-7xl">
         <MotionDiv
           className="flex"
           initial={{ scale: 0.5, opacity: 0 }}
@@ -33,7 +33,7 @@ export default async function AboutSection() {
         </MotionDiv>
         <div className="text-[var(--color-primary-gold)] max-md:mt-10">
           <MotionP
-            className="text-[8rem] max-[1300px]:text-[7rem] max-md:text-[5rem] max-sm:text-[2.5rem] font-bold"
+            className="text-[7rem] max-[1300px]:text-[5rem] max-md:text-[3rem] max-sm:text-[2rem] font-bold"
             initial={{ x: -100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -42,7 +42,7 @@ export default async function AboutSection() {
             DIRECTGOLD.&#8482;
           </MotionP>
           <MotionP
-            className="text-[8rem] max-[1300px]:text-[7rem] max-md:text-[5rem] max-sm:text-[2.5rem] font-bold mt-[-60px] max-lg:mt-[-40px] max-md:mt-[-20px] max-sm:mt-[-10px]"
+            className="text-[7rem] max-[1300px]:text-[5rem] max-md:text-[3rem] max-sm:text-[2rem] font-bold mt-[-40px] max-md:mt-[-20px] max-sm:mt-[-10px]"
             initial={{ x: 100, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
