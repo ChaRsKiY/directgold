@@ -12,7 +12,7 @@
     },
     "goldBar": {
         "question1": "DIRECTGOLD bietet Anlegern direkten Zugang zu physischem Gold zum offiziellen LBMA-Referenzpreis",
-        "answer1": "kombiniert mit der weltweit fortschrittlichsten Verifizierungstechnologie, die durch einen 24/7 verfügbaren, objektiven Nachweis der Qualität Goldbarrens unübertroffene Sicherheit und höchste Liquidität gewahrleistet."
+        "answer1": "kombiniert mit der weltweit fortschrittlichsten Verifizierungstechnologie, die durch einen 24/7 verfügbaren, objektiven Nachweis der Qualität und Integrität jedes gelagerten Goldbarrens unübertroffene Sicherheit und höchste Liquidität gewährleistet."
     },
     "cta": {
         "title1": "DIRECTGOLD",
@@ -168,5 +168,54 @@
         "text16": "LBMA-Clearingvolumen: das derzeitige tägliche durchschnittliche Netto-Clearingvolumen liegt bei über 20 Millionen Feinunzen (~622 Tonnen). Quelle: LBMA-Clearing, 2025",
         "text17": "Der internationale Goldhandel basiert zu über 90 % auf unallocated Strukturen. Diese ermöglichen effiziente Marktliquidität, bergen jedoch das Risiko, dass viele Ansprüche auf eine begrenzte physische Basis treffen.",
         "text18": "DIRECTGOLD steht deshalb bewusst in Kontrast zum globalen unallocated Markt. Jeder Kauf ist vollständig physisch gedeckt und rechtlich Eigentum des Kunden."
+    },
+    "whyDirectGold": {
+        "title": "We set new gold standards",
+        "usp1Title": "Offizieller LBMA Referenzpreis",
+        "usp1Description": "keine versteckten Kosten",
+        "usp2Title": "100% physisches Eigentum",
+        "usp2Description": "nummerierte, zugeordnete Barren",
+        "usp3Title": "24/7 unabhängige Verifizierung",
+        "usp3Description": "Qualität, Herkunft, Lagerstandort",
+        "usp4Title": "Sicherste Lagerung",
+        "usp4Description": "bei Loomis Zürich/Kloten, Schweiz",
+        "usp5Title": "Neubarren höchster Qualität",
+        "usp5Description": "von LBMA-zertifizierten Raffinerien",
+        "usp6Title": "Maximale Liquidität",
+        "usp6Description": "jederzeit verkaufen oder physisch ausliefern lassen"
+    },
+    "ourProducts": {
+        "title": "Unsere Produkte",
+        "goldkaufplanTitle": "Goldkaufplan",
+        "goldkaufplanDescription": "Mit dem DIRECTGOLD Goldkaufplan baust Du regelmäßig und automatisch Deine persönliche Goldreserve auf. Du wählst einen monatlichen Betrag, der automatisch von Deinem Konto abgebucht und in physisches Gold investiert wird. Die Kaufgebühr wird degressiv berechnet – je mehr Du über die Zeit investierst, desto günstiger wird jeder weitere Kauf. Zusätzlich profitierst Du von einer besonderen Vergünstigung: Auch geplante, aber noch nicht getätigte Käufe aus Deinem Goldkaufplan werden bei der Berechnung der Kaufgebühr berücksichtigt. So kannst Du langfristig und kosteneffizient Dein Goldportfolio aufbauen, ohne Dich um jeden einzelnen Kauf kümmern zu müssen.",
+        "einzelkaufTitle": "Einzelkauf",
+        "einzelkaufDescription": "Beim Einzelkauf erwirbst Du sofort physisches Gold in der von Dir gewählten Menge. Jeder Kauf wird zum offiziellen LBMA-Goldpreis durchgeführt, ergänzt um eine transparent ausgewiesene Kaufgebühr. Die Gebühr richtet sich nach Deinem Gesamtinvestitionsvolumen der letzten 12 Monate und sinkt mit steigendem Volumen. Du erwirbst direktes Eigentum an nummerierten, Dir zugeordneten Goldbarren, die sicher im Hochsicherheitslager von Loomis in der Schweiz verwahrt werden. Jeder Barren ist über die aXedras-Plattform 24/7 von Dir selbst überprüfbar – inklusive Seriennummer, Herkunft und aktuellem Lagerstandort.",
+        "learnMore": "Mehr erfahren"
+    },
+    "questionsSection": {
+        "question1": "Zu welchen Preisen kaufe und verkaufe ich? - Sind diese kompetitiv, transparent und jederzeit nachvollziehbar?",
+        "question1Bold": "Zu welchen Preisen",
+        "question2": "Erwerbe ich echtes Eigentum an physischen, nummerierten, mir zugewiesenen Goldbarren?",
+        "question2Bold": "Erwerbe ich echtes Eigentum",
+        "question3": "Welche Qualität und Herkunft hat das mir angebotene Gold?",
+        "question3Bold": "Welche Qualität und Herkunft",
+        "question4": "Ist mein Gold sicher? Bin ich darauf angewiesen zu vertrauen oder kann ich jederzeit selbst, 24/7, objektiv und unabhängig den Beweis für Qualität, Quantität, Herkunft und den Lagerstandort meines Goldes überprüfen?",
+        "question4Bold": "Ist mein Gold sicher?",
+        "answer": "DIRECTGOLD beantwortet alle diese Fragen eindeutig und jederzeit von Dir selbst überprüfbar.",
+        "quote": "„Wer Sicherheit will, darf sich nicht in Illusionen wiegen.\"",
+        "quoteAuthor": "Lucius Annaeus Seneca (römischer Philosoph und Staatsmann, 4 v. Chr. - 65 n. Chr.)"
+    },
+    "services": {
+        "kaufVerkaufTitle": "Kauf & Verkauf",
+        "kaufVerkaufDescription": "Bei DIRECTGOLD kaufst und verkaufst Du Gold immer zum offiziellen LBMA-Goldpreis, ergänzt um eine transparent ausgewiesene Gebühr. Die Kaufgebühr ist degressiv gestaffelt und richtet sich nach Deinem Gesamtinvestitionsvolumen der letzten 12 Monate – je mehr Du investierst, desto günstiger wird jeder weitere Kauf. Bei Goldkaufplänen werden sogar geplante zukünftige Käufe berücksichtigt. Jede Transaktion wird zum nächstmöglichen LBMA-Goldpreis PM durchgeführt, und Du erhältst eine detaillierte Aufstellung des zugrunde liegenden LBMA-Preises sowie der verrechneten Gebühr. Verkäufe erfolgen ebenfalls zum LBMA-Preis abzüglich einer transparenten Verkaufsgebühr. So profitierst Du von maximaler Transparenz und wettbewerbsfähigen Konditionen ohne versteckte Kosten.",
+        "lagerungTitle": "Lagerung",
+        "lagerungDescription": "Dein Gold wird sicher im Hochsicherheitslager der Firma LOOMIS in Zürich/Kloten, Schweiz verwahrt. LOOMIS ist LBMA-Transporter-Mitglied und Teil der offiziellen LBMA-Infrastruktur. Alle gelagerten Werte sind vollumfänglich versichert. Du erwirbst anteiliges Eigentum an einer sammelverwahrten Menge von registrierten Goldbarren zwischen 100 g und 1 kg. Sobald Du mindestens 100 g besitzt, kannst Du jederzeit einen gesamten Goldbarren auf Dich registrieren und in ungeteilter Einzellagerung ausschließlich auf Deinen Namen übertragen lassen. Jeder Barren ist über die aXedras-Plattform 24/7 von Dir selbst überprüfbar – inklusive Seriennummer, Herkunft und aktuellem Lagerstandort. Die Schweiz bietet als Lagerstandort höchste politische Stabilität, Rechtssicherheit und Eigentumsschutz.",
+        "lieferungTitle": "Lieferung",
+        "lieferungDescription": "Mit DIRECT Delivery hast Du die volle Kontrolle darüber, wann und wohin Dein physisches Gold geliefert wird. Du kannst Dein Gold jederzeit über unsere Transaktionsplattform an Deine gewünschte Lieferadresse liefern lassen – einfach, transparent und sicher. Wenn Dein Gold in Sammelverwahrung gehalten wird, entscheidest Du selbst, in welchen Barrengrößen Du Deine Lieferung erhalten möchtest – von 1 g, 2 g, 5 g, 10 g, 20 g, 1 Unze, 50 g, 100 g, 250 g, 500 g bis zu 1 kg. Wenn Du Deine Goldbarren in Einzellagerung hast, kannst Du Deine spezifischen Barren direkt aus der Einzellagerung an Deine Lieferadresse versenden lassen. Alle Lieferungen werden von erstklassigen Logistikpartnern durchgeführt und sind vollständig versichert. Die Kosten für die physische Lieferung werden transparent angezeigt, bevor Du Deine Bestellung aufgibst."
+    },
+    "securityAndTechnology": {
+        "title": "Sicherheit & Technologie",
+        "paragraph1": "DIRECTGOLD kombiniert die weltweit fortschrittlichste Verifizierungstechnologie mit höchsten Sicherheitsstandards für Dein Gold. Jeder bei DIRECTGOLD gelagerte Barren verfügt über einen digitalen Zwilling auf der aXedras-Plattform – die fälschungssichere, standardisierte digitale Repräsentation des physischen Goldbarrens im „Bullion Integrity Ledger™\". Über diese Blockchain-basierte Technologie kannst Du 24/7 jederzeit selbst, unabhängig und objektiv die Echtheit, Herkunft, Integrität und den aktuellen Lagerstandort Deines Goldes überprüfen.",
+        "paragraph2": "Die produzierten Barren stammen direkt von LBMA-zertifizierten Raffinerien wie Argor-Heraeus und werden ohne Umwege ins Hochsicherheitslager von LOOMIS in Zürich/Kloten, Schweiz transportiert. Die Schweiz bietet als Lagerstandort höchste politische Stabilität, Rechtssicherheit und Eigentumsschutz – mehr als 60% des weltweiten Goldes werden hier raffiniert und gelagert. Durch die Integration in das aXedras-Netzwerk, das von LBMA und World Gold Council als technologischer Partner des Gold Bar Integrity Programmes ausgewählt wurde, gewährleistet DIRECTGOLD ein bisher unerreichtes Maß an Transparenz, Sicherheit und Nachprüfbarkeit für Dein Gold."
     }
 }
