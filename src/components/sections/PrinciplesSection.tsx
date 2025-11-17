@@ -45,9 +45,9 @@ export function PrinciplesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Principles
+            Unsere Grundsätze
           </MotionH1>
-          <div className="relative w-full max-w-lg h-[60vh] rounded-lg overflow-hidden">
+          <div className="relative w-full max-w-lg h-[60vh] overflow-hidden">
             <Image
               src="/mockups/mock6.jpg"
               alt="DIRECTGOLD Building"
