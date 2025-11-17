@@ -219,5 +219,10 @@
         "title": "Security & Technology",
         "paragraph1": "DIRECTGOLD combines the world's most advanced verification technology with the highest security standards for your gold. Every bar stored at DIRECTGOLD has a digital twin on the aXedras platform – the forgery-proof, standardized digital representation of the physical gold bar in the \"Bullion Integrity Ledger™\". Through this blockchain-based technology, you can verify the authenticity, origin, integrity and current storage location of your gold yourself at any time, 24/7, independently and objectively.",
         "paragraph2": "The produced bars come directly from LBMA-certified refineries such as Argor-Heraeus and are transported without detours to the high-security vault of LOOMIS in Zurich/Kloten, Switzerland. Switzerland offers the highest political stability, legal certainty and property protection as a storage location – more than 60% of the world's gold is refined and stored here. Through integration into the aXedras network, which was selected by LBMA and World Gold Council as the technology partner of the Gold Bar Integrity Programme, DIRECTGOLD ensures an unprecedented level of transparency, security and verifiability for your gold."
+    },
+    "notFound": {
+        "title": "Page Not Found",
+        "description": "The page you are looking for does not exist or has been moved. Return to the homepage to continue browsing.",
+        "backToHome": "Back to Home"
     }
 }

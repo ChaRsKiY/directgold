@@ -254,5 +254,10 @@
         "title": "Sicherheit & Technologie",
         "paragraph1": "DIRECTGOLD kombiniert die weltweit fortschrittlichste Verifizierungstechnologie mit höchsten Sicherheitsstandards für Dein Gold. Jeder bei DIRECTGOLD gelagerte Barren verfügt über einen digitalen Zwilling auf der aXedras-Plattform – die fälschungssichere, standardisierte digitale Repräsentation des physischen Goldbarrens im „Bullion Integrity Ledger™\". Über diese Blockchain-basierte Technologie kannst Du 24/7 jederzeit selbst, unabhängig und objektiv die Echtheit, Herkunft, Integrität und den aktuellen Lagerstandort Deines Goldes überprüfen.",
         "paragraph2": "Die produzierten Barren stammen direkt von LBMA-zertifizierten Raffinerien wie Argor-Heraeus und werden ohne Umwege ins Hochsicherheitslager von LOOMIS in Zürich/Kloten, Schweiz transportiert. Die Schweiz bietet als Lagerstandort höchste politische Stabilität, Rechtssicherheit und Eigentumsschutz – mehr als 60% des weltweiten Goldes werden hier raffiniert und gelagert. Durch die Integration in das aXedras-Netzwerk, das von LBMA und World Gold Council als technologischer Partner des Gold Bar Integrity Programmes ausgewählt wurde, gewährleistet DIRECTGOLD ein bisher unerreichtes Maß an Transparenz, Sicherheit und Nachprüfbarkeit für Dein Gold."
+    },
+    "notFound": {
+        "title": "Seite nicht gefunden",
+        "description": "Die gesuchte Seite existiert nicht oder wurde verschoben. Kehre zur Startseite zurück, um weiterzubrowsen.",
+        "backToHome": "Zurück zur Startseite"
     }
 }

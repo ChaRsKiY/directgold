@@ -1,4 +1,5 @@
 import { Package, UserPlus, RefreshCw, FileSignature } from "lucide-react";
+import { Fragment } from "react";
 
 const BlocksSection = () => {
     const steps = [
@@ -33,8 +34,8 @@ const BlocksSection = () => {
                     const isLast = index === steps.length - 1;
                     
                     return (
-                        <>
-                            <div key={index} className="flex flex-col items-center flex-shrink-0 w-[140px] min-w-[140px] md:w-[160px] md:min-w-[160px] lg:w-[180px] lg:min-w-[180px] xl:w-[200px] xl:min-w-[200px] max-w-[180px] md:max-w-[200px] lg:max-w-[220px] xl:max-w-[250px] box-border overflow-hidden max-lg:w-full max-lg:min-w-0 max-lg:max-w-full">
+                        <Fragment key={index}>
+                            <div className="flex flex-col items-center flex-shrink-0 w-[140px] min-w-[140px] md:w-[160px] md:min-w-[160px] lg:w-[180px] lg:min-w-[180px] xl:w-[200px] xl:min-w-[200px] max-w-[180px] md:max-w-[200px] lg:max-w-[220px] xl:max-w-[250px] box-border overflow-hidden max-lg:w-full max-lg:min-w-0 max-lg:max-w-full">
                                 {/* Step Box */}
                                 <div className="relative w-full aspect-square rounded-3xl border-3 border-[var(--color-primary-gold)] p-4 md:p-6 lg:p-8 bg-white flex-shrink-0 box-border">
                                     <div className="flex flex-col items-center justify-center h-full">
@@ -71,7 +72,7 @@ const BlocksSection = () => {
                                     </div>
                                 </div>
                             )}
-                        </>
+                        </Fragment>
                     );
                 })}
             </div>
