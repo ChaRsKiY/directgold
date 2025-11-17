@@ -29,7 +29,37 @@ export default async function LBMAGoldpreisPage() {
     },
     {
       title: t("text15"),
-      paragraphs: [t("text16"), t("text17"), t("text18")]
+      paragraphs: [t("text15a")],
+      items: [
+        t("text15c"),
+        t("text15d"),
+        t("text15e"),
+        t("text15f"),
+        t("text15g")
+      ]
+    },
+    {
+      title: t("text16"),
+      paragraphs: [t("text16a")],
+      items: [
+        t("text16b"),
+        t("text16c"),
+        t("text16d"),
+        t("text16e"),
+        t("text16f"),
+        t("text16g"),
+        t("text16h"),
+        t("text16i"),
+        t("text16j")
+      ]
+    },
+    {
+      title: t("text17"),
+      paragraphs: [t("text17a"), t("text17b")]
+    },
+    {
+      title: t("text18"),
+      paragraphs: [t("text18a")]
     }
   ]
 

@@ -35,6 +35,7 @@ const WhyDirectGold = () => {
 
   return (
     <MotionSection
+      id="whyDirectGold"
       className="px-[10%] py-20 bg-gradient-to-r from-[var(--color-light-bg)] via-[var(--color-light-bg)] to-[#DEDBD5]"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}

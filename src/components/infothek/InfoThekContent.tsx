@@ -1,6 +1,6 @@
 "use client";
 
-import { MotionDiv, MotionH1, MotionH2, MotionP, MotionLi } from "@/components/motion";
+import { MotionH1, MotionH2, MotionP } from "@/components/motion";
 import Link from "next/link";
 
 interface Section {
@@ -66,16 +66,15 @@ export default function InfoThekContent({
 
       {/* Sections */}
       {sections.map((section, index) => (
-        <MotionDiv
-          key={index}
-          className="mb-12 last:mb-0"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: index * 0.1 }}
-        >
+        <div key={index} className="mb-12 last:mb-0">
           {section.title && (
-            <MotionH2 className="text-3xl max-md:text-2xl font-bold text-[var(--color-primary-gold)] mb-6">
+            <MotionH2 
+              className="text-3xl max-md:text-2xl font-bold text-[var(--color-primary-gold)] mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: false, margin: "-100px" }}
+              transition={{ duration: 0.6 }}
+            >
               {section.title}
             </MotionH2>
           )}
@@ -83,12 +82,12 @@ export default function InfoThekContent({
           {section.paragraphs && (
             <div className="space-y-6">
               {section.paragraphs.map((paragraph, pIndex) => (
-                <MotionP
+                <p
                   key={pIndex}
                   className="text-lg max-md:text-base text-[var(--color-primary-text)] leading-relaxed"
                 >
                   {paragraph}
-                </MotionP>
+                </p>
               ))}
             </div>
           )}
@@ -96,12 +95,12 @@ export default function InfoThekContent({
           {section.content && (
             <div className="space-y-6">
               {section.content.split('\n\n').map((paragraph, pIndex) => (
-                <MotionP
+                <p
                   key={pIndex}
                   className="text-lg max-md:text-base text-[var(--color-primary-text)] leading-relaxed"
                 >
                   {paragraph}
-                </MotionP>
+                </p>
               ))}
             </div>
           )}
@@ -109,13 +108,13 @@ export default function InfoThekContent({
           {section.items && (
             <ul className="space-y-4 mt-6">
               {section.items.map((item, itemIndex) => (
-                <MotionLi
+                <li
                   key={itemIndex}
                   className="flex items-start gap-4 text-lg max-md:text-base text-[var(--color-primary-text)] leading-relaxed"
                 >
                   <span className="text-[var(--color-primary-gold)] mt-2 shrink-0">—</span>
                   <span>{item}</span>
-                </MotionLi>
+                </li>
               ))}
             </ul>
           )}
@@ -123,18 +122,12 @@ export default function InfoThekContent({
           {index < sections.length - 1 && (
             <div className="w-full h-px bg-[var(--color-primary-gold)]/20 mt-12" />
           )}
-        </MotionDiv>
+        </div>
       ))}
 
       {/* Links Section */}
       {links && links.length > 0 && (
-        <MotionDiv
-          className="pt-12 border-t border-[var(--color-primary-gold)]/20"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
+        <div className="pt-12 border-t border-[var(--color-primary-gold)]/20">
           <h2 className="text-2xl max-md:text-xl font-bold text-[var(--color-primary-gold)] mb-6">
             Weitere Informationen:
           </h2>
@@ -149,7 +142,7 @@ export default function InfoThekContent({
               </Link>
             ))}
           </div>
-        </MotionDiv>
+        </div>
       )}
     </div>
   );

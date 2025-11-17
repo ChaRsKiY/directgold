@@ -14,13 +14,32 @@ export default function Header() {
   const t = useTranslations("navigation");
 
   const navItems = [
-    { href: "#home", label: t("home") },
-    { href: "#about", label: t("about") },
-    { href: "#contact", label: t("contact") },
+    {
+      label: t("about"),
+      submenu: [
+        { href: "/#whyDirectGold", label: t("warumGold") },
+        { href: "/#about", label: t("aboutDirectGold") },
+      ],
+    },
+    {
+      label: t("infothek"),
+      submenu: [
+        { href: "/info/kaufgebuhr", label: t("kaufgebuhr") },
+        { href: "/info/sammel-einzellagerung", label: t("sammelEinzellagerung") },
+        { href: "/exkurs/lbma-goldpreis", label: t("lbmaGoodDelivery") },
+        { href: "/exkurs/argor-heraeus", label: t("argorHeraeus") },
+        { href: "/exkurs/loomis", label: t("loomis") },
+        { href: "/exkurs/schweiz-lagerstandort", label: t("schweizLagerstandort") },
+        { href: "/exkurs/axedras", label: t("axedras") },
+        { href: "/principles", label: t("regulatorikCompliance") },
+      ],
+    },
+    { href: "#faq", label: t("faq") },
+    { href: "/info/gebuhrentabelle", label: t("gebuhrentabelle") },
   ];
 
   return (
-    <header ref={headerRef} className="fixed top-0 left-0 right-0 z-100 overflow-x-hidden max-w-full bg-[rgba(26,26,26,0.9)]">
+    <header ref={headerRef} className="fixed top-0 left-0 right-0 z-100 max-w-full bg-[rgba(26,26,26,0.9)]">
       <div className="flex items-center justify-between p-4 md:p-8 max-w-full w-full min-w-0">
         <Link href="/" className="shrink-0 min-w-0">
           <Logo variant="header" />

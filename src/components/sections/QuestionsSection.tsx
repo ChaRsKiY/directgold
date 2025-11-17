@@ -44,7 +44,7 @@ const QuestionsSection = () => {
         >
           <Image src="/mockups/mock1.jpg" alt="Questions Section 1" width={500} height={500} className="max-md:w-full" />
         </MotionDiv>
-        <div id="questions" className="flex justify-evenly h-full flex-1 items-end max-md:items-start">
+        <div id="faq" className="flex justify-evenly h-full flex-1 items-end max-md:items-start">
             <MotionDiv
               initial={{ y: 30, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}

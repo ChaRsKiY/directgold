@@ -121,7 +121,8 @@ export const principlesData: Principle[] = [
         title: "transparencySection5Title",
         items: [
           "transparencySection5Item1",
-          "transparencySection5Item2"
+          "transparencySection5Item2",
+          "transparencySection5Item3"
         ]
       }
     ],
@@ -138,6 +139,17 @@ export const principlesData: Principle[] = [
     long: "ownershipLong",
     fullContent: "ownershipFullContent",
     image: "https://placehold.co/600x400",
+    sections: [
+      {
+        content: "ownershipSection1Content"
+      },
+      {
+        content: "ownershipSection2Content"
+      },
+      {
+        content: "ownershipSection3Content"
+      }
+    ],
     links: [
       { text: "ownershipLink1", href: "/info/sammel-einzellagerung" },
       { text: "ownershipLink2", href: "/exkurs/lbma-goldpreis" }
