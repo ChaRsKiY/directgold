@@ -32,8 +32,8 @@ export default function InfoThekLayout({ children }: InfoThekLayoutProps) {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        <div className="bg-[var(--color-primary-gold)] py-1 px-10 rounded-md">
-           <Image src="/DG Icon White.png" alt="DBadge" width={40} height={40} />
+        <div className="bg-[var(--color-primary-gold)] py-2.5 px-10 rounded-md">
+           <Image src="/DG Icon White.png" alt="DBadge" width={35} height={35} />
         </div>
         <h1 className="text-4xl max-md:text-3xl font-bold text-[var(--color-primary-gold)]">
           INFOTHEK

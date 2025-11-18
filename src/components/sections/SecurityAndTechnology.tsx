@@ -16,7 +16,7 @@ const SecurityAndTechnologySection = () => {
       transition={{ duration: 0.6 }}
     >
       <MotionH2
-        className="text-6xl max-md:text-4xl font-bold text-[var(--color-primary-gold)] text-center mb-12 max-w-7xl mx-auto"
+        className="text-6xl max-md:text-4xl font-bold text-[var(--color-primary-gold)] mb-12 max-w-7xl mx-auto"
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}

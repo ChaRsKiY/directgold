@@ -43,13 +43,14 @@ const WhyDirectGold = () => {
       transition={{ duration: 0.6 }}
     >
       <MotionH2
-        className="text-6xl max-md:text-4xl font-bold text-[var(--color-primary-gold)] mb-12 max-w-7xl mx-auto"
+        className="font-bold text-[var(--color-primary-gold)] mb-12 max-w-7xl mx-auto"
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        {t("title")}
+        <p className="text-5xl max-md:text-3xl">{t("title1")}</p>
+        <p className="text-6xl max-md:text-4xl">{t("title2")}</p>
       </MotionH2>
       <div className="grid grid-cols-2 justify-between gap-8 items-center h-fit max-md:grid-cols-1 max-w-7xl mx-auto">
         {usps.map((usp, index) => (

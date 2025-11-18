@@ -27,7 +27,10 @@ const BlocksSection = () => {
 
     return (
         <section className="px-[10%] py-20">
-            <h2 className="text-6xl max-md:text-4xl font-bold text-[var(--color-primary-gold)] mb-12 max-w-7xl mx-auto">So funktioniert DIRECTGOLD</h2>
+            <h2 className="font-bold text-[var(--color-primary-gold)] mb-12 max-w-7xl mx-auto">
+                <p className="text-5xl max-md:text-3xl">So funktioniert</p>
+                <p className="text-6xl max-md:text-4xl">DIRECTGOLD</p>
+            </h2>
             <div className="flex items-start justify-center pb-4 gap-1 md:gap-2 lg:gap-3 xl:gap-6 max-lg:grid max-lg:grid-cols-2 max-lg:gap-6 max-lg:justify-items-center max-md:grid-cols-1 max-md:gap-8 max-md:items-center max-w-7xl mx-auto">
                 {steps.map((step, index) => {
                     const Icon = step.icon;

@@ -207,7 +207,8 @@
         "text18a": "Der LBMA-Goldpreis schafft Transparenz und Vergleichbarkeit. Doch erst die Kombination aus LBMA-Preis + physischem Eigentum (Allocated Gold) gewährleistet echten Schutz, Nachvollziehbarkeit und Werterhalt – das Fundament des DIRECTGOLD-Prinzips."
     },
     "whyDirectGold": {
-        "title": "Unsere Gold Standarts",
+        "title1": "Unsere",
+        "title2": "Gold Standarts",
         "usp1Title": "Offizieller LBMA Referenzpreis",
         "usp1Description": "keine versteckten Kosten",
         "usp2Title": "100% physisches Eigentum",
@@ -245,10 +246,13 @@
     "services": {
         "kaufVerkaufTitle": "Kauf & Verkauf",
         "kaufVerkaufDescription": "Bei DIRECTGOLD kaufst und verkaufst Du Gold immer zum offiziellen LBMA-Goldpreis, ergänzt um eine transparent ausgewiesene Gebühr. Die Kaufgebühr ist degressiv gestaffelt und richtet sich nach Deinem Gesamtinvestitionsvolumen der letzten 12 Monate – je mehr Du investierst, desto günstiger wird jeder weitere Kauf. Bei Goldkaufplänen werden sogar geplante zukünftige Käufe berücksichtigt. Jede Transaktion wird zum nächstmöglichen LBMA-Goldpreis PM durchgeführt, und Du erhältst eine detaillierte Aufstellung des zugrunde liegenden LBMA-Preises sowie der verrechneten Gebühr. Verkäufe erfolgen ebenfalls zum LBMA-Preis abzüglich einer transparenten Verkaufsgebühr. So profitierst Du von maximaler Transparenz und wettbewerbsfähigen Konditionen ohne versteckte Kosten.",
+        "kaufVerkaufShort": "Kaufen und Verkaufen zum offiziellen LBMA-Goldpreis mit transparenten, degressiven Gebühren. Maximale Transparenz ohne versteckte Kosten.",
         "lagerungTitle": "Lagerung",
         "lagerungDescription": "Dein Gold wird sicher im Hochsicherheitslager der Firma LOOMIS in Zürich/Kloten, Schweiz verwahrt. LOOMIS ist LBMA-Transporter-Mitglied und Teil der offiziellen LBMA-Infrastruktur. Alle gelagerten Werte sind vollumfänglich versichert. Du erwirbst anteiliges Eigentum an einer sammelverwahrten Menge von registrierten Goldbarren zwischen 100 g und 1 kg. Sobald Du mindestens 100 g besitzt, kannst Du jederzeit einen gesamten Goldbarren auf Dich registrieren und in ungeteilter Einzellagerung ausschließlich auf Deinen Namen übertragen lassen. Jeder Barren ist über die aXedras-Plattform 24/7 von Dir selbst überprüfbar – inklusive Seriennummer, Herkunft und aktuellem Lagerstandort. Die Schweiz bietet als Lagerstandort höchste politische Stabilität, Rechtssicherheit und Eigentumsschutz.",
+        "lagerungShort": "Sichere Verwahrung im Hochsicherheitslager von LOOMIS in der Schweiz. Vollumfänglich versichert und 24/7 überprüfbar über die aXedras-Plattform.",
         "lieferungTitle": "Lieferung",
-        "lieferungDescription": "Mit DIRECT Delivery hast Du die volle Kontrolle darüber, wann und wohin Dein physisches Gold geliefert wird. Du kannst Dein Gold jederzeit über unsere Transaktionsplattform an Deine gewünschte Lieferadresse liefern lassen – einfach, transparent und sicher. Wenn Dein Gold in Sammelverwahrung gehalten wird, entscheidest Du selbst, in welchen Barrengrößen Du Deine Lieferung erhalten möchtest – von 1 g, 2 g, 5 g, 10 g, 20 g, 1 Unze, 50 g, 100 g, 250 g, 500 g bis zu 1 kg. Wenn Du Deine Goldbarren in Einzellagerung hast, kannst Du Deine spezifischen Barren direkt aus der Einzellagerung an Deine Lieferadresse versenden lassen. Alle Lieferungen werden von erstklassigen Logistikpartnern durchgeführt und sind vollständig versichert. Die Kosten für die physische Lieferung werden transparent angezeigt, bevor Du Deine Bestellung aufgibst."
+        "lieferungDescription": "Mit DIRECT Delivery hast Du die volle Kontrolle darüber, wann und wohin Dein physisches Gold geliefert wird. Du kannst Dein Gold jederzeit über unsere Transaktionsplattform an Deine gewünschte Lieferadresse liefern lassen – einfach, transparent und sicher. Wenn Dein Gold in Sammelverwahrung gehalten wird, entscheidest Du selbst, in welchen Barrengrößen Du Deine Lieferung erhalten möchtest – von 1 g, 2 g, 5 g, 10 g, 20 g, 1 Unze, 50 g, 100 g, 250 g, 500 g bis zu 1 kg. Wenn Du Deine Goldbarren in Einzellagerung hast, kannst Du Deine spezifischen Barren direkt aus der Einzellagerung an Deine Lieferadresse versenden lassen. Alle Lieferungen werden von erstklassigen Logistikpartnern durchgeführt und sind vollständig versichert. Die Kosten für die physische Lieferung werden transparent angezeigt, bevor Du Deine Bestellung aufgibst.",
+        "lieferungShort": "Volle Kontrolle über Lieferzeitpunkt und -adresse. Flexible Barrengrößen von 1 g bis 1 kg. Vollständig versicherte Lieferungen durch erstklassige Logistikpartner."
     },
     "securityAndTechnology": {
         "title": "Sicherheit & Technologie",

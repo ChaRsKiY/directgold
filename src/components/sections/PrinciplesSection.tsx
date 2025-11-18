@@ -27,25 +27,27 @@ export function PrinciplesSection() {
       transition={{ duration: 0.6 }}
     >
       <MotionH1
-            className="text-6xl max-md:text-4xl font-bold text-[var(--color-primary-gold)] mb-8 hidden max-lg:block text-center"
+            className="text-6xl max-md:text-4xl font-bold text-[var(--color-primary-gold)] mb-8 hidden max-lg:block"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Principles
+            <p className="text-5xl max-md:text-3xl">Unsere</p>
+            <p className="text-6xl max-md:text-4xl">Grundsätze</p>
       </MotionH1>
       <div className="flex w-full relative mx-auto max-w-7xl">
         {/* Left Side - Static */}
         <div className="hidden lg:flex lg:w-1/2 flex-col bg-[var(--color-light-bg)] pr-12">
           <MotionH1
-            className="text-6xl max-md:text-4xl font-bold text-[var(--color-primary-gold)] mb-8"
+            className="font-bold text-[var(--color-primary-gold)] mb-8"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            Unsere Grundsätze
+            <p className="text-5xl max-md:text-3xl">Unsere</p>
+            <p className="text-6xl max-md:text-4xl">Grundsätze</p>
           </MotionH1>
           <div className="relative w-full max-w-lg h-[60vh] overflow-hidden">
             <Image
