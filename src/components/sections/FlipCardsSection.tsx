@@ -106,7 +106,7 @@ const FlipCardsSection = () => {
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              className={`relative w-full cursor-pointer max-h-[600px] ${
+              className={`relative w-full cursor-pointer max-h-[600px] mb-6 md:mb-0 ${
                 index === 0 
                   ? "aspect-[1/2] md:aspect-[3/2] lg:aspect-[1/2] md:col-span-2 lg:col-span-1" 
                   : "aspect-[1/2] md:aspect-[2/5] lg:aspect-[1/2]"
