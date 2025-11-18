@@ -33,7 +33,6 @@ export function PrinciplesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-5xl max-md:text-3xl">Unsere</p>
             <p className="text-6xl max-md:text-4xl">Grundsätze</p>
       </MotionH1>
       <div className="flex w-full relative mx-auto max-w-7xl">
@@ -46,7 +45,6 @@ export function PrinciplesSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <p className="text-5xl max-md:text-3xl">Unsere</p>
             <p className="text-6xl max-md:text-4xl">Grundsätze</p>
           </MotionH1>
           <div className="relative w-full max-w-lg h-[60vh] overflow-hidden">

@@ -49,7 +49,6 @@ const WhyDirectGold = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <p className="text-5xl max-md:text-3xl">{t("title1")}</p>
         <p className="text-6xl max-md:text-4xl">{t("title2")}</p>
       </MotionH2>
       <div className="grid grid-cols-2 justify-between gap-8 items-center h-fit max-md:grid-cols-1 max-w-7xl mx-auto">
