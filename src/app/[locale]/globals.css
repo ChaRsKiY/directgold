@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @layer base {
+
   *,
   *::before,
   *::after {
@@ -19,7 +20,7 @@
   --color-light-bg: #F3F3F1;
   --color-primary-gold: #D5BE7E;
   --color-primary-gold-light: #dcc7ad;
-  --color-primary-text: #333333;
+  --color-primary-text: #7d7d7d;
   --color-secondary-text: #aaaaaa;
   --color-primary-text-dark: #2E1806;
   --color-button-gold-light: #e0c29a;
@@ -186,6 +187,7 @@ html {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -213,4 +215,3 @@ html {
 .footer-link:hover::after {
   width: 100%;
 }
-

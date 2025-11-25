@@ -8,6 +8,8 @@ import OurProducts from "@/components/sections/OurProducts";
 import FlipCardsSection from "@/components/sections/FlipCardsSection";
 import SecurityAndTechnologySection from "@/components/sections/SecurityAndTechnology";
 import BlocksSection from "@/components/sections/BlocksSection";
+import DominanzSection from "@/components/sections/DominanzSection";
+import ZitatBlockSection from "@/components/sections/ZitatBlockSection";
 
 export default function Home() {
   return (
@@ -16,9 +18,11 @@ export default function Home() {
       <AboutSection />
       {/* <InfoSection /> */}
       <GoldBarSection />
+      <DominanzSection />
+      <OurProducts />
+      <ZitatBlockSection />
       <QuestionsSection />
       <WhyDirectGold />
-      <OurProducts />
       <PrinciplesSection />
       <FlipCardsSection />
       <SecurityAndTechnologySection />
