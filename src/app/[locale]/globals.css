@@ -1,6 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@font-face {
+  font-family: arkitech; /* set name */
+  src: url(/Arkitech.ttf); /* url of the font */
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @layer base {

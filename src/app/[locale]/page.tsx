@@ -10,6 +10,8 @@ import SecurityAndTechnologySection from "@/components/sections/SecurityAndTechn
 import BlocksSection from "@/components/sections/BlocksSection";
 import DominanzSection from "@/components/sections/DominanzSection";
 import ZitatBlockSection from "@/components/sections/ZitatBlockSection";
+import GoldIsGeldSection from "@/components/sections/GoldIsGeldSection";
+import GoldBenefitsSection from "@/components/sections/GoldBenefitsSection";
 
 export default function Home() {
   return (
@@ -21,6 +23,8 @@ export default function Home() {
       <DominanzSection />
       <OurProducts />
       <ZitatBlockSection />
+      <GoldBenefitsSection />
+      <GoldIsGeldSection />
       <QuestionsSection />
       <WhyDirectGold />
       <PrinciplesSection />

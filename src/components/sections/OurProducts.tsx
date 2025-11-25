@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { MotionSection } from "../motion";
 import { useTranslations } from "next-intl";
 import Button from "../ui/Button";
 
@@ -13,6 +12,12 @@ const OurProducts = () => {
       className="px-[10%] pb-20 bg-gradient-to-b to-[var(--color-primary-gold)]/30 from-transparent relative"
     >
       <div className="grid grid-cols-2 gap-48 relative m-auto max-w-7xl">
+        <div className="font-arkitech absolute left-0 top-0 mt-12 text-[#e1e1e1] text-[24rem] -translate-y-32 -translate-x-10 font-bold uppercase">
+          1
+        </div>
+        <div className="font-arkitech absolute right-0 bottom-0 mt-12 text-[#e1e1e1] text-[24rem] font-bold uppercase translate-x-20 -translate-y-36 -z-25">
+          2
+        </div>
         <div className="absolute inset-0 top-12 flex items-center justify-center">
           <div className="absolute inset-0 flex justify-end text-right">
             <div className="flex flex-col">
@@ -42,7 +47,7 @@ const OurProducts = () => {
           <h2 className="uppercase text-4xl max-md:text-2xl font-bold">
             {t("einzelkaufTitle")}
           </h2>
-          <div className="w-24 h-1 bg-[var(--color-primary-gold)] my-8 self-end" />
+          <div className=" h-1 bg-[var(--color-primary-gold)] my-8 self-end" />
           <p className="text-xl">{t("einzelkaufDescription")}</p>
           <div className="mt-12 bg-[var(--color-primary-gold)] py-3 px-12 rounded-md flex justify-center items-center group cursor-pointer transition-all duration-300 w-full">
             <div className="flex items-center justify-center gap-2">
@@ -58,12 +63,12 @@ const OurProducts = () => {
         <div className="font-bold">
           <h3 className="text-2xl max-md:text-xl text-[var(--color-primary-text)]">Zwei wege, ein Ziel</h3>
           <div className="w-24 h-1 bg-[var(--color-primary-gold)] my-6" />
-          <h2 className="text-6xl max-md:text-2xl text-[var(--color-primary-gold)]">Sicherer <br /> Goldbesitz.</h2>
+          <h2 className="text-6xl w-24max-md:text-2xl text-[var(--color-primary-gold)]">Sicherer <br /> Goldbesitz.</h2>
           <Button className="text-white mt-12">Get in touch</Button>
         </div>
       </div>
       <div className="m-auto max-w-7xl relative">
-        <Image src="/gold_nugget.png" alt="Gold Nugget" width={1300} height={1300} className="absolute bottom-0 right-0 -z-20 translate-y-[40%] contrast-60 translate-x-[70%]" />
+        <Image src="/gold_nugget.png" alt="Gold Nugget" width={1200} height={1200} className="absolute bottom-0 right-0 -z-20 translate-y-[45%] contrast-60 translate-x-[70%]" />
       </div>
     </section>
   );
