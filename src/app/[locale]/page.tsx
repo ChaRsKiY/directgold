@@ -25,11 +25,11 @@ export default function Home() {
       <ZitatBlockSection />
       <GoldBenefitsSection />
       <GoldIsGeldSection />
-      <QuestionsSection />
-      <WhyDirectGold />
       <PrinciplesSection />
-      <FlipCardsSection />
       <SecurityAndTechnologySection />
+      {/* <QuestionsSection /> */}
+      {/* <WhyDirectGold /> */}
+      {/* <FlipCardsSection /> */}
       <BlocksSection />
       {/* <PrinciplesSection /> */}
       {/* <LBMAPriceSection /> */}

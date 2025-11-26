@@ -30,7 +30,7 @@ const DominanzSection = () => {
                     </MotionH3>
                 </div>
                 <div className="flex items-center justify-center">
-                    <div className="w-full h-full relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#045589] before:to-transparent before:opacity-40 before:-z-10 p-12 pb-32">
+                    <div className="w-full h-full relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#5D9BC9] before:to-transparent before:opacity-40 before:-z-10 p-12 pb-32">
                         <h2 className="text-center text-2xl max-md:text-xl font-bold pb-8">Zu welchen Preisen kaufe und verkaufe ich?</h2>
                         <p className="text-xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio atque ex nisi suscipit animi qui recusandae veritatis. Enim eligendi beatae eveniet reprehenderit porro ad sequi fuga nulla at, similique pariatur?</p>
                     </div>

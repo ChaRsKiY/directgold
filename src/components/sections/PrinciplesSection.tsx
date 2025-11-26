@@ -20,123 +20,121 @@ export function PrinciplesSection() {
   return (
     <MotionSection
       id="principles"
-      className="relative w-full bg-[var(--color-light-bg)] px-[10%] py-20"
+      className="relative w-full min-h-screen flex items-center py-20"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
     >
-      <MotionH1
-            className="text-6xl max-md:text-4xl font-bold text-[var(--color-primary-gold)] mb-8 hidden max-lg:block"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-6xl max-md:text-4xl">Grundsätze</p>
-      </MotionH1>
-      <div className="flex w-full relative mx-auto max-w-7xl">
-        {/* Left Side - Static */}
-        <div className="hidden lg:flex lg:w-1/2 flex-col bg-[var(--color-light-bg)] pr-12">
-          <MotionH1
-            className="font-bold text-[var(--color-primary-gold)] mb-8"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <p className="text-6xl max-md:text-4xl">Grundsätze</p>
-          </MotionH1>
-          <div className="relative w-full max-w-lg h-[60vh] overflow-hidden">
-            <Image
-              src="/mockups/mock6.jpg"
-              alt="DIRECTGOLD Building"
-              fill
-              className="object-cover"
-              priority
-            />
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <Image
+          src="/mockups/mock6.jpg"
+          alt="Background"
+          fill
+          className="object-cover brightness-75"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/20" />
+      </div>
+
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-[5%] flex flex-col lg:flex-row gap-12 lg:gap-20">
+
+        {/* Left Side - Content */}
+        <div className="w-full lg:w-1/2 flex flex-col justify-between text-white">
+          <div>
+            <MotionH1
+              className="mb-2"
+              initial={{ opacity: 0, y: -20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="text-5xl md:text-6xl font-bold mb-2">Grundsätze</h2>
+              <div className="w-24 h-1 bg-[var(--color-primary-gold)] mb-4" />
+            </MotionH1>
+            <p className="text-xl md:text-2xl font-light text-gray-200">What we do</p>
+          </div>
+
+          <div className="mt-12 lg:mt-auto">
+            <div className="mb-8">
+              <p className="text-2xl md:text-3xl font-light tracking-wide uppercase">Step on our journey</p>
+              <p className="text-2xl md:text-3xl font-light tracking-wide uppercase mt-2">Let this be the first</p>
+              <p className="text-5xl md:text-7xl font-bold tracking-widest mt-4 uppercase">Together.</p>
+            </div>
+
+            <Link href="/account/open">
+              <Button variant="blue" className="w-full md:w-auto min-w-[200px]">
+                OPEN ACCOUNT
+              </Button>
+            </Link>
           </div>
         </div>
 
         {/* Right Side - Accordion */}
         <div className="w-full lg:w-1/2">
-          <div className="space-y-0 flex flex-col gap-4 justify-center h-full">
-            {principlesData.map((principle, index) => {
-              const isOpen = openIndex === index
-              const titleParts = principle.title.split(" ")
-              const directPart = titleParts[0] // "DIRECT"
-              const restTitle = titleParts.slice(1).join(" ") // остальное
+          <div className="bg-black/60 backdrop-blur-sm p-8 md:p-12 rounded-lg border border-white/10">
+            <div className="space-y-0 flex flex-col">
+              {principlesData.map((principle, index) => {
+                const isOpen = openIndex === index
+                const titleParts = principle.title.split(" ")
+                const directPart = titleParts[0] // "DIRECT"
+                const restTitle = titleParts.slice(1).join(" ") // rest
 
-              return (
-                <div
-                  key={principle.id}
-                  className="border-b border-[var(--color-primary-gold)]/20 last:border-b-0"
-                >
-                  <button
-                    onClick={() => togglePrinciple(index)}
-                    className="w-full flex items-start gap-4 py-6 text-left hover:bg-[var(--color-primary-gold)]/5 transition-colors duration-200"
+                return (
+                  <div
+                    key={principle.id}
+                    className="border-b border-white/20 last:border-b-0"
                   >
-                    <span className="text-2xl md:text-3xl font-normal text-[var(--color-primary-text)]/60 shrink-0">
-                      {String(index + 1).padStart(2, '0')}
-                    </span>
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between gap-4">
-                        <h2 className="text-xl md:text-2xl font-bold">
-                          <span className="text-[var(--color-primary-gold)]">{directPart}</span>{" "}
-                          <span className="text-[var(--color-primary-text)]">{restTitle}</span>
-                        </h2>
-                        <span className="text-2xl text-[var(--color-primary-text)]/60 shrink-0">
-                          {isOpen ? "−" : "+"}
-                        </span>
+                    <button
+                      onClick={() => togglePrinciple(index)}
+                      className="w-full flex items-center gap-6 py-6 text-left group transition-colors duration-200"
+                    >
+                      <span className="text-xl text-[var(--color-primary-gold)] font-light shrink-0">
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <div className="flex-1 flex items-center justify-between">
+                        <h3 className="text-lg md:text-xl font-medium text-white group-hover:text-[var(--color-primary-gold)] transition-colors">
+                          <span className="font-bold">{directPart}</span> {restTitle}
+                        </h3>
+                        <div className={`w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-white/70 transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}>
+                          <span className="text-sm">+</span>
+                        </div>
                       </div>
-                      <p className="text-base md:text-lg text-[var(--color-primary-text)] mt-2">
-                        {t(principle.short)}
-                      </p>
-                    </div>
-                  </button>
+                    </button>
 
-                  <AnimatePresence>
-                    {isOpen && (
-                      <MotionDiv
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.3, ease: "easeInOut" }}
-                        className="overflow-hidden"
-                      >
-                        <div className="pl-12 pb-6 pr-4">
-                          <MotionDiv
-                            initial={{ y: -10, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            exit={{ y: -10, opacity: 0 }}
-                            transition={{ duration: 0.3, delay: 0.1 }}
-                            className="flex items-start gap-2 mb-4"
-                          >
-                            <p className="text-base md:text-lg text-[var(--color-secondary-text)] leading-relaxed">
+                    <AnimatePresence>
+                      {isOpen && (
+                        <MotionDiv
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
+                          className="overflow-hidden"
+                        >
+                          <div className="pl-12 pb-6 pr-4">
+                            <p className="text-sm md:text-base text-[#5D9BC9] mb-4 font-medium">
+                              {t(principle.short)}
+                            </p>
+                            <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-6">
                               {t(principle.long)}
                             </p>
-                          </MotionDiv>
-                          <MotionDiv
-                            initial={{ y: -10, opacity: 0 }}
-                            animate={{ y: 0, opacity: 1 }}
-                            exit={{ y: -10, opacity: 0 }}
-                            transition={{ duration: 0.3, delay: 0.2 }}
-                          >
                             <Link href={`/principles/${principle.id}`}>
-                              <Button variant="primary" className="w-full md:w-auto">
-                                {t("readMore")}
+                              <Button variant="white" className="text-xs px-6 py-2 md:px-8 md:py-3">
+                                READ MORE
                               </Button>
                             </Link>
-                          </MotionDiv>
-                        </div>
-                      </MotionDiv>
-                    )}
-                  </AnimatePresence>
-                </div>
-              )
-            })}
+                          </div>
+                        </MotionDiv>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                )
+              })}
+            </div>
           </div>
         </div>
+
       </div>
     </MotionSection>
   )

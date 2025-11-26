@@ -1,5 +1,6 @@
 import { Package, UserPlus, RefreshCw, FileSignature } from "lucide-react";
 import { Fragment } from "react";
+import Button from "../ui/Button";
 
 const BlocksSection = () => {
     const steps = [
@@ -16,68 +17,74 @@ const BlocksSection = () => {
         {
             icon: RefreshCw,
             title: "Gewählten Betrag überweisen",
-            description: "Execution: Goldkauf wird durchgeführt zum nächsten LBMA Preis PM",
+            description: null,
         },
         {
             icon: FileSignature,
             title: "Identifikation und Vertragsbestätigung durch digitale Signatur",
-            description: "Settlement: Einlagerung und Gutschrift auf dem Kundendepot",
+            description: null,
         },
     ];
 
     return (
-        <section className="px-[10%] py-20">
-            <h2 className="font-bold text-[var(--color-primary-gold)] mb-12 max-w-7xl mx-auto">
-                <p className="text-5xl max-md:text-3xl">So funktioniert</p>
-                <p className="text-6xl max-md:text-4xl">DIRECTGOLD</p>
-            </h2>
-            <div className="flex items-start justify-center pb-4 gap-1 md:gap-2 lg:gap-3 xl:gap-6 max-lg:grid max-lg:grid-cols-2 max-lg:gap-6 max-lg:justify-items-center max-md:grid-cols-1 max-md:gap-8 max-md:items-center max-w-7xl mx-auto">
-                {steps.map((step, index) => {
-                    const Icon = step.icon;
-                    const isLast = index === steps.length - 1;
-                    
-                    return (
-                        <Fragment key={index}>
-                            <div className="flex flex-col items-center flex-shrink-0 w-[140px] min-w-[140px] md:w-[160px] md:min-w-[160px] lg:w-[180px] lg:min-w-[180px] xl:w-[200px] xl:min-w-[200px] max-w-[180px] md:max-w-[200px] lg:max-w-[220px] xl:max-w-[250px] box-border overflow-hidden max-lg:w-full max-lg:min-w-0 max-lg:max-w-full">
+        <section className="px-[10%] py-20 bg-[#FFFDF5]">
+            <div className="max-w-7xl mx-auto">
+                <h2 className="font-bold text-[var(--color-primary-gold)] mb-16">
+                    <p className="text-4xl md:text-5xl">So funktioniert</p>
+                    <p className="text-5xl md:text-6xl uppercase">DIRECTGOLD</p>
+                </h2>
+
+                <div className="flex flex-col lg:flex-row items-start justify-between gap-8 relative mb-20">
+                    {/* Connecting Line Background - visible only on large screens */}
+                    <div className="hidden lg:block absolute top-[110px] left-[10%] right-[10%] h-[2px] bg-[var(--color-primary-gold)] z-0" />
+
+                    {steps.map((step, index) => {
+                        const Icon = step.icon;
+
+                        return (
+                            <div key={index} className="flex flex-col items-center w-full lg:w-1/4 z-10 relative group">
                                 {/* Step Box */}
-                                <div className="relative w-full aspect-square rounded-3xl border-3 border-[var(--color-primary-gold)] p-4 md:p-6 lg:p-8 bg-white flex-shrink-0 box-border">
-                                    <div className="flex flex-col items-center justify-center h-full">
-                                        {/* Icon */}
-                                        <Icon 
-                                            className="text-[var(--color-primary-gold)] w-16 h-16 md:w-20 md:h-20 lg:w-24 lg:h-24 xl:w-[84px] xl:h-[84px]" 
-                                            size={64}
-                                            strokeWidth={1.5}
-                                            fill="none"
-                                        />
-                                    </div>
+                                <div className="w-full max-w-[220px] aspect-square rounded-[2rem] border-2 border-[var(--color-primary-gold)] bg-white flex items-center justify-center mb-8 relative">
+                                    {/* Connecting Circles for Line */}
+                                    {index > 0 && (
+                                        <div className="hidden lg:block absolute left-[-6px] top-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-[var(--color-primary-gold)] bg-white z-20" />
+                                    )}
+                                    {index < steps.length - 1 && (
+                                        <div className="hidden lg:block absolute right-[-6px] top-1/2 -translate-y-1/2 w-3 h-3 rounded-full border-2 border-[var(--color-primary-gold)] bg-white z-20" />
+                                    )}
+
+                                    <Icon
+                                        className="text-[var(--color-primary-gold)] w-20 h-20"
+                                        strokeWidth={1.5}
+                                    />
                                 </div>
-                                
+
                                 {/* Title */}
-                                <h3 className="mt-4 md:mt-6 text-center font-bold text-sm md:text-base lg:text-lg text-[var(--color-primary-gold)] w-full break-words overflow-wrap-anywhere box-border">
+                                <h3 className="text-[var(--color-primary-gold)] font-bold text-xl text-center max-w-[220px] mb-4">
                                     {step.title}
                                 </h3>
-                                
-                                {/* Description */}
-                                {step.description && (
-                                    <p className="mt-2 md:mt-3 text-center text-[10px] md:text-xs lg:text-sm text-[var(--color-secondary-text)] w-full leading-relaxed break-words overflow-wrap-anywhere box-border">
-                                        {step.description}
+
+                                {/* Extra Descriptions for specific steps */}
+                                {index === 2 && (
+                                    <p className="text-center text-gray-500 text-sm max-w-[220px]">
+                                        Execution: Goldkauf wird durchgeführt zum nächsten LBMA Preis PM
+                                    </p>
+                                )}
+                                {index === 3 && (
+                                    <p className="text-center text-gray-500 text-sm max-w-[220px]">
+                                        Settlement: Einlagerung und Gutschrift auf dem Kundendepot
                                     </p>
                                 )}
                             </div>
-                            
-                            {/* Connector Line - только на lg и больше, скрыта на max-lg, может уменьшаться */}
-                            {!isLast && (
-                                <div className="hidden lg:flex items-center justify-center pt-[70px] md:pt-[80px] lg:pt-[90px] xl:pt-[100px] flex-shrink min-w-[8px] md:min-w-[12px] lg:min-w-[16px] xl:min-w-[24px]">
-                                    <div className="flex items-center w-full">
-                                        <div className="w-1 h-1 md:w-1.5 md:h-1.5 lg:w-2 lg:h-2 rounded-full bg-[var(--color-primary-gold)] flex-shrink-0"></div>
-                                        <div className="w-4 md:w-6 lg:w-8 xl:w-16 h-0.5 bg-[var(--color-primary-gold)] flex-shrink"></div>
-                                        <div className="w-1 h-1 md:w-1.5 md:h-1.5 lg:w-2 lg:h-2 rounded-full bg-[var(--color-primary-gold)] flex-shrink-0"></div>
-                                    </div>
-                                </div>
-                            )}
-                        </Fragment>
-                    );
-                })}
+                        );
+                    })}
+                </div>
+
+                <div>
+                    <Button className="bg-[var(--color-primary-gold)] text-white px-12 py-4 rounded-md font-bold uppercase tracking-wider">
+                        OPEN ACCOUNT
+                    </Button>
+                </div>
             </div>
         </section>
     )

@@ -28,7 +28,7 @@ const OurProducts = () => {
           </div>
           <div className="w-[calc(50%-6rem)] h-full bg-[#e1e1e1] opacity-60" />
         </div>
-        <div className="flex flex-col justify-end text-white -translate-y-36 w-full h-full relative before:absolute before:inset-0 before:bg-[#045589] before:opacity-60 before:-z-10 p-24 pb-48">
+        <div className="flex flex-col justify-end text-white -translate-y-36 w-full h-full relative before:absolute before:inset-0 before:bg-[#5D9BC9] before:opacity-60 before:-z-10 p-24 pb-48">
           <h2 className="uppercase text-4xl max-md:text-2xl font-bold">
             {t("goldkaufplanTitle")}
           </h2>
