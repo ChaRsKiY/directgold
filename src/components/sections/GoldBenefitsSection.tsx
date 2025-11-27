@@ -9,13 +9,13 @@ const archivo = Archivo();
 
 const GoldBenefitsSection = () => {
     return (
-        <section className="py-20 relative text-white px-[10%]">
+        <section className="py-12 md:py-20 relative text-white px-[5%] md:px-[10%]">
             <Image src="/mockups/mock2.jpg" alt="Dominanz" fill className="object-cover -z-10" />
             <div className="absolute inset-0 bg-black/30 -z-5" />
-            <div className="grid grid-cols-2 m-auto max-w-7xl gap-12 h-[60vh] max-h-[600px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 m-auto max-w-7xl gap-8 md:gap-12 h-auto md:h-[60vh] md:max-h-[600px]">
                 <div className="flex flex-col h-full">
                     <MotionH2
-                        className="text-6xl max-md:text-4xl font-bold mb-12 max-w-7xl mx-auto"
+                        className="text-4xl md:text-6xl font-bold mb-8 md:mb-12 max-w-7xl mx-auto"
                         initial={{ y: 30, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true }}
@@ -23,25 +23,31 @@ const GoldBenefitsSection = () => {
                     >
                         Essential Gold Benefits.
                     </MotionH2>
-                    <div className="flex flex-1 gap-8">
-                        <div className="w-1 h-full bg-[#5D9BC9]/40 rounded-full" />
-                        <div className="flex-1 flex flex-col justify-between relative">
-                            <div className={cn("-translate-x-[80px] -translate-y-[110px] absolute top-0 left-0 w-full h-full text-[var(--color-primary-gold)] rounded-full opacity-30 font-bold text-[22rem] -z-1", archivo.className)}>
+                    <div className="flex flex-1 gap-4 md:gap-8">
+                        <div className="w-1 h-full bg-[#5D9BC9]/40 rounded-full shrink-0" />
+                        <div className="flex-1 flex flex-col justify-between relative gap-8 md:gap-0">
+                            <div className={cn(
+                                "absolute top-0 left-0 w-full h-full text-[var(--color-primary-gold)] rounded-full opacity-30 font-bold -z-1 pointer-events-none",
+                                "text-[12rem] md:text-[22rem]",
+                                "-translate-x-[20px] md:-translate-x-[80px]",
+                                "-translate-y-[40px] md:-translate-y-[110px]",
+                                archivo.className
+                            )}>
                                 4
                             </div>
                             <div />
-                            <div className="flex-col flex gap-4">
+                            <div className="flex-col flex gap-4 relative z-10">
                                 <h2 className="font-bold text-xl">Sicherste Lagerung</h2>
                                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores similique earum aperiam ratione dolorum totam in porro sunt recusandae, vitae, provident vero quis nulla id est quibusdam, qui ad quo?</p>
                             </div>
-                            <div className="flex items-center justify-center">
+                            <div className="flex items-center justify-start md:justify-center mt-4 md:mt-0 relative z-10">
                                 <Button variant="white">Get in touch</Button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="flex items-center justify-center flex-1">
-                    <div className="h-full text-9xl w-full flex items-center justify-center relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#5D9BC9] before:to-transparent before:opacity-40 before:-z-10 p-12 pb-32">
+                <div className="flex items-center justify-center flex-1 mt-8 md:mt-0">
+                    <div className="h-64 md:h-full text-6xl md:text-9xl w-full flex items-center justify-center relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#5D9BC9] before:to-transparent before:opacity-40 before:-z-10 p-8 md:p-12 pb-16 md:pb-32 rounded-2xl md:rounded-none overflow-hidden md:overflow-visible">
                         <LuShieldCheck />
                     </div>
                 </div>
