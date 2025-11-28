@@ -1,32 +1,45 @@
 import { cn } from "@/lib/utils";
 import { Archivo } from "next/font/google"
 import Image from "next/image";
+import { MotionDiv } from "../motion";
 
 const archivo = Archivo();
 
 const ZitatBlockSection = () => {
     return (
-        <div className="py-20 px-[10%] relative">
+        <div className="py-12 md:py-20 px-[5%] md:px-[10%] relative overflow-hidden">
             <div className="absolute inset-0 bg-white mix-blend-saturation -z-1" />
             <div className="m-auto max-w-7xl">
-                <div className="w-1/2 pr-24 relative">
-                        <div className={cn("absolute right-0 bottom-0 font-bold rotate-180 text-[var(--color-primary-text)] text-[20rem] -translate-x-10 translate-y-24", archivo.className)}>
-                            “
-                        </div>
-                    <div className="bg-[#e1e1e1] p-12 py-32 flex flex-col justify-center items-center">
-                        <h2 className="text-center text-[var(--color-primary-text)] text-bold text-3xl">
+                <div className="w-full md:w-3/4 lg:w-1/2 md:pr-24 relative">
+                    <MotionDiv
+                        className={cn("absolute right-0 bottom-0 font-bold text-[var(--color-primary-text)] text-[10rem] md:text-[20rem] -translate-x-4 md:-translate-x-10 translate-y-12 md:translate-y-24 z-10 pointer-events-none", archivo.className)}
+                        initial={{ opacity: 0, rotate: 180, scale: 0.8 }}
+                        whileInView={{ opacity: 1, rotate: 180, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        “
+                    </MotionDiv>
+                    <MotionDiv
+                        className="bg-[#e1e1e1] p-8 md:p-12 py-16 md:py-32 flex flex-col justify-center items-center relative z-0"
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                    >
+                        <h2 className="text-center text-[var(--color-primary-text)] text-bold text-xl md:text-3xl">
                             Wer Sicherheit will, darf sich nicht in Illusionen wiegen.
                         </h2>
-                        <div className="w-32 h-1 bg-[var(--color-primary-gold)] my-12" />
-                        <div className="flex gap-5 items-center">
-                            <Image src="/zitat.png" alt="Zitat" width={80} height={80} />
-                            <p className="text-[var(--color-secondary-text)]">Lucius Annaeus Seneca<br/>römischer Philosoph, Staatsmann,<br/>
-                            4 v. Chr. - 65 n. Chr.</p>
+                        <div className="w-24 md:w-32 h-1 bg-[var(--color-primary-gold)] my-8 md:my-12" />
+                        <div className="flex flex-col md:flex-row gap-5 items-center text-center md:text-left">
+                            <Image src="/zitat.png" alt="Zitat" width={80} height={80} className="shrink-0" />
+                            <p className="text-[var(--color-secondary-text)] text-sm md:text-base">Lucius Annaeus Seneca<br />römischer Philosoph, Staatsmann,<br />
+                                4 v. Chr. - 65 n. Chr.</p>
                         </div>
-                    </div>
+                    </MotionDiv>
                 </div>
             </div>
-            
+
         </div>
     );
 };

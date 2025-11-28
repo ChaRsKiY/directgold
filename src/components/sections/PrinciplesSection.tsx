@@ -43,7 +43,7 @@ export function PrinciplesSection() {
         {/* Left Side - Content */}
         <div className="w-full lg:w-1/2 flex flex-col justify-between text-white">
           <div>
-            <MotionH1
+            <MotionDiv
               className="mb-2"
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -52,16 +52,22 @@ export function PrinciplesSection() {
             >
               <h2 className="text-5xl md:text-6xl font-bold mb-2">Grundsätze</h2>
               <div className="w-24 h-1 bg-[var(--color-primary-gold)] mb-4" />
-            </MotionH1>
+            </MotionDiv>
             <p className="text-xl md:text-2xl font-light text-gray-200">What we do</p>
           </div>
 
           <div className="mt-12 lg:mt-auto">
-            <div className="mb-8">
+            <MotionDiv
+              className="mb-8"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               <p className="text-2xl md:text-3xl font-light tracking-wide uppercase">Step on our journey</p>
               <p className="text-2xl md:text-3xl font-light tracking-wide uppercase mt-2">Let this be the first</p>
               <p className="text-5xl md:text-7xl font-bold tracking-widest mt-4 uppercase">Together.</p>
-            </div>
+            </MotionDiv>
 
             <Link href="/account/open">
               <Button variant="blue" className="w-full md:w-auto min-w-[200px]">

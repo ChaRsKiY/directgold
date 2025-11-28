@@ -63,15 +63,13 @@ const SecurityAndTechnologySection = () => {
         {/* Left Side - Content */}
         <div className="w-full lg:w-1/2 text-white flex flex-col justify-between">
           <MotionH2
-            className="mb-8"
+            className="mb-8 text-5xl md:text-6xl font-bold leading-tight"
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-5xl md:text-6xl font-bold leading-tight">
-              Sicherheit &<br />Technologie
-            </h2>
+            Sicherheit &<br />Technologie
           </MotionH2>
 
           <MotionDiv
@@ -100,7 +98,13 @@ const SecurityAndTechnologySection = () => {
 
         {/* Right Side - Carousel */}
         <div className="w-full lg:w-1/2">
-          <div className="bg-gradient-to-b from-[#5D9BC9]/40 to-transparent p-8 md:p-12 min-h-[500px] flex flex-col justify-between relative overflow-hidden">
+          <MotionDiv
+            className="bg-gradient-to-b from-[#5D9BC9]/40 to-transparent p-8 md:p-12 min-h-[500px] flex flex-col justify-between relative overflow-hidden"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
             {/* Gradient Overlay */}
             <div className="absolute inset-0 pointer-events-none" />
 
@@ -158,7 +162,7 @@ const SecurityAndTechnologySection = () => {
                 </svg>
               </button>
             </div>
-          </div>
+          </MotionDiv>
         </div>
 
       </div>
