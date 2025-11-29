@@ -49,7 +49,7 @@ const BlocksSection = () => {
     };
 
     return (
-        <section className="px-[10%] py-20 bg-[#FFFDF5]">
+        <section className="px-[10%] py-20 bg-gradient-to-b from-white to-[#fef4de]">
             <div className="max-w-7xl mx-auto">
                 <MotionDiv
                     className="font-bold text-[var(--color-primary-gold)] mb-16"

@@ -70,7 +70,7 @@ export function PrinciplesSection() {
             </MotionDiv>
 
             <Link href="/account/open">
-              <Button variant="blue" className="w-full md:w-auto min-w-[200px]">
+              <Button variant="blue" className="w-full">
                 OPEN ACCOUNT
               </Button>
             </Link>

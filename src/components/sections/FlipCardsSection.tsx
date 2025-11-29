@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { MotionSection, MotionH2, MotionDiv } from "../motion";
 import { useTranslations } from "next-intl";
@@ -18,7 +18,6 @@ interface FlipCard {
 const FlipCardsSection = () => {
   const t = useTranslations("services");
   const [flippedIndex, setFlippedIndex] = useState<number | null>(null);
-  const textRefs = useRef<(HTMLParagraphElement | null)[]>([]);
 
   // Function to truncate text by sentences
   const truncateBySentences = (text: string, maxHeight: number, element: HTMLParagraphElement): string => {
@@ -50,19 +49,19 @@ const FlipCardsSection = () => {
 
   const cards: FlipCard[] = [
     {
-      image: "/mockups/mock2.jpg",
+      image: "/lake_bg.jpeg",
       titleKey: "kaufVerkaufTitle",
       descriptionKey: "kaufVerkaufDescription",
       shortDescriptionKey: "kaufVerkaufShort",
     },
     {
-      image: "/mockups/mock3.png",
+      image: "/lake_bg.jpeg",
       titleKey: "lagerungTitle",
       descriptionKey: "lagerungDescription",
       shortDescriptionKey: "lagerungShort",
     },
     {
-      image: "/mockups/mock4.jpg",
+      image: "/lake_bg.jpeg",
       titleKey: "lieferungTitle",
       descriptionKey: "lieferungDescription",
       shortDescriptionKey: "lieferungShort",
@@ -78,30 +77,9 @@ const FlipCardsSection = () => {
     setFlippedIndex(index);
   };
 
-  // Adjust text on flip
-  useEffect(() => {
-    if (flippedIndex !== null) {
-      // Small delay to ensure element is rendered
-      const timeoutId = setTimeout(() => {
-        const element = textRefs.current[flippedIndex];
-        if (element) {
-          const container = element.parentElement?.parentElement;
-          if (container) {
-            const maxHeight = container.clientHeight - 96; // padding
-            const fullText = t(cards[flippedIndex].descriptionKey);
-            const truncated = truncateBySentences(fullText, maxHeight, element);
-            element.textContent = truncated;
-          }
-        }
-      }, 100);
-
-      return () => clearTimeout(timeoutId);
-    }
-  }, [flippedIndex, t]);
-
   return (
     <MotionSection
-      className="px-[10%] py-20 bg-[#FFFDF5]"
+      className="px-[10%] py-20 bg-gradient-to-b from-white to-[#fef4de]"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -131,7 +109,7 @@ const FlipCardsSection = () => {
           {cards.map((card, index) => (
             <motion.div
               key={index}
-              className={`relative w-full cursor-pointer max-h-[600px] mb-6 md:mb-0 aspect-[2/3]`}
+              className={`relative w-full cursor-pointer mb-6 md:mb-0`}
               onClick={() => handleCardClick(index)}
               whileHover={{ scale: flippedIndex === index ? 1 : 1.02 }}
               transition={{ duration: 0.2 }}
@@ -154,7 +132,7 @@ const FlipCardsSection = () => {
                 }}
               >
                 <motion.div
-                  className="relative w-full h-full"
+                  className="relative w-full h-full grid grid-cols-1"
                   animate={{
                     rotateY: flippedIndex === index ? 180 : 0,
                   }}
@@ -166,7 +144,7 @@ const FlipCardsSection = () => {
                 >
                   {/* Front Side */}
                   <div
-                    className="absolute inset-0 w-full h-full overflow-hidden"
+                    className="col-start-1 row-start-1 w-full min-h-[500px]"
                     style={{
                       backfaceVisibility: "hidden",
                       WebkitBackfaceVisibility: "hidden",
@@ -179,6 +157,9 @@ const FlipCardsSection = () => {
                         alt={t(card.titleKey)}
                         fill
                         className="object-cover"
+                        style={{
+                          objectPosition: index === 0 ? "20% 50%" : index === 1 ? "50% 50%" : "80% 50%"
+                        }}
                       />
                       {/* Dark overlay for text readability */}
                       <div className="absolute inset-0 bg-black/20" />
@@ -202,7 +183,7 @@ const FlipCardsSection = () => {
 
                   {/* Back Side */}
                   <div
-                    className="absolute inset-0 w-full h-full overflow-hidden"
+                    className="col-start-1 row-start-1 w-full min-h-[500px]"
                     style={{
                       backfaceVisibility: "hidden",
                       WebkitBackfaceVisibility: "hidden",
@@ -219,19 +200,12 @@ const FlipCardsSection = () => {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: flippedIndex === index ? 1 : 0 }}
                         transition={{ duration: 0.3, delay: 0.3 }}
-                        className="flex-grow overflow-hidden"
+                        className="flex-grow"
                       >
                         <p
-                          ref={(el) => {
-                            textRefs.current[index] = el;
-                          }}
                           className="text-lg text-gray-300 leading-relaxed"
-                          style={{
-                            maxHeight: "100%",
-                            overflow: "hidden"
-                          }}
                         >
-                          {flippedIndex === index ? t(card.descriptionKey) : ""}
+                          {t(card.descriptionKey)}
                         </p>
                       </MotionDiv>
                     </div>

@@ -8,7 +8,7 @@ const archivo = Archivo();
 const ZitatBlockSection = () => {
     return (
         <div className="py-12 md:py-20 px-[5%] md:px-[10%] relative overflow-hidden">
-            <div className="absolute inset-0 bg-white mix-blend-saturation -z-1" />
+            <div className="absolute inset-0 bg-[#e0e0e0] mix-blend-saturation -z-1" />
             <div className="m-auto max-w-7xl">
                 <div className="w-full md:w-3/4 lg:w-1/2 md:pr-24 relative">
                     <MotionDiv

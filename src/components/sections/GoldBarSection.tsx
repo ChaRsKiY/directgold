@@ -8,18 +8,18 @@ export default async function GoldBarSection() {
   const t = await getTranslations("goldBar");
   return (
     <section
-      className="relative overflow-hidden min-h-[700px] h-screen bg-gradient-to-r from-[var(--color-light-bg)] via-[var(--color-light-bg)] to-[#DEDBD5] px-[10%]"
+      className="relative overflow-hidden min-h-[700px] h-screen bg-gradient-to-r from-[var(--color-light-bg)] via-[var(--color-light-bg)] to-[#cfcec9] px-[10%]"
     >
       {/* Gold bar image - positioned right, ~50% width, slightly overlapping screen */}
       <div className="absolute right-0 top-0 bottom-0 w-[50%] max-lg:w-[75%] max-sm:w-[85%] h-full flex items-center justify-end pointer-events-none z-10">
         <div className="relative w-full h-full">
-          <Image 
-            src="/goldbarbg.png" 
-            alt="Gold Bar" 
-            width={1000} 
-            height={1000} 
+          <Image
+            src="/goldbarbg.png"
+            alt="Gold Bar"
+            width={1000}
+            height={1000}
             className="object-contain object-right w-full h-full max-lg:translate-y-[10%]"
-            style={{ 
+            style={{
               transform: 'translateX(10%)',
               maxHeight: '100%'
             }}
@@ -39,7 +39,7 @@ export default async function GoldBarSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <MotionDiv
-              className="min-w-3 h-72 bg-[var(--color-primary-gold)] rounded-lg max-lg:hidden"
+              className="min-w-1 h-72 bg-[var(--color-primary-gold)] rounded-lg max-lg:hidden"
               initial={{ scaleY: 0 }}
               whileInView={{ scaleY: 1 }}
               viewport={{ once: true }}
@@ -56,7 +56,7 @@ export default async function GoldBarSection() {
                 {t("question1")}
               </MotionH2>
               <MotionH3
-                className="text-base text-[var(--color-secondary-text)] font-normal max-lg:hidden"
+                className="text-xl text-[var(--color-secondary-text)] font-normal max-lg:hidden"
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
@@ -65,7 +65,7 @@ export default async function GoldBarSection() {
                 {t("answer1")}
               </MotionH3>
               <MotionH3
-                className="text-base text-left text-[var(--color-secondary-text)] font-normal hidden max-lg:block max-md:text-sm"
+                className="text-xl text-left text-[var(--color-secondary-text)] font-normal hidden max-lg:block max-md:text-base"
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}

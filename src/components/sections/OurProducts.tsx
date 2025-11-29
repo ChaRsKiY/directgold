@@ -10,9 +10,9 @@ const OurProducts = () => {
 
   return (
     <section
-      className="px-[10%] pb-20 bg-gradient-to-b to-[var(--color-primary-gold)]/30 from-transparent relative"
+      className="px-[10%] pb-20 bg-gradient-to-b to-[var(--color-primary-gold)]/30 from-[#e5e5e5] relative"
     >
-      <div className="md:hidden mt-20">
+      <div className="md:hidden pt-20">
         <div className="flex flex-col mb-12">
           <MotionH1
             className="text-4xl md:text-6xl font-bold"
@@ -28,7 +28,7 @@ const OurProducts = () => {
         </div>
         <div className="flex flex-col gap-6 mb-12">
           <MotionDiv
-            className="flex flex-col justify-end text-white w-full h-full relative before:absolute before:inset-0 before:bg-[#5D9BC9] before:opacity-60 before:-z-10 p-12"
+            className="flex flex-col justify-end text-white w-full h-full relative before:absolute before:inset-0 before:bg-[#5D9BC9] before:opacity-70 before:-z-10 p-12"
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -47,12 +47,12 @@ const OurProducts = () => {
                 </span>
               </div>
             </div>
-            <div className="font-arkitech absolute right-0 top-0 text-[#e1e1e1] text-[24rem] -translate-y-72 translate-x-2 font-bold uppercase -z-25">
+            <div className="font-arkitech absolute right-0 top-0 text-[#cfcfce] text-[24rem] -translate-y-72 translate-x-2 font-bold uppercase -z-25">
               1
             </div>
           </MotionDiv>
           <MotionDiv
-            className="flex flex-col text-right text-white w-full h-full relative before:absolute before:inset-0 before:bg-[#412b0d] before:opacity-60 before:-z-10 p-12"
+            className="flex flex-col text-right text-white w-full h-full relative before:absolute before:inset-0 before:bg-[#412b0d] before:opacity-70 before:-z-10 p-12"
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
@@ -71,7 +71,7 @@ const OurProducts = () => {
                 </span>
               </div>
             </div>
-            <div className="font-arkitech absolute left-0 top-0 mt-12 text-[#e1e1e1] text-[24rem] font-bold uppercase -translate-x-8 -translate-y-56 -z-25">
+            <div className="font-arkitech absolute left-0 top-0 mt-12 text-[#cfcfce] text-[24rem] font-bold uppercase -translate-x-8 -translate-y-56 -z-25">
               2
             </div>
           </MotionDiv>
@@ -79,7 +79,7 @@ const OurProducts = () => {
       </div>
       <div className="grid grid-cols-2 gap-48 relative m-auto max-w-7xl max-[1100px]:gap-16 max-md:hidden">
         <MotionDiv
-          className="font-arkitech absolute left-0 top-0 mt-12 text-[#e1e1e1] text-[24rem] -translate-y-32 -translate-x-10 font-bold uppercase"
+          className="font-arkitech absolute left-0 top-0 mt-12 text-[#cfcfce] text-[24rem] -translate-y-32 -translate-x-10 font-bold uppercase"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -88,7 +88,7 @@ const OurProducts = () => {
           1
         </MotionDiv>
         <MotionDiv
-          className="font-arkitech absolute right-0 bottom-0 mt-12 text-[#e1e1e1] text-[24rem] font-bold uppercase translate-x-20 -translate-y-36 -z-25"
+          className="font-arkitech absolute right-0 bottom-0 mt-12 text-[#cfcfce] text-[24rem] font-bold uppercase translate-x-20 -translate-y-36 -z-25"
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -112,10 +112,10 @@ const OurProducts = () => {
               <h2 className="text-xl font-bold text-[var(--color-primary-text)] max-lg:text-base">DIRECTGOLD bestseller <br /> Edelmetall Anlagen</h2>
             </div>
           </div>
-          <div className="w-[calc(50%-6rem)] h-full bg-[#e1e1e1] opacity-60" />
+          <div className="w-[calc(50%-6rem)] h-full bg-[#cfcfce] opacity-60" />
         </div>
         <MotionDiv
-          className="flex flex-col justify-end text-white -translate-y-36 w-full h-full relative before:absolute before:inset-0 before:bg-[#5D9BC9] before:opacity-60 before:-z-10 px-24 pb-48 max-[1300px]:px-12"
+          className="flex flex-col justify-end text-white -translate-y-36 w-full h-full relative before:absolute before:inset-0 before:bg-[#5D9BC9] before:opacity-70 before:-z-10 px-24 pb-48 max-[1300px]:px-12"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -136,7 +136,7 @@ const OurProducts = () => {
           </div>
         </MotionDiv>
         <MotionDiv
-          className="flex flex-col min-h-[850px] text-right text-white translate-y-64 w-full h-full relative before:absolute before:inset-0 before:bg-[#412b0d] before:opacity-60 before:-z-10 px-24 pt-48 max-[1300px]:px-12"
+          className="flex flex-col min-h-[850px] text-right text-white translate-y-64 w-full h-full relative before:absolute before:inset-0 before:bg-[#412b0d] before:opacity-70 before:-z-10 px-24 pt-48 max-[1300px]:px-12"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}

@@ -2,8 +2,10 @@
 @import "tw-animate-css";
 
 @font-face {
-  font-family: arkitech; /* set name */
-  src: url(/Arkitech.ttf); /* url of the font */
+  font-family: arkitech;
+  /* set name */
+  src: url(/Arkitech.ttf);
+  /* url of the font */
 }
 
 @custom-variant dark (&:is(.dark *));
@@ -22,7 +24,7 @@
 :root {
   /* DIRECTGOLD Color Palette */
   --color-dark-bg: #1a1a1a;
-  --color-light-bg: #F3F3F1;
+  --color-light-bg: #d0cfca;
   --color-primary-gold: #D5BE7E;
   --color-primary-gold-light: #dcc7ad;
   --color-primary-text: #7d7d7d;

@@ -52,7 +52,7 @@ const SecurityAndTechnologySection = () => {
           src="/mockups/mock5.png"
           alt="Security Background"
           fill
-          className="object-cover brightness-50"
+          className="object-cover brightness-90"
           priority
         />
         <div className="absolute inset-0 bg-black/40" />
@@ -108,23 +108,40 @@ const SecurityAndTechnologySection = () => {
             {/* Gradient Overlay */}
             <div className="absolute inset-0 pointer-events-none" />
 
-            <div className="relative z-10">
-              <AnimatePresence mode="wait">
-                <MotionDiv
-                  key={currentSlide}
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -20 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-6 leading-snug">
-                    {slides[currentSlide].title}
-                  </h3>
-                  <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                    {slides[currentSlide].text}
-                  </p>
-                </MotionDiv>
-              </AnimatePresence>
+            <div className="relative z-10 grid grid-cols-1">
+              {/* Spacer to force height based on tallest slide */}
+              <div className="col-start-1 row-start-1 invisible pointer-events-none grid grid-cols-1">
+                {slides.map((slide) => (
+                  <div key={slide.id} className="col-start-1 row-start-1">
+                    <h3 className="text-xl md:text-2xl font-bold mb-6 leading-snug">
+                      {slide.title}
+                    </h3>
+                    <p className="text-base md:text-lg leading-relaxed">
+                      {slide.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
+              {/* Actual Animated Content */}
+              <div className="col-start-1 row-start-1">
+                <AnimatePresence mode="wait">
+                  <MotionDiv
+                    key={currentSlide}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    exit={{ opacity: 0, x: -20 }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    <h3 className="text-xl md:text-2xl font-bold text-white mb-6 leading-snug">
+                      {slides[currentSlide].title}
+                    </h3>
+                    <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+                      {slides[currentSlide].text}
+                    </p>
+                  </MotionDiv>
+                </AnimatePresence>
+              </div>
             </div>
 
             <div className="relative z-10 flex items-center justify-between mt-8 pt-8 border-t border-white/10">
