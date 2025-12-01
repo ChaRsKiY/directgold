@@ -32,7 +32,7 @@ const ZitatBlockSection = () => {
                         </h2>
                         <div className="w-24 md:w-32 h-1 bg-[var(--color-primary-gold)] my-8 md:my-12" />
                         <div className="flex flex-col md:flex-row gap-5 items-center text-center md:text-left">
-                            <Image src="/zitat.png" alt="Zitat" width={80} height={80} className="shrink-0" />
+                            <Image src="/quote.png" alt="Zitat" width={80} height={80} className="shrink-0" />
                             <p className="text-[#62615f] text-sm md:text-base">Lucius Annaeus Seneca<br />römischer Philosoph, Staatsmann,<br />
                                 4 v. Chr. - 65 n. Chr.</p>
                         </div>
