@@ -1,10 +1,14 @@
 import Image from "next/image";
 import { MotionH2 } from "@/components/motion/MotionH2";
 import { MotionH3 } from "../motion";
+import ProgressIndicator from "../ui/ProgressIndicator";
 
 const DominanzSection = () => {
     return (
         <section className="py-12 md:py-20 relative text-white px-[5%] md:px-[10%]">
+            <div className="absolute left-0 bottom-0 p-8">
+                <ProgressIndicator activeIndex={1} />
+            </div>
             <Image src="/mockups/mock7.png" alt="Dominanz" fill className="object-cover -z-10" />
             <div className="absolute inset-0 bg-black/30 -z-5" />
             <div className="grid grid-cols-1 lg:grid-cols-2 m-auto max-w-7xl gap-8 md:gap-12 min-h-[60vh]">

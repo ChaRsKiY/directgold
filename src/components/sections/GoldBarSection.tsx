@@ -3,6 +3,7 @@ import CTASection from "./CTASection";
 import { IoMdArrowDropright } from "react-icons/io";
 import { MotionDiv, MotionH2, MotionH3 } from "../motion";
 import { getTranslations } from "next-intl/server";
+import ProgressIndicator from "../ui/ProgressIndicator";
 
 export default async function GoldBarSection() {
   const t = await getTranslations("goldBar");
@@ -10,6 +11,9 @@ export default async function GoldBarSection() {
     <section
       className="relative overflow-hidden min-h-[700px] h-screen bg-gradient-to-r from-[var(--color-light-bg)] via-[var(--color-light-bg)] to-[#cfcec9] px-[10%]"
     >
+      <div className="absolute left-0 bottom-0 p-8">
+        <ProgressIndicator activeIndex={0} />
+      </div>
       {/* Gold bar image - positioned right, ~50% width, slightly overlapping screen */}
       <div className="absolute right-0 top-0 bottom-0 w-[50%] max-lg:w-[75%] max-sm:w-[85%] h-full flex items-center justify-end pointer-events-none z-10">
         <div className="relative w-full h-full">

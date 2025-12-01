@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
 import { ArrowLeft } from "lucide-react";
 import Button from "../ui/Button";
+import ProgressIndicator from "../ui/ProgressIndicator";
 
 interface FlipCard {
   image: string;
@@ -79,12 +80,15 @@ const FlipCardsSection = () => {
 
   return (
     <MotionSection
-      className="px-[10%] py-20 bg-gradient-to-b from-white to-[#fef4de]"
+      className="px-[10%] py-20 bg-gradient-to-b from-white to-[#fef4de] relative"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
     >
+      <div className="absolute left-0 bottom-0 p-8">
+        <ProgressIndicator activeIndex={5} />
+      </div>
       <div className="max-w-7xl mx-auto">
         <h2 className="text-[var(--color-primary-gold)] font-bold text-5xl mb-12">
           Services

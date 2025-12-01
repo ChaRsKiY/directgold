@@ -7,6 +7,7 @@ import { MotionSection, MotionDiv, MotionH2 } from "../motion";
 import { useTranslations } from "next-intl";
 import Button from "../ui/Button";
 import { AnimatePresence } from "framer-motion";
+import ProgressIndicator from "../ui/ProgressIndicator";
 
 const slides = [
   {
@@ -46,6 +47,9 @@ const SecurityAndTechnologySection = () => {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
     >
+      <div className="absolute left-0 bottom-0 p-8 z-100">
+        <ProgressIndicator activeIndex={6} />
+      </div>
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image

@@ -4,13 +4,17 @@ import { LuShieldCheck } from "react-icons/lu";
 import Button from "../ui/Button";
 import { Archivo } from "next/font/google"
 import { cn } from "@/lib/utils";
+import ProgressIndicator from "../ui/ProgressIndicator";
 
 const archivo = Archivo();
 
 const GoldBenefitsSection = () => {
     return (
         <section className="py-12 md:py-20 relative text-white px-[5%] md:px-[10%]">
-            <Image src="/mockups/mock2.jpg" alt="Dominanz" fill className="object-cover -z-10" />
+            <div className="absolute left-0 bottom-0 p-8">
+                <ProgressIndicator activeIndex={3} />
+            </div>
+            <Image src="/buildings.png" alt="Dominanz" fill className="object-cover -z-10" />
             <div className="absolute inset-0 bg-black/30 -z-5" />
             <div className="grid grid-cols-1 md:grid-cols-2 m-auto max-w-7xl gap-8 md:gap-12 h-auto md:h-[60vh] md:max-h-[600px]">
                 <div className="flex flex-col h-full">
@@ -66,13 +70,13 @@ const GoldBenefitsSection = () => {
                 </div>
                 <div className="flex items-center justify-center flex-1 mt-8 md:mt-0">
                     <MotionDiv
-                        className="h-64 md:h-full text-6xl md:text-9xl w-full flex items-center justify-center relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#5D9BC9] before:to-transparent before:opacity-40 before:-z-10 p-8 md:p-12 pb-16 md:pb-32 rounded-2xl md:rounded-none overflow-hidden md:overflow-visible"
+                        className="h-64 md:h-full text-[9rem] md:text-[13rem] w-full flex items-center justify-center relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#5D9BC9] before:to-transparent before:opacity-40 before:-z-10 p-8 md:p-12 pb-16 md:pb-32 overflow-hidden md:overflow-visible"
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        <LuShieldCheck />
+                        <LuShieldCheck color="#999999" />
                     </MotionDiv>
                 </div>
             </div>

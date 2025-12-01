@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import Button from "../ui/Button";
 import { MotionH1, MotionDiv, MotionH2, MotionH3 } from "../motion";
+import ProgressIndicator from "../ui/ProgressIndicator";
 
 const OurProducts = () => {
   const t = useTranslations("ourProducts");
@@ -12,6 +13,9 @@ const OurProducts = () => {
     <section
       className="px-[10%] pb-20 bg-gradient-to-b to-[var(--color-primary-gold)]/30 from-[#e5e5e5] relative"
     >
+      <div className="absolute left-0 bottom-0 top-0 p-8 flex items-center">
+        <ProgressIndicator activeIndex={2} />
+      </div>
       <div className="md:hidden pt-20">
         <div className="flex flex-col mb-12">
           <MotionH1
@@ -79,7 +83,7 @@ const OurProducts = () => {
       </div>
       <div className="grid grid-cols-2 gap-48 relative m-auto max-w-7xl max-[1100px]:gap-16 max-md:hidden">
         <MotionDiv
-          className="font-arkitech absolute left-0 top-0 mt-12 text-[#cfcfce] text-[24rem] -translate-y-32 -translate-x-10 font-bold uppercase"
+          className="font-arkitech  absolute left-0 top-0 mt-12 text-[#cfcfce] text-[24rem] -translate-y-32 -translate-x-10 font-bold uppercase"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}

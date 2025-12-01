@@ -8,6 +8,7 @@ import Button from '../ui/Button'
 import { useTranslations } from "next-intl"
 import { MotionSection, MotionH1, MotionDiv } from '../motion'
 import { AnimatePresence } from "framer-motion"
+import ProgressIndicator from "../ui/ProgressIndicator"
 
 export function PrinciplesSection() {
   const t = useTranslations("principles")
@@ -26,6 +27,9 @@ export function PrinciplesSection() {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
     >
+      <div className="absolute left-0 bottom-0 p-8 z-100">
+        <ProgressIndicator activeIndex={4} />
+      </div>
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
@@ -79,7 +83,7 @@ export function PrinciplesSection() {
 
         {/* Right Side - Accordion */}
         <div className="w-full lg:w-1/2">
-          <div className="bg-black/60 backdrop-blur-sm p-8 md:p-12 rounded-lg border border-white/10">
+          <div className="bg-black/60 backdrop-blur-sm p-8 md:p-12 border border-white/10">
             <div className="space-y-0 flex flex-col">
               {principlesData.map((principle, index) => {
                 const isOpen = openIndex === index
@@ -103,8 +107,8 @@ export function PrinciplesSection() {
                         <h3 className="text-lg md:text-xl font-medium text-white group-hover:text-[var(--color-primary-gold)] transition-colors">
                           <span className="font-bold">{directPart}</span> {restTitle}
                         </h3>
-                        <div className={`w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-white/70 transition-transform duration-300 ${isOpen ? 'rotate-45' : ''}`}>
-                          <span className="text-sm">+</span>
+                        <div className={`w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-white/70 transition-transform duration-300`}>
+                          <span className="text-sm">{isOpen ? '-' : '+'}</span>
                         </div>
                       </div>
                     </button>
@@ -126,7 +130,7 @@ export function PrinciplesSection() {
                               {t(principle.long)}
                             </p>
                             <Link href={`/principles/${principle.id}`}>
-                              <Button variant="white" className="text-xs px-6 py-2 md:px-8 md:py-3">
+                              <Button variant="white" className="px-4 py-2 md:px-6 md:py-2">
                                 READ MORE
                               </Button>
                             </Link>
