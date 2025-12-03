@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { MotionSection, MotionH2, MotionDiv } from "../motion";
 import { useTranslations } from "next-intl";
 import { motion } from "motion/react";
@@ -14,6 +15,7 @@ interface FlipCard {
   titleKey: string;
   descriptionKey: string;
   shortDescriptionKey: string;
+  link: string;
 }
 
 const FlipCardsSection = () => {
@@ -54,29 +56,23 @@ const FlipCardsSection = () => {
       titleKey: "kaufVerkaufTitle",
       descriptionKey: "kaufVerkaufDescription",
       shortDescriptionKey: "kaufVerkaufShort",
+      link: "/services/buy-sell",
     },
     {
       image: "/lake_bg.jpeg",
       titleKey: "lagerungTitle",
       descriptionKey: "lagerungDescription",
       shortDescriptionKey: "lagerungShort",
+      link: "/services/storage",
     },
     {
       image: "/lake_bg.jpeg",
       titleKey: "lieferungTitle",
       descriptionKey: "lieferungDescription",
       shortDescriptionKey: "lieferungShort",
+      link: "/services/delivery",
     },
   ];
-
-  const handleCardClick = (index: number) => {
-    setFlippedIndex(flippedIndex === index ? null : index);
-  };
-
-  const handleReadMore = (e: React.MouseEvent, index: number) => {
-    e.stopPropagation();
-    setFlippedIndex(index);
-  };
 
   return (
     <MotionSection
@@ -114,8 +110,9 @@ const FlipCardsSection = () => {
             <motion.div
               key={index}
               className={`relative w-full cursor-pointer mb-6 md:mb-0`}
-              onClick={() => handleCardClick(index)}
-              whileHover={{ scale: flippedIndex === index ? 1 : 1.02 }}
+              onMouseEnter={() => setFlippedIndex(index)}
+              onMouseLeave={() => setFlippedIndex(null)}
+              whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.2 }}
               variants={{
                 hidden: { y: 30, opacity: 0 },
@@ -148,7 +145,7 @@ const FlipCardsSection = () => {
                 >
                   {/* Front Side */}
                   <div
-                    className="col-start-1 row-start-1 w-full min-h-[500px]"
+                    className="col-start-1 row-start-1 w-full aspect-[1/2]"
                     style={{
                       backfaceVisibility: "hidden",
                       WebkitBackfaceVisibility: "hidden",
@@ -162,7 +159,7 @@ const FlipCardsSection = () => {
                         fill
                         className="object-cover"
                         style={{
-                          objectPosition: index === 0 ? "20% 50%" : index === 1 ? "50% 50%" : "80% 50%"
+                          objectPosition: index === 0 ? "0% 50%" : index === 1 ? "50% 50%" : "100% 50%"
                         }}
                       />
                       {/* Dark overlay for text readability */}
@@ -174,20 +171,14 @@ const FlipCardsSection = () => {
                         </h3>
                         <div className="w-16 h-1 bg-[#5D9BC9]" />
 
-                        <Button
-                          variant="white"
-                          className="w-full"
-                          onClick={(e: any) => handleReadMore(e, index)}
-                        >
-                          Read More
-                        </Button>
+
                       </div>
                     </div>
                   </div>
 
                   {/* Back Side */}
                   <div
-                    className="col-start-1 row-start-1 w-full min-h-[500px]"
+                    className="col-start-1 row-start-1 w-full h-full"
                     style={{
                       backfaceVisibility: "hidden",
                       WebkitBackfaceVisibility: "hidden",
@@ -212,6 +203,14 @@ const FlipCardsSection = () => {
                           {t(card.descriptionKey)}
                         </p>
                       </MotionDiv>
+
+                      <div className="mt-auto pt-6">
+                        <Link href={card.link} className="w-full block">
+                          <Button variant="white" className="w-full">
+                            Read More
+                          </Button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </motion.div>

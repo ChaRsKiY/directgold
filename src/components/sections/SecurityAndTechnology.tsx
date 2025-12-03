@@ -165,8 +165,8 @@ const SecurityAndTechnologySection = () => {
                     key={index}
                     onClick={() => setCurrentSlide(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index
-                      ? "bg-[var(--color-primary-gold)] w-4 h-4"
-                      : "bg-white/30 hover:bg-white/50"
+                      ? "bg-[var(--color-primary-gold)]"
+                      : "bg-black/35 hover:bg-black/50"
                       }`}
                     aria-label={`Go to slide ${index + 1}`}
                   />

@@ -33,7 +33,7 @@ export function PrinciplesSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/mockups/mock6.jpg"
+          src="/land.jpg"
           alt="Background"
           fill
           className="object-cover brightness-75"
@@ -42,7 +42,7 @@ export function PrinciplesSection() {
         <div className="absolute inset-0 bg-black/20" />
       </div>
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-[5%] flex flex-col lg:flex-row gap-12 lg:gap-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-[5%] flex flex-col lg:flex-row gap-16 lg:gap-32">
 
         {/* Left Side - Content */}
         <div className="w-full lg:w-1/2 flex flex-col justify-between text-white">
@@ -54,8 +54,8 @@ export function PrinciplesSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-5xl md:text-6xl font-bold mb-2">Grundsätze</h2>
-              <div className="w-24 h-1 bg-[var(--color-primary-gold)] mb-4" />
+              <h2 className="text-5xl md:text-6xl font-bold mb-5">Grundsätze</h2>
+              <div className="w-24 h-1 bg-[var(--color-primary-gold)] mb-5" />
             </MotionDiv>
             <p className="text-xl md:text-2xl font-light text-gray-200">What we do</p>
           </div>

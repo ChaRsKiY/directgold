@@ -23,6 +23,7 @@ export default function Header() {
     },
     {
       label: t("infothek"),
+      href: "/info/kaufgebuhr",
       submenu: [
         { href: "/info/kaufgebuhr", label: t("kaufgebuhr") },
         { href: "/info/sammel-einzellagerung", label: t("sammelEinzellagerung") },
@@ -58,11 +59,10 @@ export default function Header() {
           >
             <div className="relative w-6 h-6">
               <svg
-                className={`absolute inset-0 w-6 h-6 transition-all duration-300 ease-in-out ${
-                  isMobileMenuOpen
+                className={`absolute inset-0 w-6 h-6 transition-all duration-300 ease-in-out ${isMobileMenuOpen
                     ? "opacity-100 rotate-0 scale-100"
                     : "opacity-0 rotate-90 scale-0"
-                }`}
+                  }`}
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -73,11 +73,10 @@ export default function Header() {
                 <path d="M6 18L18 6M6 6l12 12" />
               </svg>
               <svg
-                className={`absolute inset-0 w-6 h-6 transition-all duration-300 ease-in-out ${
-                  isMobileMenuOpen
+                className={`absolute inset-0 w-6 h-6 transition-all duration-300 ease-in-out ${isMobileMenuOpen
                     ? "opacity-0 rotate-90 scale-0"
                     : "opacity-100 rotate-0 scale-100"
-                }`}
+                  }`}
                 fill="none"
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -93,9 +92,8 @@ export default function Header() {
       </div>
       {/* Mobile menu с анимацией */}
       <div
-        className={`md:hidden grid transition-all duration-500 ease-out overflow-hidden ${
-          isMobileMenuOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-        }`}
+        className={`md:hidden grid transition-all duration-500 ease-out overflow-hidden ${isMobileMenuOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+          }`}
       >
         <div className="min-h-0">
           <div
@@ -104,16 +102,14 @@ export default function Header() {
           >
             <div className="w-full max-w-full px-4 py-4 overflow-x-hidden box-border">
               <div
-                className={`transition-all duration-300 ease-out ${
-                  isMobileMenuOpen ? "opacity-100 translate-y-0 delay-100" : "opacity-0 -translate-y-2 delay-0"
-                }`}
+                className={`transition-all duration-300 ease-out ${isMobileMenuOpen ? "opacity-100 translate-y-0 delay-100" : "opacity-0 -translate-y-2 delay-0"
+                  }`}
               >
                 <Navigation items={navItems} className="flex flex-col gap-3 w-full" isMobile={true} />
               </div>
               <div
-                className={`mt-4 pt-4 border-t border-gray-700 flex justify-center w-full box-border transition-all duration-300 ease-out ${
-                  isMobileMenuOpen ? "opacity-100 translate-y-0 delay-200" : "opacity-0 -translate-y-2 delay-0"
-                }`}
+                className={`mt-4 pt-4 border-t border-gray-700 flex justify-center w-full box-border transition-all duration-300 ease-out ${isMobileMenuOpen ? "opacity-100 translate-y-0 delay-200" : "opacity-0 -translate-y-2 delay-0"
+                  }`}
               >
                 <LanguageSwitcher />
               </div>

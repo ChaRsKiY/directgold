@@ -17,25 +17,25 @@ export default function LanguageSwitcher() {
   return (
     <div className="flex items-center gap-2">
       <button
-        onClick={() => switchLanguage("de")}
-        className={`uppercase text-sm font-medium transition-colors duration-200 footer-link ${
-          locale === "de"
-            ? "text-[var(--color-primary-gold)]"
-            : "text-gray-400 hover:text-gray-300"
-        }`}
+        onClick={() => locale !== "de" && switchLanguage("de")}
+        className={`uppercase text-sm font-medium transition-colors duration-200 footer-link ${locale === "de"
+            ? "text-[var(--color-primary-gold)] cursor-default"
+            : "text-gray-400 hover:text-gray-300 cursor-pointer"
+          }`}
         aria-label="Switch to German"
+        disabled={locale === "de"}
       >
         DE
       </button>
       <span className="text-gray-500">/</span>
       <button
-        onClick={() => switchLanguage("en")}
-        className={`uppercase text-sm font-medium transition-colors duration-200 footer-link ${
-          locale === "en"
-            ? "text-[var(--color-primary-gold)]"
-            : "text-gray-400 hover:text-gray-300"
-        }`}
+        onClick={() => locale !== "en" && switchLanguage("en")}
+        className={`uppercase text-sm font-medium transition-colors duration-200 footer-link ${locale === "en"
+            ? "text-[var(--color-primary-gold)] cursor-default"
+            : "text-gray-400 hover:text-gray-300 cursor-pointer"
+          }`}
         aria-label="Switch to English"
+        disabled={locale === "en"}
       >
         EN
       </button>

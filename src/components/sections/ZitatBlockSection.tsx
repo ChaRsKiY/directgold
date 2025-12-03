@@ -8,7 +8,10 @@ const archivo = Archivo();
 const ZitatBlockSection = () => {
     return (
         <div className="py-12 md:py-20 px-[5%] md:px-[10%] relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-white to-[#e2e2e2] z-10 mix-blend-multiply backdrop-grayscale backdrop-brightness-125" />
+            {/* Grayscale layer for cross-browser support */}
+            <div className="absolute inset-0 bg-white z-10 mix-blend-color pointer-events-none" />
+            {/* Gradient overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-white to-[#e2e2e2] z-10 mix-blend-multiply pointer-events-none" />
             <div className="m-auto max-w-7xl">
                 <div className="w-full md:w-3/4 lg:w-1/2 md:pr-24 relative z-20">
                     <MotionDiv

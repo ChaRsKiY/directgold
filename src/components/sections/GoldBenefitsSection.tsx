@@ -10,13 +10,13 @@ const archivo = Archivo();
 
 const GoldBenefitsSection = () => {
     return (
-        <section className="py-12 md:py-20 relative text-white px-[5%] md:px-[10%]">
+        <section className="py-12 md:py-20 relative text-white px-[5%] md:px-[10%] h-screen max-sm:max-h-auto">
             <div className="absolute left-0 bottom-0 p-8">
                 <ProgressIndicator activeIndex={3} />
             </div>
             <Image src="/buildings.png" alt="Dominanz" fill className="object-cover -z-10" />
             <div className="absolute inset-0 bg-black/30 -z-5" />
-            <div className="grid grid-cols-1 md:grid-cols-2 m-auto max-w-7xl gap-8 md:gap-12 h-auto md:h-[60vh] md:max-h-[600px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 m-auto max-w-7xl gap-8 md:gap-12 h-full">
                 <div className="flex flex-col h-full">
                     <MotionH2
                         className="text-4xl md:text-6xl font-bold mb-8 md:mb-12 max-w-7xl mx-auto"
@@ -53,8 +53,8 @@ const GoldBenefitsSection = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: 0.4 }}
                             >
-                                <h2 className="font-bold text-xl">Sicherste Lagerung</h2>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores similique earum aperiam ratione dolorum totam in porro sunt recusandae, vitae, provident vero quis nulla id est quibusdam, qui ad quo?</p>
+                                <h2 className="font-bold text-2xl">Sicherste Lagerung</h2>
+                                <p className="text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maiores similique earum aperiam ratione dolorum totam in porro sunt recusandae, vitae, provident vero quis nulla id est quibusdam, qui ad quo?</p>
                             </MotionDiv>
                             <MotionDiv
                                 className="flex items-center justify-start md:justify-center mt-4 md:mt-0 relative z-10"
@@ -70,7 +70,7 @@ const GoldBenefitsSection = () => {
                 </div>
                 <div className="flex items-center justify-center flex-1 mt-8 md:mt-0">
                     <MotionDiv
-                        className="h-64 md:h-full text-[9rem] md:text-[13rem] w-full flex items-center justify-center relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#5D9BC9] before:to-transparent before:opacity-40 before:-z-10 p-8 md:p-12 pb-16 md:pb-32 overflow-hidden md:overflow-visible"
+                        className="h-full aspect-[1/2] text-[9rem] md:text-[13rem] max-w-full flex items-center justify-center relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#5D9BC9] before:to-transparent before:opacity-40 before:-z-10 p-8 md:p-12 pb-16 md:pb-32 overflow-hidden md:overflow-visible"
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}

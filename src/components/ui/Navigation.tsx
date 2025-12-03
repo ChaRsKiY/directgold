@@ -24,6 +24,7 @@ export default function Navigation({ items, className = "", isMobile = false }: 
             <DropdownMenu
               key={index}
               label={item.label}
+              href={item.href}
               items={item.submenu}
               isMobile={isMobile}
             />
