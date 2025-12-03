@@ -11,7 +11,7 @@ const OurProducts = () => {
 
   return (
     <section
-      className="px-[10%] pb-20 bg-gradient-to-b to-[var(--color-primary-gold)]/30 from-[#e5e5e5] relative"
+      className="px-[10%] pb-20 bg-gradient-to-b to-[var(--color-primary-gold)]/30 from-white relative"
     >
       <div className="absolute left-0 bottom-0 top-0 p-8 flex items-center">
         <ProgressIndicator activeIndex={2} />
@@ -140,7 +140,7 @@ const OurProducts = () => {
           </div>
         </MotionDiv>
         <MotionDiv
-          className="flex flex-col min-h-[850px] text-right text-white translate-y-64 w-full h-full relative before:absolute before:inset-0 before:bg-[#412b0d] before:opacity-70 before:-z-10 px-24 pt-48 max-[1300px]:px-12"
+          className="z-10 flex flex-col min-h-[850px] text-right text-white translate-y-64 w-full h-full relative before:absolute before:inset-0 before:bg-[#412b0d] before:opacity-70 before:-z-10 px-24 pt-48 max-[1300px]:px-12"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -161,7 +161,7 @@ const OurProducts = () => {
           </div>
         </MotionDiv>
       </div>
-      <div className="m-auto max-w-7xl">
+      <div className="m-auto max-w-7xl z-10">
         <MotionDiv
           className="font-bold"
           initial={{ opacity: 0, y: 20 }}
@@ -180,7 +180,7 @@ const OurProducts = () => {
           </MotionH3>
           <div className="w-24 h-1 bg-[var(--color-primary-gold)] my-6" />
           <MotionH2
-            className="text-6xl w-24 max-lg:text-4xl max-md:text-2xl text-[var(--color-primary-gold)]"
+            className="text-6xl w-24 max-lg:text-4xl max-md:text-2xl text-[#9f8c58]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -192,7 +192,7 @@ const OurProducts = () => {
         </MotionDiv>
       </div>
       <div className="m-auto max-w-7xl relative">
-        <Image src="/gold_nugget.png" alt="Gold Nugget" width={1300} height={1300} className="absolute bottom-0 right-0 -z-20 translate-y-[45%] contrast-60 translate-x-[70%] max-sm:translate-y-[65%]" />
+        <Image src="/gold_nugget.png" alt="Gold Nugget" width={1300} height={1300} className="absolute bottom-0 right-0 z-1 translate-y-[45%] contrast-80 translate-x-[70%] max-sm:translate-y-[65%]" />
       </div>
     </section>
   );

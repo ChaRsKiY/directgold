@@ -11,7 +11,7 @@ const DominanzSection = () => {
             </div>
             <Image src="/mockups/mock7.png" alt="Dominanz" fill className="object-cover -z-10" />
             <div className="absolute inset-0 bg-black/30 -z-5" />
-            <div className="grid grid-cols-1 lg:grid-cols-2 m-auto max-w-7xl gap-8 md:gap-12 min-h-[60vh]">
+            <div className="grid grid-cols-1 lg:grid-cols-2 m-auto max-w-7xl gap-8 md:gap-12 min-h-[60vh] max-h-[850px]">
                 <div>
                     <MotionH2
                         className="text-4xl md:text-6xl font-bold mb-8 md:mb-12 max-w-7xl mx-auto"
@@ -35,8 +35,8 @@ const DominanzSection = () => {
                 </div>
                 <div className="flex items-center justify-center gap-16 max-md:gap-4">
                     <div className="w-full h-full relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#5D9BC9] before:to-transparent before:opacity-40 before:-z-10 p-8 md:p-12 pb-16 md:pb-32 overflow-hidden md:overflow-visible">
-                        <h2 className="text-center text-xl md:text-2xl font-bold pb-4 md:pb-8">Zu welchen Preisen kaufe und verkaufe ich?</h2>
-                        <p className="text-base md:text-xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio atque ex nisi suscipit animi qui recusandae veritatis. Enim eligendi beatae eveniet reprehenderit porro ad sequi fuga nulla at, similique pariatur?</p>
+                        <h2 className="text-center text-2xl md:text-3xl font-bold pb-4 md:pb-8">Zu welchen Preisen kaufe und verkaufe ich?</h2>
+                        <p className="text-xl md:text-2xl">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio atque ex nisi suscipit animi qui recusandae veritatis. Enim eligendi beatae eveniet reprehenderit porro ad sequi fuga nulla at, similique pariatur?</p>
                     </div>
                     <div className="w-1 h-full bg-[var(--color-primary-gold)] rounded-full" />
                 </div>

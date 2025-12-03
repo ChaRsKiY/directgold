@@ -9,7 +9,7 @@ export default async function GoldBarSection() {
   const t = await getTranslations("goldBar");
   return (
     <section
-      className="relative overflow-hidden min-h-[700px] h-screen bg-gradient-to-r from-[var(--color-light-bg)] via-[var(--color-light-bg)] to-[#cfcec9] px-[10%]"
+      className="relative overflow-hidden min-h-[850px] h-screen max-h-[950px] px-[10%]"
     >
       <div className="absolute left-0 bottom-0 p-8">
         <ProgressIndicator activeIndex={0} />
@@ -60,7 +60,7 @@ export default async function GoldBarSection() {
                 {t("question1")}
               </MotionH2>
               <MotionH3
-                className="text-xl text-[var(--color-secondary-text)] font-normal max-lg:hidden"
+                className="text-2xl text-[#747474] font-normal max-lg:hidden"
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default async function GoldBarSection() {
                 {t("answer1")}
               </MotionH3>
               <MotionH3
-                className="text-xl text-left text-[var(--color-secondary-text)] font-normal hidden max-lg:block max-md:text-base"
+                className="text-2xl text-left text-[#747474] font-normal hidden max-lg:block max-md:text-xl"
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}

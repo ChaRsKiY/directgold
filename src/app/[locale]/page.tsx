@@ -17,9 +17,11 @@ export default function Home() {
   return (
     <main className="min-h-screen font-montserrat">
       <Hero />
-      <AboutSection />
-      {/* <InfoSection /> */}
-      <GoldBarSection />
+      <div className="bg-gradient-to-b from-[#f5f5f3] to-[#cecfd0]">
+        <AboutSection />
+        {/* <InfoSection /> */}
+        <GoldBarSection />
+      </div>
       <DominanzSection />
       <OurProducts />
       <ZitatBlockSection />

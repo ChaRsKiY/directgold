@@ -7,7 +7,7 @@ export default async function AboutSection() {
   return (
     <section
       id="about"
-      className="min-h-[700px] h-[80vh] max-md:h-[75vh] max-sm:h-[65vh] relative bg-linear-to-r from-light-bg via-light-bg to-[#cfcec9]"
+      className="min-h-[700px] h-[80vh] max-md:h-[75vh] max-sm:h-[65vh] relative"
     >
       {/* Smooth gradient transition at the bottom - fades out to blend with next section */}
       <div className="absolute bottom-0 left-0 right-0 h-40 z-0 pointer-events-none" />

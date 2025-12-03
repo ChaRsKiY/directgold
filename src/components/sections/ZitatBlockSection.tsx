@@ -8,9 +8,9 @@ const archivo = Archivo();
 const ZitatBlockSection = () => {
     return (
         <div className="py-12 md:py-20 px-[5%] md:px-[10%] relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-b from-white to-[#e2e2e2] -z-1 mix-blend-multiply backdrop-grayscale backdrop-brightness-125" />
+            <div className="absolute inset-0 bg-gradient-to-b from-white to-[#e2e2e2] z-10 mix-blend-multiply backdrop-grayscale backdrop-brightness-125" />
             <div className="m-auto max-w-7xl">
-                <div className="w-full md:w-3/4 lg:w-1/2 md:pr-24 relative">
+                <div className="w-full md:w-3/4 lg:w-1/2 md:pr-24 relative z-20">
                     <MotionDiv
                         className={cn("absolute right-0 bottom-0 font-bold text-[var(--color-primary-text)] text-[10rem] md:text-[20rem] -translate-x-4 md:-translate-x-10 translate-y-12 md:translate-y-24 z-10 pointer-events-none", archivo.className)}
                         initial={{ opacity: 0, rotate: 180, scale: 0.8 }}
