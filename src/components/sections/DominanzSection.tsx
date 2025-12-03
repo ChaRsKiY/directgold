@@ -30,7 +30,7 @@ const DominanzSection = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="text-xl md:text-2xl mt-8 md:mt-12 max-w-7xl mx-auto"
                     >
-                        Was hebt uns vor?
+                        Der Unterschied der zählt.
                     </MotionH3>
                 </div>
                 <div className="flex items-center justify-center gap-16 max-md:gap-4">

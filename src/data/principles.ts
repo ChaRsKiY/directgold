@@ -18,6 +18,138 @@ export interface Principle {
 
 export const principlesData: Principle[] = [
   {
+    id: "transparency",
+    title: "DIRECT Price Transparency",
+    short: "transparencyShort",
+    long: "transparencyLong",
+    fullContent: "transparencyFullContent",
+    image: "https://placehold.co/600x400",
+    sections: [
+      {
+        title: "transparencySection1Title",
+        items: [
+          "transparencySection1Item1",
+          "transparencySection1Item2"
+        ]
+      },
+      {
+        title: "transparencySection2Title",
+        items: [
+          "transparencySection2Item1"
+        ]
+      },
+      {
+        title: "transparencySection3Title",
+        items: [
+          "transparencySection3Item1",
+          "transparencySection3Item2",
+          "transparencySection3Item3"
+        ]
+      },
+      {
+        title: "transparencySection4Title",
+        items: [
+          "transparencySection4Item1",
+          "transparencySection4Item2",
+          "transparencySection4Item3"
+        ]
+      },
+      {
+        title: "transparencySection5Title",
+        items: [
+          "transparencySection5Item1",
+          "transparencySection5Item2",
+          "transparencySection5Item3"
+        ]
+      }
+    ],
+    links: [
+      { text: "transparencyLink1", href: "/info/gebuhrentabelle" },
+      { text: "transparencyLink2", href: "/info/kaufgebuhr" },
+      { text: "transparencyLink3", href: "/exkurs/lbma-goldpreis" }
+    ]
+  },
+  {
+    id: "integrity",
+    title: "DIRECT Integrity",
+    short: "integrityShort",
+    long: "integrityLong",
+    fullContent: "integrityFullContent",
+    image: "https://placehold.co/600x400",
+    sections: [
+      {
+        title: "integritySection1Title",
+        items: [
+          "integritySection1Item1",
+          "integritySection1Item2",
+          "integritySection1Item3",
+          "integritySection1Item4",
+          "integritySection1Item5"
+        ]
+      },
+      {
+        title: "integritySection2Title",
+        items: [
+          "integritySection2Item1",
+          "integritySection2Item2",
+          "integritySection2Item3",
+          "integritySection2Item4"
+        ]
+      }
+    ],
+    links: [
+      { text: "integrityLink1", href: "/exkurs/axedras" }
+    ]
+  },
+  {
+    id: "origin",
+    title: "DIRECT Origin",
+    short: "originShort",
+    long: "originLong",
+    fullContent: "originFullContent",
+    image: "https://placehold.co/600x400",
+    sections: [
+      {
+        items: [
+          "originSection1Item1",
+          "originSection1Item2",
+          "originSection1Item3",
+          "originSection1Item4",
+          "originSection1Item5",
+          "originSection1Item6"
+        ]
+      }
+    ],
+    links: [
+      { text: "originLink1", href: "/exkurs/argor-heraeus" },
+      { text: "originLink2", href: "/exkurs/loomis" },
+      { text: "originLink3", href: "/exkurs/schweiz-lagerstandort" }
+    ]
+  },
+  {
+    id: "ownership",
+    title: "DIRECT Ownership",
+    short: "ownershipShort",
+    long: "ownershipLong",
+    fullContent: "ownershipFullContent",
+    image: "https://placehold.co/600x400",
+    sections: [
+      {
+        content: "ownershipSection1Content"
+      },
+      {
+        content: "ownershipSection2Content"
+      },
+      {
+        content: "ownershipSection3Content"
+      }
+    ],
+    links: [
+      { text: "ownershipLink1", href: "/info/sammel-einzellagerung" },
+      { text: "ownershipLink2", href: "/exkurs/lbma-goldpreis" }
+    ]
+  },
+  {
     id: "accountability",
     title: "DIRECT Accountability",
     short: "accountabilityShort",
@@ -78,138 +210,6 @@ export const principlesData: Principle[] = [
         title: "validationSection2Title",
         content: "validationSection2Content"
       }
-    ]
-  },
-  {
-    id: "transparency",
-    title: "DIRECT Price Transparency",
-    short: "transparencyShort",
-    long: "transparencyLong",
-    fullContent: "transparencyFullContent",
-    image: "https://placehold.co/600x400",
-    sections: [
-      {
-        title: "transparencySection1Title",
-        items: [
-          "transparencySection1Item1",
-          "transparencySection1Item2"
-        ]
-      },
-      {
-        title: "transparencySection2Title",
-        items: [
-          "transparencySection2Item1"
-        ]
-      },
-      {
-        title: "transparencySection3Title",
-        items: [
-          "transparencySection3Item1",
-          "transparencySection3Item2",
-          "transparencySection3Item3"
-        ]
-      },
-      {
-        title: "transparencySection4Title",
-        items: [
-          "transparencySection4Item1",
-          "transparencySection4Item2",
-          "transparencySection4Item3"
-        ]
-      },
-      {
-        title: "transparencySection5Title",
-        items: [
-          "transparencySection5Item1",
-          "transparencySection5Item2",
-          "transparencySection5Item3"
-        ]
-      }
-    ],
-    links: [
-      { text: "transparencyLink1", href: "/info/gebuhrentabelle" },
-      { text: "transparencyLink2", href: "/info/kaufgebuhr" },
-      { text: "transparencyLink3", href: "/exkurs/lbma-goldpreis" }
-    ]
-  },
-  {
-    id: "ownership",
-    title: "DIRECT Ownership",
-    short: "ownershipShort",
-    long: "ownershipLong",
-    fullContent: "ownershipFullContent",
-    image: "https://placehold.co/600x400",
-    sections: [
-      {
-        content: "ownershipSection1Content"
-      },
-      {
-        content: "ownershipSection2Content"
-      },
-      {
-        content: "ownershipSection3Content"
-      }
-    ],
-    links: [
-      { text: "ownershipLink1", href: "/info/sammel-einzellagerung" },
-      { text: "ownershipLink2", href: "/exkurs/lbma-goldpreis" }
-    ]
-  },
-  {
-    id: "origin",
-    title: "DIRECT Origin",
-    short: "originShort",
-    long: "originLong",
-    fullContent: "originFullContent",
-    image: "https://placehold.co/600x400",
-    sections: [
-      {
-        items: [
-          "originSection1Item1",
-          "originSection1Item2",
-          "originSection1Item3",
-          "originSection1Item4",
-          "originSection1Item5",
-          "originSection1Item6"
-        ]
-      }
-    ],
-    links: [
-      { text: "originLink1", href: "/exkurs/argor-heraeus" },
-      { text: "originLink2", href: "/exkurs/loomis" },
-      { text: "originLink3", href: "/exkurs/schweiz-lagerstandort" }
-    ]
-  },
-  {
-    id: "integrity",
-    title: "DIRECT Integrity",
-    short: "integrityShort",
-    long: "integrityLong",
-    fullContent: "integrityFullContent",
-    image: "https://placehold.co/600x400",
-    sections: [
-      {
-        title: "integritySection1Title",
-        items: [
-          "integritySection1Item1",
-          "integritySection1Item2",
-          "integritySection1Item3",
-          "integritySection1Item4",
-          "integritySection1Item5"
-        ]
-      },
-      {
-        title: "integritySection2Title",
-        items: [
-          "integritySection2Item1",
-          "integritySection2Item2",
-          "integritySection2Item3",
-          "integritySection2Item4"
-        ]
-      }
-    ],
-    links: [
-      { text: "integrityLink1", href: "/exkurs/axedras" }
     ]
   }
 ];

@@ -7,12 +7,12 @@ export default async function AboutSection() {
   return (
     <section
       id="about"
-      className="min-h-[700px] h-[80vh] max-md:h-[75vh] max-sm:h-[65vh] relative"
+      className="h-[300px] md:h-[500px] lg:h-[500px] relative"
     >
       {/* Smooth gradient transition at the bottom - fades out to blend with next section */}
       <div className="absolute bottom-0 left-0 right-0 h-40 z-0 pointer-events-none" />
       <MotionDiv
-        className="z-50 flex flex-col justify-center h-full absolute top-0 left-0 w-full px-[10%] gap-12"
+        className="z-50 flex flex-col justify-center lg:justify-end h-full absolute top-0 left-0 w-full px-[10%] gap-12"
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true, margin: "-100px" }}

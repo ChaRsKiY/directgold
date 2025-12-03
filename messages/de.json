@@ -225,9 +225,9 @@
     "ourProducts": {
         "title": "Produkte",
         "goldkaufplanTitle": "Goldkaufplan",
-        "goldkaufplanDescription": "Mit dem DIRECTGOLD Goldkaufplan baust Du regelmäßig und automatisch Deine persönliche Goldreserve auf.",
+        "goldkaufplanDescription": "Deine stetig wachsende Goldreserve – Schritt für Schritt, Monat für Monat.",
         "einzelkaufTitle": "Einzelkauf",
-        "einzelkaufDescription": "Beim Einzelkauf erwirbst Du sofort physisches Gold in der von Dir gewählten Menge.",
+        "einzelkaufDescription": "Dein individueller Goldkauf – jederzeit, exakt zum Betrag Deiner Wahl.",
         "learnMore": "Mehr erfahren"
     },
     "questionsSection": {
@@ -245,13 +245,13 @@
     },
     "services": {
         "kaufVerkaufTitle": "Kauf & Verkauf",
-        "kaufVerkaufDescription": "Bei DIRECTGOLD handelst Du Gold stets zum offiziellen LBMA-Preis zzgl. einer transparenten Gebühr. Diese sinkt degressiv mit Deinem Investitionsvolumen der letzten 12 Monate – auch geplante Käufe zählen dazu. Transaktionen erfolgen zum nächsten LBMA-Goldpreis PM, inklusive detaillierter Aufstellung aller Kosten. Auch Verkäufe basieren auf dem LBMA-Preis abzüglich einer fairen Gebühr. Profitiere von maximaler Transparenz und Top-Konditionen ohne versteckte Kosten.",
+        "kaufVerkaufDescription": "DIRECTGOLD bietet Goldkauf und -verkauf nach professionellen Marktstandards zum offiziellen LBMA Gold Price PM, mit klar ausgewiesenen, degressiven Gebühren. Kunden erwerben ausschließlich neu produzierte LBMA-zertifizierte Barren, gelagert im versicherten Hochsicherheitslager von Loomis Zürich. Jeder Barren besitzt einen digitalen Zwilling auf der aXedras-DLT, der Echtheit und Herkunft unverfälschbar dokumentiert. Damit erhältst du eindeutig zugeordnetes Gold, unabhängig überprüfbar und bereits ab € 100 kaufbar – inklusive garantiertem Rückkauf zum LBMA-Preis.",
         "kaufVerkaufShort": "Kaufen und Verkaufen zum offiziellen LBMA-Goldpreis mit transparenten, degressiven Gebühren. Maximale Transparenz ohne versteckte Kosten.",
         "lagerungTitle": "Lagerung",
         "lagerungDescription": "Dein Gold lagert vollversichert im Hochsicherheitslager von LOOMIS in Zürich (Schweiz), einem LBMA-Mitglied. Du erwirbst anteiliges Eigentum an Barren zwischen 100 g und 1 kg. Ab 100 g kannst Du Barren auf Deinen Namen registrieren und in Einzellagerung überführen. Über die aXedras-Plattform prüfst Du jederzeit Seriennummer, Herkunft und Standort Deines Goldes. Die Schweiz garantiert dabei höchste Stabilität und Rechtssicherheit.",
         "lagerungShort": "Sichere Verwahrung im Hochsicherheitslager von LOOMIS in der Schweiz. Vollumfänglich versichert und 24/7 überprüfbar über die aXedras-Plattform.",
         "lieferungTitle": "Lieferung",
-        "lieferungDescription": "Mit DIRECT Delivery bestimmst Du, wann und wohin Dein Gold geliefert wird – einfach und sicher über unsere Plattform. Bei Sammelverwahrung wählst Du flexibel Barrengrößen von 1 g bis 1 kg. Gold aus der Einzellagerung wird als spezifischer Barren versendet. Unsere Logistikpartner liefern vollständig versichert. Alle Lieferkosten werden Dir vor Bestellung transparent angezeigt.",
+        "lieferungDescription": "Mit DIRECT Delivery entscheidest Du selbst, wann und wohin Dein physisches Gold geliefert wird – einfach, sicher und vollständig transparent über die Transaktionsplattform. Bei Sammelverwahrung wählst Du frei die gewünschten Barrengrößen von 1 g bis 1 kg; bei individueller Einzellagerung kannst Du zusätzlich konkret Deine Dir zugeordneten nummerierten Barren ausliefern lassen. Alle Lieferungen erfolgen über erstklassige, vollversicherte Logistikpartner. DIRECT Delivery verbindet digitale Effizienz mit maximaler physischer Sicherheit.",
         "lieferungShort": "Volle Kontrolle über Lieferzeitpunkt und -adresse. Flexible Barrengrößen von 1 g bis 1 kg. Vollständig versicherte Lieferungen durch erstklassige Logistikpartner."
     },
     "securityAndTechnology": {

@@ -28,7 +28,7 @@ const OurProducts = () => {
             Produkte.
           </MotionH1>
           <div className="w-24 h-1 bg-[var(--color-primary-gold)] my-8" />
-          <h2 className="text-xl font-bold text-[var(--color-primary-text)] max-lg:text-base">DIRECTGOLD bestseller <br /> Edelmetall Anlagen</h2>
+          <h2 className="text-xl font-bold text-[var(--color-primary-text)] max-lg:text-base">DIRECTGOLD Bestseller <br /> Edelmetall Anlagen</h2>
         </div>
         <div className="flex flex-col gap-6 mb-12">
           <MotionDiv
@@ -176,7 +176,7 @@ const OurProducts = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Zwei wege, ein Ziel
+            Zwei Wege, ein Ziel
           </MotionH3>
           <div className="w-24 h-1 bg-[var(--color-primary-gold)] my-6" />
           <MotionH2
@@ -188,7 +188,7 @@ const OurProducts = () => {
           >
             Sicherer <br /> Goldbesitz.
           </MotionH2>
-          <Button className="text-white mt-12">Get in touch</Button>
+          <Button className="text-white mt-12">OPEN ACCOUNT</Button>
         </MotionDiv>
       </div>
       <div className="m-auto max-w-7xl relative">

@@ -18,12 +18,12 @@ const BlocksSection = () => {
         {
             icon: RefreshCw,
             title: "Gewählten Betrag überweisen",
-            description: "Execution: Goldkauf wird durchgeführt zum nächsten LBMA Preis PM",
+            description: "Execution: Durchführung des Goldkaufs zum nächsten LBMA Preis PM",
         },
         {
             icon: FileSignature,
             title: "Identifikation und Vertragsbestätigung durch digitale Signatur",
-            description: "Settlement: Einlagerung und Gutschrift auf dem Kundendepot",
+            description: "Settlement: Einlagerung und Gutschrift auf dem persönlichen Golddepot",
         },
     ];
 

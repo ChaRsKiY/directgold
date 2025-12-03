@@ -83,18 +83,15 @@ const SecurityAndTechnologySection = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <p className="text-xl md:text-2xl font-light uppercase tracking-wide mb-2">
-              IF THIS FEELS LIKE THE RIGHT
-            </p>
-            <p className="text-xl md:text-2xl font-light uppercase tracking-wide mb-4">
-              DIRECTION, LET'S START THE
+              If this feels right,
             </p>
             <h3 className="text-4xl md:text-5xl font-bold uppercase tracking-wider mb-12">
-              CONVERSATION.
+              BEGIN HERE.
             </h3>
 
             <Link href="/contact">
               <Button variant="blue" className="w-full md:w-auto min-w-[200px]">
-                GET IN TOUCH
+                OPEN ACCOUNT
               </Button>
             </Link>
           </MotionDiv>

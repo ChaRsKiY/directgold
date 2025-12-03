@@ -63,7 +63,7 @@ const GoldBenefitsSection = () => {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.6, delay: 0.6 }}
                             >
-                                <Button variant="white">Get in touch</Button>
+                                <Button variant="white">OPEN ACCOUNT</Button>
                             </MotionDiv>
                         </div>
                     </div>

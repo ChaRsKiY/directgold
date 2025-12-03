@@ -57,7 +57,7 @@ export function PrinciplesSection() {
               <h2 className="text-5xl md:text-6xl font-bold mb-5">Grundsätze</h2>
               <div className="w-24 h-1 bg-[var(--color-primary-gold)] mb-5" />
             </MotionDiv>
-            <p className="text-xl md:text-2xl font-light text-gray-200">What we do</p>
+            <p className="text-xl md:text-2xl font-light text-gray-200">OUR CODEX</p>
           </div>
 
           <div className="mt-12 lg:mt-auto">
@@ -68,9 +68,9 @@ export function PrinciplesSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <p className="text-2xl md:text-3xl font-light tracking-wide uppercase">Step on our journey</p>
-              <p className="text-2xl md:text-3xl font-light tracking-wide uppercase mt-2">Let this be the first</p>
-              <p className="text-5xl md:text-7xl font-bold tracking-widest mt-4 uppercase">Together.</p>
+              <p className="text-2xl md:text-3xl font-light tracking-wide uppercase">JOIN OUR JOURNEY</p>
+              <p className="text-2xl md:text-3xl font-light tracking-wide uppercase mt-2">LET THIS BE OUR FIRST STEP</p>
+              <p className="text-5xl md:text-7xl font-bold tracking-widest mt-4 uppercase">TOGETHER.</p>
             </MotionDiv>
 
             <Link href="/account/open">
