@@ -208,19 +208,55 @@ Edit the `footerLinks` and `socialLinks` objects to modify content.
 
 ## 🎨 Styling System
 
-### CSS Variables
+### Color System (Tailwind CSS v4)
 
-All colors are defined in `src/app/globals.css`:
+The project uses a **centralized color system** with CSS variables integrated into Tailwind CSS v4.
+
+**All colors are defined in** `src/app/[locale]/globals.css`:
 
 ```css
---color-primary-gold: #C9A961
---color-primary-gold-light: #D4B573
---color-primary-gold-dark: #B39850
---color-accent-gold: #F4E4C1
+:root {
+  --color-primary-gold: #C9A961;
+  --color-gold-deep: #B8935A;
+  --color-dark-bg: #1a1a1a;
+  --color-light-bg: #f5f5f0;
+  /* ... and many more */
+}
 
---color-dark-bg: #0A0A0A
---color-light-bg: #F5F5F0
+@theme inline {
+  --color-gold: var(--color-primary-gold);
+  --color-gold-deep: var(--color-gold-deep);
+  --color-dark-bg: var(--color-dark-bg);
+  /* ... automatic Tailwind mapping */
+}
+```
 
+### Using Colors in Components
+
+**Tailwind Utility Classes (Recommended):**
+```tsx
+className="bg-gold text-white"
+className="bg-dark-bg hover:bg-gold"
+className="text-primary-text"
+className="border border-gold/20"
+```
+
+**CSS Variables (For Complex Cases):**
+```tsx
+style={{ boxShadow: '0 12px 30px var(--color-cta-shadow)' }}
+style={{ backgroundImage: 'linear-gradient(...)' }}
+```
+
+### Common Color Classes
+
+- **Backgrounds**: `bg-gold`, `bg-dark-bg`, `bg-light-bg`
+- **Text**: `text-gold`, `text-primary-text`, `text-secondary-text`
+- **Borders**: `border-gold`, `border-gold/20`
+- **Hover**: `hover:bg-gold`, `hover:text-gold`
+
+### Spacing Variables
+
+```css
 --spacing-xs: 0.5rem
 --spacing-sm: 1rem
 --spacing-md: 2rem
@@ -229,13 +265,7 @@ All colors are defined in `src/app/globals.css`:
 --spacing-2xl: 8rem
 ```
 
-### Using CSS Variables in Tailwind
-
-```tsx
-className="bg-[var(--color-primary-gold)]"
-className="text-[var(--color-primary-gold)]"
-className="p-[var(--spacing-md)]"
-```
+**For complete color reference, see [COLOR_SYSTEM.md](./COLOR_SYSTEM.md)**
 
 ---
 

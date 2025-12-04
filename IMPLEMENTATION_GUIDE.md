@@ -22,24 +22,64 @@ src/
 │       └── Footer.tsx        # Footer with newsletter
 ```
 
-## 🎨 Color System
+## 🎨 Color System (Tailwind CSS v4)
 
-All colors are defined as CSS variables in `globals.css`:
+The project uses a **centralized color system** that integrates CSS variables with Tailwind CSS v4. This approach provides:
+
+- ✅ Single source of truth for all colors
+- ✅ Automatic Tailwind utility class generation
+- ✅ Easy theme customization
+- ✅ No hardcoded colors in components
+
+### How It Works
+
+1. **CSS Variables** are defined in `:root` in `src/app/[locale]/globals.css`
+2. **Tailwind Integration** via `@theme inline` block maps variables to utility classes
+3. **Components** use Tailwind classes like `bg-gold`, `text-dark-bg`, etc.
 
 ### Primary Colors
-- `--color-primary-gold`: #C9A961 (Main gold color)
-- `--color-primary-gold-light`: #D4B573
-- `--color-primary-gold-dark`: #B39850
-- `--color-accent-gold`: #F4E4C1
+- `--color-primary-gold` → `bg-gold`, `text-gold`, `border-gold`
+- `--color-gold-deep` → `bg-gold-deep`, `hover:bg-gold-deep`
+- `--color-blue-light` → `bg-blue-light`, `text-blue-light`
 
-### Neutral Colors
-- `--color-dark-bg`: #0A0A0A (Dark backgrounds)
-- `--color-light-bg`: #F5F5F0 (Light backgrounds)
+### Background Colors
+- `--color-dark-bg` → `bg-dark-bg`
+- `--color-light-bg` → `bg-light-bg`
+- `--color-dark-secondary` → `bg-dark-secondary`
 
-### Usage in Tailwind
+### Text Colors
+- `--color-primary-text` → `text-primary-text`
+- `--color-secondary-text` → `text-secondary-text`
+- `--color-text-dark` → `text-text-dark`
+
+### Usage Examples
+
+**Tailwind Utility Classes (Recommended):**
 ```tsx
-className="bg-[var(--color-primary-gold)]"
-className="text-[var(--color-primary-gold)]"
+<div className="bg-gold text-white">
+<button className="bg-dark-bg hover:bg-gold transition-colors">
+<p className="text-primary-text">
+```
+
+**CSS Variables (For Complex Cases):**
+```tsx
+<div style={{ boxShadow: '0 12px 30px var(--color-cta-shadow)' }}>
+```
+
+### Customizing Colors
+
+Edit `src/app/[locale]/globals.css`:
+
+1. **Update `:root` variables** with your brand colors
+2. **Colors automatically become Tailwind classes** - no additional configuration needed
+3. **All components update automatically** - no need to modify component files
+
+```css
+:root {
+  --color-primary-gold: #YOUR_GOLD_COLOR;
+  --color-dark-bg: #YOUR_DARK_COLOR;
+  /* Components will automatically use the new colors */
+}
 ```
 
 ## 📱 Responsive Breakpoints
