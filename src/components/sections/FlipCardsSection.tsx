@@ -76,7 +76,7 @@ const FlipCardsSection = () => {
 
   return (
     <MotionSection
-      className="px-[10%] py-20 bg-gradient-to-b from-white to-[#fef4de] relative"
+      className="px-[10%] py-20 bg-gradient-to-b from-white to-bg-cream relative"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
@@ -86,7 +86,7 @@ const FlipCardsSection = () => {
         <ProgressIndicator activeIndex={5} />
       </div>
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-[var(--color-primary-gold)] font-bold text-5xl mb-12">
+        <h2 className="text-gold font-bold text-5xl mb-12">
           Services
         </h2>
 
@@ -169,7 +169,7 @@ const FlipCardsSection = () => {
                         <h3 className="text-3xl font-bold text-white uppercase leading-tight">
                           {t(card.titleKey)}
                         </h3>
-                        <div className="w-16 h-1 bg-[#5D9BC9]" />
+                        <div className="w-16 h-1 bg-blue-light" />
 
 
                       </div>
@@ -185,10 +185,10 @@ const FlipCardsSection = () => {
                       transform: "rotateY(180deg)",
                     }}
                   >
-                    <div className="relative w-full h-full bg-[#0F172A] p-8 flex flex-col">
+                    <div className="relative w-full h-full bg-card-back-bg p-8 flex flex-col">
                       {/* Back Arrow */}
                       <div className="mb-6">
-                        <ArrowLeft className="text-[var(--color-primary-gold)] w-8 h-8" />
+                        <ArrowLeft className="text-gold w-8 h-8" />
                       </div>
 
                       <MotionDiv

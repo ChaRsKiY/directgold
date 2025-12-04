@@ -20,12 +20,12 @@ export default function Button({
 
   const variantClasses =
     variant === "primary"
-      ? "text-[var(--color-primary-text)] bg-[var(--color-primary-gold)] hover:ring-2 hover:ring-offset-2 hover:ring-[var(--color-primary-gold)]"
+      ? "text-primary-text bg-gold hover:ring-2 hover:ring-offset-2 hover:ring-gold"
       : variant === "white"
-        ? "border-2 bg-white border-white text-black hover:ring-white ring-offset-black hover:ring-2 hover:ring-offset-2 hover:ring-[var(--color-primary-gold)]"
+        ? "border-2 bg-white border-white text-black hover:ring-white ring-offset-black hover:ring-2 hover:ring-offset-2 hover:ring-gold"
         : variant === "blue"
-          ? "bg-[#5D9BC9] text-white hover:bg-[#4A8AB8]"
-          : "border-2 border-[var(--color-primary-gold)] text-[var(--color-primary-gold)] hover:bg-[var(--color-primary-gold)] hover:text-[var(--color-primary-text)]";
+          ? "bg-blue-light text-white hover:bg-blue-dark"
+          : "border-2 border-gold text-gold hover:bg-gold hover:text-primary-text";
 
   return (
     <button

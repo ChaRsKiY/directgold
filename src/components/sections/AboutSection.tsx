@@ -19,7 +19,7 @@ export default async function AboutSection() {
         transition={{ duration: 0.8, delay: 0.2 }}
       >
         <div className="w-full mx-auto max-w-7xl">
-          <div className="text-[var(--color-primary-gold)] max-md:mt-10">
+          <div className="text-gold max-md:mt-10">
             <MotionP
               className="text-[7rem] max-[1300px]:text-[5rem] max-md:text-[3rem] max-sm:text-[2rem] font-bold"
               initial={{ x: -100, opacity: 0 }}

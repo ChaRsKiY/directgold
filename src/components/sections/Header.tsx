@@ -24,9 +24,8 @@ export const Header: React.FC = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[var(--color-dark-bg)] shadow-lg' : 'bg-transparent'
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-dark-bg shadow-lg' : 'bg-transparent'
+        }`}
     >
       <Container>
         <div className="flex items-center justify-between py-4 md:py-6">
@@ -43,7 +42,7 @@ export const Header: React.FC = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-white text-sm font-medium tracking-wider hover:text-[var(--color-primary-gold)] transition-colors duration-300"
+                className="text-white text-sm font-medium tracking-wider hover:text-gold transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -81,7 +80,7 @@ export const Header: React.FC = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="block text-white text-sm font-medium tracking-wider hover:text-[var(--color-primary-gold)] transition-colors duration-300"
+                className="block text-white text-sm font-medium tracking-wider hover:text-gold transition-colors duration-300"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.label}

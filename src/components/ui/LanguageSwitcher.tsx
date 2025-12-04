@@ -19,8 +19,8 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => locale !== "de" && switchLanguage("de")}
         className={`uppercase text-sm font-medium transition-colors duration-200 footer-link ${locale === "de"
-            ? "text-[var(--color-primary-gold)] cursor-default"
-            : "text-gray-400 hover:text-gray-300 cursor-pointer"
+          ? "text-gold cursor-default"
+          : "text-gray-400 hover:text-gray-300 cursor-pointer"
           }`}
         aria-label="Switch to German"
         disabled={locale === "de"}
@@ -31,8 +31,8 @@ export default function LanguageSwitcher() {
       <button
         onClick={() => locale !== "en" && switchLanguage("en")}
         className={`uppercase text-sm font-medium transition-colors duration-200 footer-link ${locale === "en"
-            ? "text-[var(--color-primary-gold)] cursor-default"
-            : "text-gray-400 hover:text-gray-300 cursor-pointer"
+          ? "text-gold cursor-default"
+          : "text-gray-400 hover:text-gray-300 cursor-pointer"
           }`}
         aria-label="Switch to English"
         disabled={locale === "en"}

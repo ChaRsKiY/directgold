@@ -60,8 +60,8 @@ export default function Footer() {
                         return (
                           <p key={itemIndex}>
                             {prefix}
-                            <a 
-                              href={`mailto:${email}`} 
+                            <a
+                              href={`mailto:${email}`}
                               className="text-gray-400 hover:text-gray-300 footer-link"
                             >
                               {email}
@@ -78,8 +78,8 @@ export default function Footer() {
                 <div className="space-y-2">
                   {column.links.map((link, linkIndex) => (
                     <div key={linkIndex}>
-                    <Link 
-                        href={link.href} 
+                      <Link
+                        href={link.href}
                         className="text-sm text-gray-400 footer-link"
                       >
                         {link.label}
@@ -92,7 +92,7 @@ export default function Footer() {
           ))}
 
 
-        <div>
+          <div>
             <h3 className="text-white font-bold text-lg mb-4 uppercase">
               Newsletter
             </h3>
@@ -105,7 +105,7 @@ export default function Footer() {
               <button
                 type="submit"
                 aria-label="Submit newsletter"
-                className="absolute right-2 top-1/2 -translate-y-1/2 w-10 h-10 bg-[var(--color-primary-gold)] rounded-full flex items-center justify-center hover:bg-[var(--color-primary-gold-dark)] transition-colors text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-gold)]"
+                className="absolute right-1 top-1/2 -translate-y-1/2 w-10 h-10 bg-[var(--color-primary-gold)] rounded-full flex items-center justify-center hover:bg-[var(--color-primary-gold-dark)] transition-colors text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[var(--color-primary-gold)]"
               >
                 <BsSend />
               </button>

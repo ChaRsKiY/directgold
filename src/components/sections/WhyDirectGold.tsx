@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 
 const WhyDirectGold = () => {
   const t = useTranslations("whyDirectGold");
-  
+
   const usps = [
     {
       titleKey: "usp1Title",
@@ -36,14 +36,14 @@ const WhyDirectGold = () => {
   return (
     <MotionSection
       id="whyDirectGold"
-      className="px-[10%] py-20 bg-gradient-to-r from-[var(--color-light-bg)] via-[var(--color-light-bg)] to-[#DEDBD5]"
+      className="px-[10%] py-20 bg-gradient-to-r from-light-bg via-light-bg to-light-bg-darker"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.6 }}
     >
       <MotionH2
-        className="font-bold text-[var(--color-primary-gold)] mb-12 max-w-7xl mx-auto"
+        className="font-bold text-gold mb-12 max-w-7xl mx-auto"
         initial={{ y: 30, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
@@ -55,7 +55,7 @@ const WhyDirectGold = () => {
         {usps.map((usp, index) => (
           <MotionDiv
             key={index}
-            className="bg-[var(--color-primary-gold)] text-white p-5 rounded-md"
+            className="bg-gold text-white p-5 rounded-md"
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}

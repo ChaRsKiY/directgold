@@ -43,7 +43,7 @@ export default async function GoldBarSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <MotionDiv
-              className="min-w-1 h-72 bg-[var(--color-primary-gold)] rounded-lg max-lg:hidden"
+              className="min-w-1 h-72 bg-gold rounded-lg max-lg:hidden"
               initial={{ scaleY: 0 }}
               whileInView={{ scaleY: 1 }}
               viewport={{ once: true }}
@@ -60,7 +60,7 @@ export default async function GoldBarSection() {
                 {t("question1")}
               </MotionH2>
               <MotionH3
-                className="text-2xl text-[#747474] font-normal max-lg:hidden"
+                className="text-2xl text-gray-medium font-normal max-lg:hidden"
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
@@ -69,7 +69,7 @@ export default async function GoldBarSection() {
                 {t("answer1")}
               </MotionH3>
               <MotionH3
-                className="text-2xl text-left text-[#747474] font-normal hidden max-lg:block max-md:text-xl"
+                className="text-2xl text-left text-gray-medium font-normal hidden max-lg:block max-md:text-xl"
                 initial={{ y: 30, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
@@ -85,7 +85,7 @@ export default async function GoldBarSection() {
               transition={{ duration: 0.6, delay: 0.9 }}
               className="max-lg:hidden"
             >
-              <IoMdArrowDropright size={60} color="var(--color-primary-gold)" />
+              <IoMdArrowDropright size={60} color="var(--color-gold)" />
             </MotionDiv>
           </MotionDiv>
         </div>

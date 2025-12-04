@@ -21,7 +21,7 @@ export default async function CTASection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
         >
-          <MotionH2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-[var(--color-primary-text-dark)] mb-8 md:mb-10 max-w-4xl mx-auto flex gap-2 flex-wrap items-center justify-center">
+          <MotionH2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-primary-text-dark mb-8 md:mb-10 max-w-4xl mx-auto flex gap-2 flex-wrap items-center justify-center">
             <MotionP
               initial={{ x: -20, opacity: 0 }}
               whileInView={{ x: 0, opacity: 1 }}

@@ -40,7 +40,7 @@ export default function Header() {
   ];
 
   return (
-    <header ref={headerRef} className="fixed top-0 left-0 right-0 z-100 max-w-full bg-[rgba(26,26,26,0.9)]">
+    <header ref={headerRef} className="fixed top-0 left-0 right-0 z-100 max-w-full bg-header-bg">
       <div className="flex items-center justify-between p-4 md:p-8 max-w-full w-full min-w-0">
         <Link href="/" className="shrink-0 min-w-0">
           <Logo variant="header" />
@@ -60,8 +60,8 @@ export default function Header() {
             <div className="relative w-6 h-6">
               <svg
                 className={`absolute inset-0 w-6 h-6 transition-all duration-300 ease-in-out ${isMobileMenuOpen
-                    ? "opacity-100 rotate-0 scale-100"
-                    : "opacity-0 rotate-90 scale-0"
+                  ? "opacity-100 rotate-0 scale-100"
+                  : "opacity-0 rotate-90 scale-0"
                   }`}
                 fill="none"
                 strokeLinecap="round"
@@ -74,8 +74,8 @@ export default function Header() {
               </svg>
               <svg
                 className={`absolute inset-0 w-6 h-6 transition-all duration-300 ease-in-out ${isMobileMenuOpen
-                    ? "opacity-0 rotate-90 scale-0"
-                    : "opacity-100 rotate-0 scale-100"
+                  ? "opacity-0 rotate-90 scale-0"
+                  : "opacity-100 rotate-0 scale-100"
                   }`}
                 fill="none"
                 strokeLinecap="round"

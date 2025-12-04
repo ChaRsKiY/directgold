@@ -25,7 +25,7 @@ export default function PrincipleHero({ image, title }: PrincipleHeroProps) {
           priority
           unoptimized
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-light-bg)] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-light-bg via-transparent to-transparent" />
       </div>
     </MotionSection>
   );

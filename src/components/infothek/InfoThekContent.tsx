@@ -32,7 +32,7 @@ export default function InfoThekContent({
     <div className="space-y-12 pb-20">
       {/* Title */}
       <MotionH1
-        className="text-5xl max-md:text-4xl font-bold text-[var(--color-primary-gold)] mb-6"
+        className="text-5xl max-md:text-4xl font-bold text-gold mb-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -43,7 +43,7 @@ export default function InfoThekContent({
       {/* Description */}
       {description && (
         <MotionP
-          className="text-xl max-md:text-lg text-[var(--color-primary-text-dark)] mb-8 leading-relaxed"
+          className="text-xl max-md:text-lg text-primary-text-dark mb-8 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
@@ -55,7 +55,7 @@ export default function InfoThekContent({
       {/* Full Content */}
       {fullContent && (
         <MotionP
-          className="text-lg max-md:text-base text-[var(--color-primary-text)] mb-12 leading-relaxed"
+          className="text-lg max-md:text-base text-primary-text mb-12 leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -68,8 +68,8 @@ export default function InfoThekContent({
       {sections.map((section, index) => (
         <div key={index} className="mb-12 last:mb-0">
           {section.title && (
-            <MotionH2 
-              className="text-3xl max-md:text-2xl font-bold text-[var(--color-primary-gold)] mb-6"
+            <MotionH2
+              className="text-3xl max-md:text-2xl font-bold text-gold mb-6"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: false, margin: "-100px" }}
@@ -84,7 +84,7 @@ export default function InfoThekContent({
               {section.paragraphs.map((paragraph, pIndex) => (
                 <p
                   key={pIndex}
-                  className="text-lg max-md:text-base text-[var(--color-primary-text)] leading-relaxed"
+                  className="text-lg max-md:text-base text-primary-text leading-relaxed"
                 >
                   {paragraph}
                 </p>
@@ -97,7 +97,7 @@ export default function InfoThekContent({
               {section.content.split('\n\n').map((paragraph, pIndex) => (
                 <p
                   key={pIndex}
-                  className="text-lg max-md:text-base text-[var(--color-primary-text)] leading-relaxed"
+                  className="text-lg max-md:text-base text-primary-text leading-relaxed"
                 >
                   {paragraph}
                 </p>
@@ -110,9 +110,9 @@ export default function InfoThekContent({
               {section.items.map((item, itemIndex) => (
                 <li
                   key={itemIndex}
-                  className="flex items-start gap-4 text-lg max-md:text-base text-[var(--color-primary-text)] leading-relaxed"
+                  className="flex items-start gap-4 text-lg max-md:text-base text-primary-text leading-relaxed"
                 >
-                  <span className="text-[var(--color-primary-gold)] mt-2 shrink-0">—</span>
+                  <span className="text-gold mt-2 shrink-0">—</span>
                   <span>{item}</span>
                 </li>
               ))}
@@ -120,15 +120,15 @@ export default function InfoThekContent({
           )}
 
           {index < sections.length - 1 && (
-            <div className="w-full h-px bg-[var(--color-primary-gold)]/20 mt-12" />
+            <div className="w-full h-px bg-gold/20 mt-12" />
           )}
         </div>
       ))}
 
       {/* Links Section */}
       {links && links.length > 0 && (
-        <div className="pt-12 border-t border-[var(--color-primary-gold)]/20">
-          <h2 className="text-2xl max-md:text-xl font-bold text-[var(--color-primary-gold)] mb-6">
+        <div className="pt-12 border-t border-gold/20">
+          <h2 className="text-2xl max-md:text-xl font-bold text-gold mb-6">
             Weitere Informationen:
           </h2>
           <div className="flex flex-wrap gap-4">
@@ -136,7 +136,7 @@ export default function InfoThekContent({
               <Link
                 key={index}
                 href={link.href}
-                className="px-6 py-3 border border-[var(--color-primary-gold)]/30 bg-transparent hover:bg-[var(--color-primary-gold)]/10 hover:border-[var(--color-primary-gold)] transition-all duration-300 font-normal tracking-wider text-sm text-[var(--color-primary-text)] rounded"
+                className="px-6 py-3 border border-gold/30 bg-transparent hover:bg-gold/10 hover:border-gold transition-all duration-300 font-normal tracking-wider text-sm text-primary-text rounded"
               >
                 {link.text}
               </Link>

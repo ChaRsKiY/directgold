@@ -19,7 +19,7 @@ export default function InfoSection() {
   return (
     <section
       id="about"
-      className="bg-[var(--color-light-bg)] py-20 md:py-24 lg:py-32"
+      className="bg-light-bg py-20 md:py-24 lg:py-32"
     >
       <div className="w-full">
         <div className="w-full flex flex-col items-center justify-center px-4">

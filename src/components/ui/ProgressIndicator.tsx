@@ -10,8 +10,8 @@ const ProgressIndicator = ({ activeIndex, totalSteps = 8 }: ProgressIndicatorPro
                 <div
                     key={index}
                     className={`w-1 h-2 transition-colors duration-300 ${index === activeIndex
-                        ? 'bg-[var(--color-primary-gold)]'
-                        : 'bg-[#aaa9a5]'
+                        ? 'bg-gold'
+                        : 'bg-indicator-inactive'
                         }`}
                 />
             ))}

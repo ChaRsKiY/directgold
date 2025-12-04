@@ -55,7 +55,7 @@ export function PrinciplesSection() {
               transition={{ duration: 0.6 }}
             >
               <h2 className="text-5xl md:text-6xl font-bold mb-5">Grundsätze</h2>
-              <div className="w-24 h-1 bg-[var(--color-primary-gold)] mb-5" />
+              <div className="w-24 h-1 bg-gold mb-5" />
             </MotionDiv>
             <p className="text-xl md:text-2xl font-light text-gray-200">OUR CODEX</p>
           </div>
@@ -100,11 +100,11 @@ export function PrinciplesSection() {
                       onClick={() => togglePrinciple(index)}
                       className="w-full flex items-center gap-6 py-6 text-left group transition-colors duration-200"
                     >
-                      <span className="text-xl text-[var(--color-primary-gold)] font-light shrink-0">
+                      <span className="text-xl text-gold font-light shrink-0">
                         {String(index + 1).padStart(2, '0')}
                       </span>
                       <div className="flex-1 flex items-center justify-between">
-                        <h3 className="text-lg md:text-xl font-medium text-white group-hover:text-[var(--color-primary-gold)] transition-colors">
+                        <h3 className="text-lg md:text-xl font-medium text-white group-hover:text-gold transition-colors">
                           <span className="font-bold">{directPart}</span> {restTitle}
                         </h3>
                         <div className={`w-6 h-6 rounded-full border border-white/30 flex items-center justify-center text-white/70 transition-transform duration-300`}>
@@ -123,7 +123,7 @@ export function PrinciplesSection() {
                           className="overflow-hidden"
                         >
                           <div className="pl-12 pb-6 pr-4">
-                            <p className="text-sm md:text-base text-[#5D9BC9] mb-4 font-medium">
+                            <p className="text-sm md:text-base text-blue-light mb-4 font-medium">
                               {t(principle.short)}
                             </p>
                             <p className="text-sm md:text-base text-gray-300 leading-relaxed mb-6">

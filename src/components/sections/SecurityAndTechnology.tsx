@@ -100,7 +100,7 @@ const SecurityAndTechnologySection = () => {
         {/* Right Side - Carousel */}
         <div className="w-full lg:w-1/2">
           <MotionDiv
-            className="bg-gradient-to-b from-[#5D9BC9]/40 to-transparent p-8 md:p-12 min-h-[500px] flex flex-col justify-between relative overflow-hidden"
+            className="bg-gradient-to-b from-blue-light/40 to-transparent p-8 md:p-12 min-h-[500px] flex flex-col justify-between relative overflow-hidden"
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -148,7 +148,7 @@ const SecurityAndTechnologySection = () => {
             <div className="relative z-10 flex items-center justify-between mt-8 pt-8 border-t border-white/10">
               <button
                 onClick={prevSlide}
-                className="p-2 text-[var(--color-primary-gold)] hover:text-white transition-colors"
+                className="p-2 text-gold hover:text-white transition-colors"
                 aria-label="Previous slide"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8">
@@ -162,7 +162,7 @@ const SecurityAndTechnologySection = () => {
                     key={index}
                     onClick={() => setCurrentSlide(index)}
                     className={`w-3 h-3 rounded-full transition-all duration-300 ${currentSlide === index
-                      ? "bg-[var(--color-primary-gold)]"
+                      ? "bg-gold"
                       : "bg-black/35 hover:bg-black/50"
                       }`}
                     aria-label={`Go to slide ${index + 1}`}
@@ -172,7 +172,7 @@ const SecurityAndTechnologySection = () => {
 
               <button
                 onClick={nextSlide}
-                className="p-2 text-[var(--color-primary-gold)] hover:text-white transition-colors"
+                className="p-2 text-gold hover:text-white transition-colors"
                 aria-label="Next slide"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-8 h-8">

@@ -66,6 +66,52 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+
+  /* Refactored Colors */
+  --color-hero-overlay-start: rgba(8, 6, 5, 0.92);
+  --color-hero-overlay-middle: rgba(16, 11, 7, 0.92);
+  --color-hero-overlay-end: rgba(8, 6, 5, 0.96);
+  --color-hero-brand-mark: rgba(255, 255, 255, 0.7);
+  --color-hero-overlay-multiply: rgba(6, 4, 3, 0.45);
+  --color-hero-gradient-start: #2b160a;
+  --color-hero-gradient-via: rgba(23, 13, 8, 0.6);
+  --color-gray-medium: #747474;
+  --color-blue-light: #5D9BC9;
+  --color-blue-dark: #4A8AB8;
+  --color-indicator-inactive: #aaa9a5;
+  --color-quote-gradient-end: #e2e2e2;
+  --color-quote-bg: #d9d9d9;
+  --color-quote-text: #62615f;
+  --color-gold: var(--color-primary-gold);
+  --color-dark-secondary: #2a2a2a;
+  --color-primary-gold-dark: #c2a070;
+  --color-text-primary-light: #ffffff;
+  --color-quote-mark: #e5e5e5;
+  --color-light-bg-darker: #DEDBD5;
+  --color-shield-icon: #999999;
+  --color-banner-title: rgba(53, 35, 21, 0.95);
+  --color-banner-subtitle: rgba(96, 70, 49, 0.75);
+  --color-gold-bar-border: rgba(255, 255, 255, 0.15);
+  --color-info-eyebrow: rgba(0, 0, 0, 0.55);
+  --color-info-question: rgba(44, 28, 18, 0.78);
+  --color-info-answer: rgba(70, 46, 29, 0.95);
+  --color-dropdown-bg: rgba(26, 26, 26, 0.98);
+  --color-header-bg: rgba(26, 26, 26, 0.9);
+  --color-cta-shadow: rgba(214, 175, 109, 0.35);
+  --color-cta-shadow-hover: rgba(214, 175, 109, 0.45);
+  --color-cta-border: rgba(255, 255, 255, 0.18);
+  --color-cta-border-hover: rgba(255, 255, 255, 0.4);
+  --color-product-number: #cfcfce;
+  --color-product-overlay-dark: #412b0d;
+  --color-product-text-gold: #9f8c58;
+  --color-bg-cream: #fef4de;
+  --color-card-back-bg: #0F172A;
+  --color-bg-light-gray: #f5f5f3;
+  --color-bg-dark-gray: #cecfd0;
+  --color-sheen-white-60: rgba(255, 255, 255, 0.6);
+  --color-sheen-white-10: rgba(255, 255, 255, 0.1);
+  --color-sheen-gold-25: rgba(242, 200, 122, 0.25);
+  --color-sheen-gold-65: rgba(214, 175, 109, 0.65);
 }
 
 @theme inline {
@@ -74,6 +120,7 @@
   --color-primary-gold: var(--color-primary-gold);
   --color-primary-text: var(--color-primary-text);
   --color-secondary-text: var(--color-secondary-text);
+  --color-primary-text-dark: var(--color-primary-text-dark);
   --color-button-gold-light: var(--color-button-gold-light);
   --color-button-gold-dark: var(--color-button-gold-dark);
   --color-input-bg: var(--color-input-bg);
@@ -115,6 +162,53 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  /* Refactored Colors Mappings */
+  --color-hero-overlay-start: var(--color-hero-overlay-start);
+  --color-hero-overlay-middle: var(--color-hero-overlay-middle);
+  --color-hero-overlay-end: var(--color-hero-overlay-end);
+  --color-hero-brand-mark: var(--color-hero-brand-mark);
+  --color-hero-overlay-multiply: var(--color-hero-overlay-multiply);
+  --color-hero-gradient-start: var(--color-hero-gradient-start);
+  --color-hero-gradient-via: var(--color-hero-gradient-via);
+  --color-gray-medium: var(--color-gray-medium);
+  --color-blue-light: var(--color-blue-light);
+  --color-blue-dark: var(--color-blue-dark);
+  --color-indicator-inactive: var(--color-indicator-inactive);
+  --color-quote-gradient-end: var(--color-quote-gradient-end);
+  --color-quote-bg: var(--color-quote-bg);
+  --color-quote-text: var(--color-quote-text);
+  --color-gold: var(--color-gold);
+  --color-dark-secondary: var(--color-dark-secondary);
+  --color-primary-gold-dark: var(--color-primary-gold-dark);
+  --color-text-primary-light: var(--color-text-primary-light);
+  --color-quote-mark: var(--color-quote-mark);
+  --color-light-bg-darker: var(--color-light-bg-darker);
+  --color-shield-icon: var(--color-shield-icon);
+  --color-banner-title: var(--color-banner-title);
+  --color-banner-subtitle: var(--color-banner-subtitle);
+  --color-gold-bar-border: var(--color-gold-bar-border);
+  --color-info-eyebrow: var(--color-info-eyebrow);
+  --color-info-question: var(--color-info-question);
+  --color-info-answer: var(--color-info-answer);
+  --color-dropdown-bg: var(--color-dropdown-bg);
+  --color-header-bg: var(--color-header-bg);
+  --color-cta-shadow: var(--color-cta-shadow);
+  --color-cta-shadow-hover: var(--color-cta-shadow-hover);
+  --color-cta-border: var(--color-cta-border);
+  --color-cta-border-hover: var(--color-cta-border-hover);
+  --color-product-number: var(--color-product-number);
+  --color-product-overlay-dark: var(--color-product-overlay-dark);
+  --color-product-text-gold: var(--color-product-text-gold);
+  --color-bg-cream: var(--color-bg-cream);
+  --color-card-back-bg: var(--color-card-back-bg);
+  --color-bg-light-gray: var(--color-bg-light-gray);
+  --color-bg-dark-gray: var(--color-bg-dark-gray);
+  --color-sheen-white-60: var(--color-sheen-white-60);
+  --color-sheen-white-10: var(--color-sheen-white-10);
+  --color-sheen-gold-25: var(--color-sheen-gold-25);
+  --color-sheen-gold-65: var(--color-sheen-gold-65);
 }
 
 body {

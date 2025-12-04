@@ -83,7 +83,7 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer id="contact" className="bg-[var(--color-dark-bg)] text-white">
+    <footer id="contact" className="bg-dark-bg text-white">
       {/* Main Footer Content */}
       <Container className="py-12 md:py-16 lg:py-20">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -95,7 +95,7 @@ export const Footer: React.FC = () => {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-[var(--color-primary-gold)] transition-colors duration-300"
+                    className="text-sm text-gray-400 hover:text-gold transition-colors duration-300"
                   >
                     {link.label}
                   </a>
@@ -112,7 +112,7 @@ export const Footer: React.FC = () => {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-[var(--color-primary-gold)] transition-colors duration-300"
+                    className="text-sm text-gray-400 hover:text-gold transition-colors duration-300"
                   >
                     {link.label}
                   </a>
@@ -129,7 +129,7 @@ export const Footer: React.FC = () => {
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-gray-400 hover:text-[var(--color-primary-gold)] transition-colors duration-300"
+                    className="text-sm text-gray-400 hover:text-gold transition-colors duration-300"
                   >
                     {link.label}
                   </a>
@@ -150,12 +150,12 @@ export const Footer: React.FC = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="Email Address"
-                className="w-full px-4 py-2 bg-[var(--color-dark-secondary)] text-white border border-gray-700 rounded focus:outline-none focus:border-[var(--color-primary-gold)] transition-colors duration-300"
+                className="w-full px-4 py-2 bg-dark-secondary text-white border border-gray-700 rounded focus:outline-none focus:border-gold transition-colors duration-300"
                 required
               />
               <button
                 type="submit"
-                className="w-full px-4 py-2 bg-[var(--color-primary-gold)] text-[var(--color-text-primary-light)] font-semibold rounded hover:bg-[var(--color-primary-gold-dark)] transition-all duration-300 hover:scale-105"
+                className="w-full px-4 py-2 bg-gold text-text-primary-light font-semibold rounded hover:bg-primary-gold-dark transition-all duration-300 hover:scale-105"
               >
                 Subscribe
               </button>
@@ -171,11 +171,11 @@ export const Footer: React.FC = () => {
             {/* Copyright */}
             <p className="text-sm text-gray-400 text-center md:text-left">
               © 2025 DirectGold. All rights reserved. |{' '}
-              <a href="#privacy" className="hover:text-[var(--color-primary-gold)] transition-colors">
+              <a href="#privacy" className="hover:text-gold transition-colors">
                 Privacy Policy
               </a>{' '}
               |{' '}
-              <a href="#terms" className="hover:text-[var(--color-primary-gold)] transition-colors">
+              <a href="#terms" className="hover:text-gold transition-colors">
                 Terms of Service
               </a>
             </p>
@@ -186,7 +186,7 @@ export const Footer: React.FC = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="text-gray-400 hover:text-[var(--color-primary-gold)] transition-colors duration-300"
+                  className="text-gray-400 hover:text-gold transition-colors duration-300"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -195,8 +195,8 @@ export const Footer: React.FC = () => {
             </div>
           </div>
         </Container>
-      </div>
-    </footer>
+      </div >
+    </footer >
   );
 };
 

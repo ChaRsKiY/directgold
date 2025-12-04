@@ -28,11 +28,11 @@ const GoldBenefitsSection = () => {
                         Essential Gold Benefits.
                     </MotionH2>
                     <div className="flex flex-1 gap-4 md:gap-8">
-                        <div className="w-1 h-full bg-[#5D9BC9]/40 rounded-full shrink-0" />
+                        <div className="w-1 h-full bg-blue-light/40 rounded-full shrink-0" />
                         <div className="flex-1 flex flex-col justify-between relative gap-8 md:gap-0">
                             <MotionDiv
                                 className={cn(
-                                    "absolute top-0 left-0 w-full h-full text-[var(--color-primary-gold)] rounded-full opacity-30 font-bold -z-1 pointer-events-none",
+                                    "absolute top-0 left-0 w-full h-full text-gold rounded-full opacity-30 font-bold -z-1 pointer-events-none",
                                     "text-[12rem] md:text-[22rem]",
                                     "-translate-x-[20px] md:-translate-x-[80px]",
                                     "-translate-y-[40px] md:-translate-y-[110px]",
@@ -70,13 +70,13 @@ const GoldBenefitsSection = () => {
                 </div>
                 <div className="flex items-center justify-center flex-1 mt-8 md:mt-0">
                     <MotionDiv
-                        className="h-full aspect-[1/2] text-[9rem] md:text-[13rem] max-w-full flex items-center justify-center relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-[#5D9BC9] before:to-transparent before:opacity-40 before:-z-10 p-8 md:p-12 pb-16 md:pb-32 overflow-hidden md:overflow-visible"
+                        className="h-full aspect-[1/2] text-[9rem] md:text-[13rem] max-w-full flex items-center justify-center relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-blue-light before:to-transparent before:opacity-40 before:-z-10 p-8 md:p-12 pb-16 md:pb-32 overflow-hidden md:overflow-visible"
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.4 }}
                     >
-                        <LuShieldCheck color="#999999" />
+                        <LuShieldCheck color="var(--color-shield-icon)" />
                     </MotionDiv>
                 </div>
             </div>

@@ -19,7 +19,7 @@ export function HeroSection({
   brandMark,
 }: HeroSectionProps) {
   const overlay =
-    "linear-gradient(180deg, rgba(8,6,5,0.92) 0%, rgba(16,11,7,0.92) 45%, rgba(8,6,5,0.96) 100%)";
+    "linear-gradient(180deg, var(--color-hero-overlay-start) 0%, var(--color-hero-overlay-middle) 45%, var(--color-hero-overlay-end) 100%)";
   const backgroundValue = backgroundImage
     ? `${overlay}, url(${backgroundImage})`
     : overlay;
@@ -42,12 +42,12 @@ export function HeroSection({
       >
         {brandMark ? (
           <MotionDiv
-            className="flex items-center gap-4 text-lg font-semibold uppercase tracking-[0.8rem] text-[rgba(255,255,255,0.7)] md:text-2xl"
+            className="flex items-center gap-4 text-lg font-semibold uppercase tracking-[0.8rem] text-hero-brand-mark md:text-2xl"
             initial={{ x: -30, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.5 }}
           >
-            <MotionSpan className="text-[var(--color-gold)]">›</MotionSpan>
+            <MotionSpan className="text-gold">›</MotionSpan>
             <MotionSpan>{brandMark}</MotionSpan>
           </MotionDiv>
         ) : null}
@@ -75,8 +75,8 @@ export function HeroSection({
           <CTAButton href={ctaHref}>{ctaLabel}</CTAButton>
         </MotionDiv>
       </MotionDiv>
-      <div className="absolute inset-0 bg-[rgba(6,4,3,0.45)] mix-blend-multiply" aria-hidden="true" />
-      <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-[#2b160a] via-[rgba(23,13,8,0.6)] to-transparent" aria-hidden="true" />
+      <div className="absolute inset-0 bg-hero-overlay-multiply mix-blend-multiply" aria-hidden="true" />
+      <div className="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-hero-gradient-start via-hero-gradient-via to-transparent" aria-hidden="true" />
     </MotionSection>
   );
 }

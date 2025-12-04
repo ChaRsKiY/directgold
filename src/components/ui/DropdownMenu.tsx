@@ -55,17 +55,17 @@ export default function DropdownMenu({ label, items, className = "", isMobile = 
             <>
               <Link
                 href={href}
-                className={`text-[var(--color-primary-gold)] uppercase tracking-wide font-medium transition-opacity duration-200 flex items-center gap-0.5 flex-grow text-left text-base ${isActive ? "opacity-100" : "opacity-80"
+                className={`text-gold uppercase tracking-wide font-medium transition-opacity duration-200 flex items-center gap-0.5 flex-grow text-left text-base ${isActive ? "opacity-100" : "opacity-80"
                   }`}
               >
-                <span className="text-[var(--color-primary-gold-light)] shrink-0">
+                <span className="text-primary-gold-light shrink-0">
                   <IoMdArrowDropright size={20} />
                 </span>
                 <span className="footer-link relative">{label}</span>
               </Link>
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 text-[var(--color-primary-gold)]"
+                className="p-2 text-gold"
                 aria-label="Toggle submenu"
               >
                 {isOpen ? "−" : "+"}
@@ -74,14 +74,14 @@ export default function DropdownMenu({ label, items, className = "", isMobile = 
           ) : (
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className={`text-[var(--color-primary-gold)] uppercase tracking-wide font-medium transition-opacity duration-200 flex items-center gap-0.5 w-full text-left text-base ${isActive ? "opacity-100" : "opacity-80"
+              className={`text-gold uppercase tracking-wide font-medium transition-opacity duration-200 flex items-center gap-0.5 w-full text-left text-base ${isActive ? "opacity-100" : "opacity-80"
                 }`}
             >
-              <span className="text-[var(--color-primary-gold-light)] shrink-0">
+              <span className="text-primary-gold-light shrink-0">
                 <IoMdArrowDropright size={20} />
               </span>
               <span className="footer-link relative">{label}</span>
-              <span className="ml-auto text-[var(--color-primary-gold)]">
+              <span className="ml-auto text-gold">
                 {isOpen ? "−" : "+"}
               </span>
             </button>
@@ -103,7 +103,7 @@ export default function DropdownMenu({ label, items, className = "", isMobile = 
                   key={index}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className={`block text-sm text-[var(--color-primary-gold)] uppercase tracking-wide font-medium transition-opacity duration-200 ${itemIsActive ? "opacity-100 font-semibold" : "opacity-70 hover:opacity-100"
+                  className={`block text-sm text-gold uppercase tracking-wide font-medium transition-opacity duration-200 ${itemIsActive ? "opacity-100 font-semibold" : "opacity-70 hover:opacity-100"
                     }`}
                 >
                   {item.label}
@@ -123,10 +123,10 @@ export default function DropdownMenu({ label, items, className = "", isMobile = 
           href={href}
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
-          className={`text-[var(--color-primary-gold)] uppercase tracking-wide font-medium transition-opacity duration-200 flex items-center gap-0.5 ${isActive ? "opacity-100" : "opacity-80 hover:opacity-100"
+          className={`text-gold uppercase tracking-wide font-medium transition-opacity duration-200 flex items-center gap-0.5 ${isActive ? "opacity-100" : "opacity-80 hover:opacity-100"
             }`}
         >
-          <span className="text-[var(--color-primary-gold-light)] shrink-0">
+          <span className="text-primary-gold-light shrink-0">
             <IoMdArrowDropright size={20} />
           </span>
           <span className="footer-link relative">{label}</span>
@@ -135,17 +135,17 @@ export default function DropdownMenu({ label, items, className = "", isMobile = 
         <button
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
-          className={`text-[var(--color-primary-gold)] uppercase tracking-wide font-medium transition-opacity duration-200 flex items-center gap-0.5 ${isActive ? "opacity-100" : "opacity-80 hover:opacity-100"
+          className={`text-gold uppercase tracking-wide font-medium transition-opacity duration-200 flex items-center gap-0.5 ${isActive ? "opacity-100" : "opacity-80 hover:opacity-100"
             }`}
         >
-          <span className="text-[var(--color-primary-gold-light)] shrink-0">
+          <span className="text-primary-gold-light shrink-0">
             <IoMdArrowDropright size={20} />
           </span>
           <span className="footer-link relative">{label}</span>
         </button>
       )}
       <div
-        className={`absolute top-full left-0 mt-2 bg-[rgba(26,26,26,0.98)] border border-[var(--color-primary-gold)]/20 rounded-md shadow-lg min-w-[250px] z-50 transition-all duration-300 ${isOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
+        className={`absolute top-full left-0 mt-2 bg-dropdown-bg border border-gold/20 rounded-md shadow-lg min-w-[250px] z-50 transition-all duration-300 ${isOpen ? "opacity-100 visible translate-y-0" : "opacity-0 invisible -translate-y-2"
           }`}
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
@@ -161,7 +161,7 @@ export default function DropdownMenu({ label, items, className = "", isMobile = 
               <Link
                 key={index}
                 href={item.href}
-                className={`block px-4 py-2 text-sm text-[var(--color-primary-gold)] uppercase tracking-wide font-medium transition-colors duration-200 hover:bg-[var(--color-primary-gold)]/10 ${itemIsActive ? "bg-[var(--color-primary-gold)]/10 font-semibold" : ""
+                className={`block px-4 py-2 text-sm text-gold uppercase tracking-wide font-medium transition-colors duration-200 hover:bg-gold/10 ${itemIsActive ? "bg-gold/10 font-semibold" : ""
                   }`}
               >
                 {item.label}

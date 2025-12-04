@@ -15,9 +15,9 @@ const baseClasses =
 
 const variantClasses: Record<CTAButtonVariant, string> = {
   primary:
-    "border-transparent bg-[var(--color-gold)] text-[var(--color-text-dark)] shadow-[0_12px_30px_rgba(214,175,109,0.35)] hover:-translate-y-[1px] hover:bg-[var(--color-gold-deep)] hover:shadow-[0_18px_40px_rgba(214,175,109,0.45)] focus-visible:outline-[var(--color-gold)]",
+    "border-transparent bg-gold text-text-dark shadow-[0_12px_30px_var(--color-cta-shadow)] hover:-translate-y-[1px] hover:bg-gold-deep hover:shadow-[0_18px_40px_var(--color-cta-shadow-hover)] focus-visible:outline-gold",
   secondary:
-    "border-[rgba(255,255,255,0.18)] text-hero-primary hover:-translate-y-[1px] hover:border-[rgba(255,255,255,0.4)] hover:text-[var(--color-text-secondary)] focus-visible:outline-[var(--color-text-secondary)]",
+    "border-cta-border text-hero-primary hover:-translate-y-[1px] hover:border-cta-border-hover hover:text-secondary-text focus-visible:outline-secondary-text",
 };
 
 export function CTAButton({ href, children, variant = "primary", className }: CTAButtonProps) {

@@ -12,8 +12,8 @@ export const ImagePlaceholder: React.FC<ImagePlaceholderProps> = ({
   gradient = 'gold',
 }) => {
   const gradients = {
-    gold: 'from-[var(--color-primary-gold)] to-[var(--color-primary-gold-dark)]',
-    dark: 'from-[var(--color-dark-bg)] to-[var(--color-dark-secondary)]',
+    gold: 'from-gold to-primary-gold-dark',
+    dark: 'from-dark-bg to-dark-secondary',
     mountain: 'from-gray-700 via-gray-800 to-gray-900',
   };
 
