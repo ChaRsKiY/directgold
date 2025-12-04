@@ -10,9 +10,12 @@ interface InfoThekLayoutProps {
 }
 
 const navigationItems = [
+  { label: "Kauf & Verkauf", href: "/info/kauf-verkauf" },
+  { label: "Lagerung", href: "/info/lagerung" },
+  { label: "Lieferung", href: "/info/lieferung" },
+  { label: "LBMA, Good-Delivery, Allocated & Unallocated", href: "/exkurs/lbma-goldpreis" },
   { label: "Kaufgebühr", href: "/info/kaufgebuhr" },
   { label: "Sammel- & Einzelverwahrung", href: "/info/sammel-einzellagerung" },
-  { label: "LBMA, Good-Delivery, Allocated & Unallocated", href: "/exkurs/lbma-goldpreis" },
   { label: "Argor-Heraeus", href: "/exkurs/argor-heraeus" },
   { label: "Loomis", href: "/exkurs/loomis" },
   { label: "Die Schweiz als Lagerstandort", href: "/exkurs/schweiz-lagerstandort" },
@@ -63,8 +66,8 @@ export default function InfoThekLayout({ children }: InfoThekLayoutProps) {
                     <Link
                       href={item.href}
                       className={`block text-lg max-md:text-base leading-relaxed transition-colors duration-300 ${isActive
-                          ? "text-gold font-semibold"
-                          : "text-primary-text hover:text-gold"
+                        ? "text-gold font-semibold"
+                        : "text-primary-text hover:text-gold"
                         }`}
                     >
                       {item.label}

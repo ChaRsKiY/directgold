@@ -1,13 +1,11 @@
-"use client";
-
 import Image from "next/image";
-import { useTranslations } from "next-intl";
 import Button from "../ui/Button";
 import { MotionH1, MotionDiv, MotionH2, MotionH3 } from "../motion";
 import ProgressIndicator from "../ui/ProgressIndicator";
+import { getTranslations } from "next-intl/server";
 
-const OurProducts = () => {
-  const t = useTranslations("ourProducts");
+const OurProducts = async () => {
+  const t = await getTranslations("ourProducts");
 
   return (
     <section

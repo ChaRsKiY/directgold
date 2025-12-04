@@ -56,21 +56,21 @@ const FlipCardsSection = () => {
       titleKey: "kaufVerkaufTitle",
       descriptionKey: "kaufVerkaufDescription",
       shortDescriptionKey: "kaufVerkaufShort",
-      link: "/services/buy-sell",
+      link: "/info/kauf-verkauf",
     },
     {
       image: "/lake_bg.jpeg",
       titleKey: "lagerungTitle",
       descriptionKey: "lagerungDescription",
       shortDescriptionKey: "lagerungShort",
-      link: "/services/storage",
+      link: "/info/lagerung",
     },
     {
       image: "/lake_bg.jpeg",
       titleKey: "lieferungTitle",
       descriptionKey: "lieferungDescription",
       shortDescriptionKey: "lieferungShort",
-      link: "/services/delivery",
+      link: "/info/lieferung",
     },
   ];
 

@@ -25,6 +25,9 @@ export default function Header() {
       label: t("infothek"),
       href: "/info/kaufgebuhr",
       submenu: [
+        { href: "/info/kauf-verkauf", label: "Kauf & Verkauf" },
+        { href: "/info/lagerung", label: "Lagerung" },
+        { href: "/info/lieferung", label: "Lieferung" },
         { href: "/info/kaufgebuhr", label: t("kaufgebuhr") },
         { href: "/info/sammel-einzellagerung", label: t("sammelEinzellagerung") },
         { href: "/exkurs/lbma-goldpreis", label: t("lbmaGoodDelivery") },

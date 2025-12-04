@@ -1,5 +1,4 @@
-import DBadge from "../ui/DBadge";
-import { MotionSection, MotionDiv, MotionP } from "../motion";
+import { MotionDiv, MotionP } from "../motion";
 import { getTranslations } from "next-intl/server";
 
 export default async function AboutSection() {

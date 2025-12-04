@@ -1,5 +1,3 @@
-"use client";
-
 import { MotionH1, MotionH2, MotionP } from "@/components/motion";
 import Link from "next/link";
 
