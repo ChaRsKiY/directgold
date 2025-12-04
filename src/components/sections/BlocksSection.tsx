@@ -67,7 +67,7 @@ const BlocksSection = () => {
                 </MotionDiv>
 
                 <MotionDiv
-                    className="flex flex-col lg:flex-row items-start justify-between relative mb-20"
+                    className="flex flex-col lg:flex-row items-start lg:items-stretch justify-between relative mb-20 h-full flex-1 "
                     variants={containerVariants}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ const BlocksSection = () => {
                         const Icon = step.icon;
 
                         return (
-                            <div key={index} className="flex flex-row lg:flex-col items-start lg:items-center justify-start lg:justify-center w-full lg:w-1/4 z-10 relative group gap-6 lg:gap-0 pb-8 lg:pb-0">
+                            <div key={index} className="flex flex-row lg:flex-col items-start lg:items-center justify-start w-full lg:w-1/4 z-10 relative group gap-6 lg:gap-0 pb-8 lg:pb-0 h-full flex-1">
                                 {/* Vertical Connecting Line - Mobile */}
                                 {index < steps.length - 1 && (
                                     <div className="lg:hidden absolute left-[3rem] -translate-x-1/2 top-[6rem] bottom-0 w-[3px] bg-[var(--color-primary-gold)]" />
@@ -143,27 +143,32 @@ const BlocksSection = () => {
                                     />
                                 </div>
 
-                                {/* Text Content */}
-                                <div className="flex flex-col flex-1 items-start lg:items-center text-left lg:text-center pt-2 lg:pt-0">
-                                    {/* Title */}
-                                    <h3 className="text-[var(--color-primary-gold)] font-bold text-lg lg:text-xl lg:text-center max-w-[220px] mb-2 lg:mb-4">
-                                        {step.title}
-                                    </h3>
 
+
+                                {/* Text Content */}
+                                <div className="flex flex-col items-start lg:items-center text-left lg:text-center pt-2 lg:pt-0 flex-1 w-full lg:min-h-[200px] justify-between">
+                                    <div className="flex flex-col items-start lg:items-center w-full">
+                                        {/* Title */}
+                                        <h3 className="text-[var(--color-primary-gold)] font-bold text-lg lg:text-xl lg:text-center max-w-[220px] mb-2 lg:mb-4">
+                                            {step.title}
+                                        </h3>
+                                    </div>
+
+                                    {/* Bottom content - Button or Descriptions */}
                                     {index === 0 && (
-                                        <div className="flex justify-end">
+                                        <div className="flex justify-end lg:justify-center w-full lg:mt-0 mt-4">
                                             <Button className="bg-[var(--color-primary-gold)] text-white px-12 py-4 rounded-md font-bold uppercase tracking-wider">
                                                 OPEN ACCOUNT
                                             </Button>
                                         </div>
                                     )}
 
-                                    {/* Extra Descriptions for specific steps */}
                                     {index === 2 && (
                                         <p className="text-gray-500 text-xs lg:text-sm max-w-[220px]">
                                             Execution: Goldkauf wird durchgeführt zum nächsten LBMA Preis PM
                                         </p>
                                     )}
+
                                     {index === 3 && (
                                         <p className="text-gray-500 text-xs lg:text-sm max-w-[220px]">
                                             Settlement: Einlagerung und Gutschrift auf dem Kundendepot

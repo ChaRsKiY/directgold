@@ -18,7 +18,7 @@ export default async function GoldBarSection() {
       <div className="absolute right-0 top-0 bottom-0 w-[50%] max-lg:w-[75%] max-sm:w-[85%] h-full flex items-center justify-end pointer-events-none z-10">
         <div className="relative w-full h-full">
           <Image
-            src="/goldbarbg.png"
+            src="/gold_bar.png"
             alt="Gold Bar"
             width={1000}
             height={1000}
