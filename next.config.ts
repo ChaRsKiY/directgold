@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
   images: {
     domains: ["placehold.co"],
   }
-}; 
+};
 
 const withNextIntl = createNextIntlPlugin();
 export default withNextIntl(nextConfig);
