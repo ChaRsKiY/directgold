@@ -81,61 +81,75 @@ const BlocksSection = () => {
                             <div key={index} className="flex flex-row lg:flex-col items-start lg:items-center justify-start w-full lg:w-1/4 z-10 relative group gap-6 lg:gap-0 pb-8 lg:pb-0 h-full flex-1">
                                 {/* Vertical Connecting Line - Mobile */}
                                 {index < steps.length - 1 && (
-                                    <div className="lg:hidden absolute left-[3rem] -translate-x-1/2 top-[6rem] bottom-0 w-[3px] bg-gold" />
+                                    <div className="lg:hidden absolute left-[3rem] -translate-x-1/2 top-[calc(6rem+6px)] bottom-0 w-[3px] bg-gold" />
                                 )}
 
                                 {/* Desktop Left Line */}
                                 {index > 0 && (
-                                    <div className="hidden lg:block absolute left-0 top-[90px] xl:top-[110px] -translate-y-1/2 h-[3px] bg-gold w-[calc(50%-90px)] xl:w-[calc(50%-110px)]" />
+                                    <div className="hidden lg:block absolute left-0 top-[90px] xl:top-[110px] -translate-y-1/2 h-[3px] bg-gold w-[calc(50%-98px)] xl:w-[calc(50%-118px)]" />
                                 )}
 
                                 {/* Desktop Right Line */}
                                 {index < steps.length - 1 && (
-                                    <div className="hidden lg:block absolute right-0 top-[90px] xl:top-[110px] -translate-y-1/2 h-[3px] bg-gold w-[calc(50%-90px)] xl:w-[calc(50%-110px)]" />
+                                    <div className="hidden lg:block absolute right-0 top-[90px] xl:top-[110px] -translate-y-1/2 h-[3px] bg-gold w-[calc(50%-98px)] xl:w-[calc(50%-118px)]" />
                                 )}
 
                                 {/* Step Box */}
-                                <div className="w-24 h-24 lg:w-[180px] lg:h-[180px] xl:w-[220px] xl:h-[220px] border-[3px] border-gold rounded-3xl lg:rounded-[2rem] bg-transparent flex items-center justify-center mb-0 lg:mb-8 relative shrink-0">
+                                <div className="w-24 h-24 lg:w-[180px] lg:h-[180px] xl:w-[220px] xl:h-[220px] rounded-3xl lg:rounded-[2rem] bg-transparent flex items-center justify-center mb-0 lg:mb-8 relative shrink-0">
+                                    {/* Mobile Border with Masks */}
+                                    <div
+                                        className="lg:hidden absolute inset-0 border-[3px] border-gold rounded-3xl"
+                                        style={{
+                                            maskImage: `${index === 0 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to right, #fff calc(50% - 8px), transparent calc(50% - 8px), transparent calc(50% + 8px), #fff calc(50% + 8px))'}, ${index === steps.length - 1 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to right, #fff calc(50% - 8px), transparent calc(50% - 8px), transparent calc(50% + 8px), #fff calc(50% + 8px))'}`,
+                                            maskSize: "100% 51%",
+                                            maskPosition: "top left, bottom left",
+                                            maskRepeat: "no-repeat",
+                                            WebkitMaskImage: `${index === 0 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to right, #fff calc(50% - 8px), transparent calc(50% - 8px), transparent calc(50% + 8px), #fff calc(50% + 8px))'}, ${index === steps.length - 1 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to right, #fff calc(50% - 8px), transparent calc(50% - 8px), transparent calc(50% + 8px), #fff calc(50% + 8px))'}`,
+                                            WebkitMaskSize: "100% 51%",
+                                            WebkitMaskPosition: "top left, bottom left",
+                                            WebkitMaskRepeat: "no-repeat"
+                                        }}
+                                    />
+
+                                    {/* Desktop Border with Masks */}
+                                    <div
+                                        className="hidden lg:block absolute inset-0 border-[3px] border-gold rounded-[2rem]"
+                                        style={{
+                                            maskImage: `${index === 0 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to bottom, #fff calc(50% - 12px), transparent calc(50% - 12px), transparent calc(50% + 12px), #fff calc(50% + 12px))'}, ${index === steps.length - 1 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to bottom, #fff calc(50% - 12px), transparent calc(50% - 12px), transparent calc(50% + 12px), #fff calc(50% + 12px))'}`,
+                                            maskSize: "51% 100%",
+                                            maskPosition: "left top, right top",
+                                            maskRepeat: "no-repeat",
+                                            WebkitMaskImage: `${index === 0 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to bottom, #fff calc(50% - 12px), transparent calc(50% - 12px), transparent calc(50% + 12px), #fff calc(50% + 12px))'}, ${index === steps.length - 1 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to bottom, #fff calc(50% - 12px), transparent calc(50% - 12px), transparent calc(50% + 12px), #fff calc(50% + 12px))'}`,
+                                            WebkitMaskSize: "51% 100%",
+                                            WebkitMaskPosition: "left top, right top",
+                                            WebkitMaskRepeat: "no-repeat"
+                                        }}
+                                    />
+
                                     {/* Connecting Circles for Line */}
                                     {/* Desktop: Left/Right */}
                                     {index > 0 && (
                                         <>
-                                            <div className="lg:hidden absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-[3px] border-gold bg-white z-20" />
+                                            <div className="lg:hidden absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-[3px] border-gold bg-transparent z-20" />
                                             {/* Desktop Left Circle */}
-                                            <div className="hidden lg:block absolute left-[-8px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-[3px] border-gold bg-white z-20" />
-                                            {/* Top gap cover */}
-                                            <div className="hidden lg:block absolute left-[-8px] top-[calc(50%-11px)] w-4 h-[8px] bg-white z-[19]" />
-                                            {/* Bottom gap cover */}
-                                            <div className="hidden lg:block absolute left-[-8px] top-[calc(50%+3px)] w-4 h-[8px] bg-white z-[19]" />
+                                            <div className="hidden lg:block absolute left-[-8px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-[3px] border-gold bg-transparent z-20" />
                                         </>
                                     )}
                                     {index < steps.length - 1 && (
                                         <>
-                                            <div className="hidden lg:block absolute right-[-8px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-[3px] border-gold bg-white z-20" />
-                                            {/* Top gap cover */}
-                                            <div className="hidden lg:block absolute right-[-8px] top-[calc(50%-11px)] w-4 h-[8px] bg-white z-[19]" />
-                                            {/* Bottom gap cover */}
-                                            <div className="hidden lg:block absolute right-[-8px] top-[calc(50%+3px)] w-4 h-[8px] bg-white z-[19]" />
+                                            <div className="hidden lg:block absolute right-[-8px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-[3px] border-gold bg-transparent z-20" />
                                         </>
                                     )}
 
                                     {/* Mobile: Top/Bottom */}
                                     {index > 0 && (
                                         <>
-                                            <div className="lg:hidden absolute top-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-[3px] border-gold bg-white z-20" />
-                                            {/* Left gap cover */}
-                                            <div className="lg:hidden absolute top-[-6px] left-[calc(50%-8.5px)] w-[7px] h-3 bg-white z-[19]" />
-                                            {/* Right gap cover */}
-                                            <div className="lg:hidden absolute top-[-6px] left-[calc(50%+1.5px)] w-[7px] h-3 bg-white z-[19]" />
+                                            <div className="lg:hidden absolute top-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-[3px] border-gold bg-transparent z-20" />
                                         </>
                                     )}
                                     {index < steps.length - 1 && (
                                         <>
-                                            <div className="lg:hidden absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-[3px] border-gold bg-white z-20" />
-                                            {/* Left gap cover */}
-                                            <div className="lg:hidden absolute bottom-[-6px] left-[calc(50%-8.5px)] w-[7px] h-3 bg-white z-[19]" />
-                                            {/* Right gap cover */}
-                                            <div className="lg:hidden absolute bottom-[-6px] left-[calc(50%+1.5px)] w-[7px] h-3 bg-white z-[19]" />
+                                            <div className="lg:hidden absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-[3px] border-gold bg-transparent z-20" />
                                         </>
                                     )}
 
