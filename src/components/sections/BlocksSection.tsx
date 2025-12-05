@@ -101,6 +101,8 @@ const BlocksSection = () => {
                                     {index > 0 && (
                                         <>
                                             <div className="lg:hidden absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-[3px] border-gold bg-white z-20" />
+                                            {/* Desktop Left Circle */}
+                                            <div className="hidden lg:block absolute left-[-8px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-[3px] border-gold bg-white z-20" />
                                             {/* Top gap cover */}
                                             <div className="hidden lg:block absolute left-[-8px] top-[calc(50%-11px)] w-4 h-[8px] bg-white z-[19]" />
                                             {/* Bottom gap cover */}
