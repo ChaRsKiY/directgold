@@ -112,7 +112,7 @@ const DominanzSection = () => {
 
                 <div className="flex items-center justify-center gap-16 max-md:gap-4 h-full">
                     <div className="w-full relative h-[400px] flex items-center justify-center">
-                        <div className="absolute inset-0 bg-gradient-to-b from-blue-light to-transparent opacity-40 -z-10 rounded-3xl" />
+                        <div className="absolute inset-0 bg-gradient-to-b from-blue-light to-transparent opacity-40 -z-10" />
 
                         {QA_ITEMS.map((item, index) => (
                             <div
