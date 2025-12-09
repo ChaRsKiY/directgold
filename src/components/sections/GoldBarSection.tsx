@@ -9,7 +9,7 @@ export default async function GoldBarSection() {
   const t = await getTranslations("goldBar");
   return (
     <section
-      className="relative overflow-hidden min-h-[850px] h-screen max-h-[950px] px-[10%]"
+      className="relative min-h-[850px] h-screen max-h-[950px] px-[10%]"
     >
       <div className="absolute left-0 bottom-0 p-8">
         <ProgressIndicator activeIndex={0} />

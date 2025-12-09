@@ -80,8 +80,8 @@ const DominanzSection = () => {
     }, { scope: containerRef });
 
     return (
-        <section ref={containerRef} className="relative text-white h-screen overflow-hidden">
-            <div className="absolute left-0 bottom-0 p-8 z-20">
+        <section id="dominanz" ref={containerRef} className="relative text-white h-screen z-30">
+            <div className="absolute left-0 bottom-0 p-8 z-[9999]">
                 <ProgressIndicator activeIndex={1} />
             </div>
             <Image src="/mockups/mock7.png" alt="Dominanz" fill className="object-cover -z-10" />

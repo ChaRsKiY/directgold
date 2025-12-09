@@ -11,7 +11,8 @@ const SecurityAndTechnologySection = async () => {
 
   return (
     <MotionSection
-      className="relative w-full min-h-screen flex items-center py-20 overflow-hidden"
+      id="security"
+      className="relative w-full min-h-screen flex items-center py-20"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, margin: "-100px" }}

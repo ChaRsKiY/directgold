@@ -109,8 +109,8 @@ const GoldBenefitsSection = () => {
     }, { scope: containerRef });
 
     return (
-        <section ref={containerRef} className="relative text-white h-screen overflow-hidden">
-            <div className="absolute left-0 bottom-0 p-8 z-20">
+        <section id="benefits" ref={containerRef} className="relative text-white h-screen z-30">
+            <div className="absolute left-0 bottom-0 p-8 z-100">
                 <ProgressIndicator activeIndex={3} />
             </div>
             <Image src="/buildings.png" alt="Dominanz" fill className="object-cover -z-10" />
@@ -131,8 +131,8 @@ const GoldBenefitsSection = () => {
                                     ref={(el) => { textItemsRef.current[index] = el }}
                                     className="absolute inset-0 flex flex-col justify-center opacity-0 hidden"
                                 >
-                                    <div className="flex flex-1 gap-4 md:gap-8 items-center">
-                                        <div className="w-1 h-[60%] bg-blue-light/40 rounded-full shrink-0 hidden md:block" />
+                                    <div className="flex flex-1 h-full gap-4 md:gap-8 items-center">
+                                        <div className="w-1 h-full bg-blue-light/40 rounded-full shrink-0 hidden md:block" />
                                         <div className="flex-1 flex flex-col justify-center relative gap-8 md:gap-0">
                                             <div
                                                 className={cn(

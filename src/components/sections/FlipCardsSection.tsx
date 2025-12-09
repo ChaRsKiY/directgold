@@ -76,6 +76,7 @@ const FlipCardsSection = () => {
 
   return (
     <MotionSection
+      id="services"
       className="px-[10%] py-20 bg-gradient-to-b from-white to-bg-cream relative"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}

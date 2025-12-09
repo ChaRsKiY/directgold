@@ -50,7 +50,7 @@ const BlocksSection = () => {
     };
 
     return (
-        <section className="px-[10%] py-20 bg-gradient-to-b from-white to-bg-cream relative">
+        <section id="how-it-works" className="px-[10%] py-20 bg-gradient-to-b from-white to-bg-cream relative">
             <div className="absolute left-0 bottom-0 p-8">
                 <ProgressIndicator activeIndex={7} />
             </div>
