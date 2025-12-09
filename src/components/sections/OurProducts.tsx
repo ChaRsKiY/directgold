@@ -49,7 +49,7 @@ const OurProducts = async () => {
                 </span>
               </div>
             </div>
-            <div className="font-arkitech absolute right-0 top-0 text-product-number text-[24rem] -translate-y-72 translate-x-2 font-bold uppercase -z-25">
+            <div className="number-1 absolute right-0 top-0 text-product-number text-[24rem] -translate-y-72 translate-x-2 font-bold uppercase -z-25">
               1
             </div>
           </MotionDiv>
@@ -73,7 +73,7 @@ const OurProducts = async () => {
                 </span>
               </div>
             </div>
-            <div className="font-arkitech absolute left-0 top-0 mt-12 text-product-number text-[24rem] font-bold uppercase -translate-x-8 -translate-y-56 -z-25">
+            <div className="number absolute left-0 top-0 mt-12 text-product-number text-[24rem] font-bold uppercase -translate-x-8 -translate-y-56 -z-25">
               2
             </div>
           </MotionDiv>
@@ -81,7 +81,7 @@ const OurProducts = async () => {
       </div>
       <div className="grid grid-cols-2 gap-48 relative m-auto max-w-7xl max-[1100px]:gap-16 max-md:hidden">
         <MotionDiv
-          className="font-arkitech  absolute left-0 top-0 mt-12 text-product-number text-[24rem] -translate-y-32 -translate-x-10 font-bold uppercase"
+          className="number-1 absolute left-0 top-0 mt-12 text-product-number text-[24rem] -translate-y-32 -translate-x-10 font-bold uppercase"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}
@@ -90,7 +90,7 @@ const OurProducts = async () => {
           1
         </MotionDiv>
         <MotionDiv
-          className="font-arkitech absolute right-0 bottom-0 mt-12 text-product-number text-[24rem] font-bold uppercase translate-x-20 -translate-y-36 -z-25"
+          className="number absolute right-0 bottom-0 mt-12 text-product-number text-[24rem] font-bold uppercase translate-x-20 -translate-y-36 -z-25"
           initial={{ x: 50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true }}

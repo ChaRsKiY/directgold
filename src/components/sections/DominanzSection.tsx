@@ -87,47 +87,49 @@ const DominanzSection = () => {
             <Image src="/mockups/mock7.png" alt="Dominanz" fill className="object-cover -z-10" />
             <div className="absolute inset-0 bg-black/30 -z-5" />
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 h-full px-[5%] md:px-[10%] pt-20 md:pt-0">
-                <div className="flex flex-col justify-center">
-                    <MotionH2
-                        className="text-4xl md:text-6xl font-bold mb-8 md:mb-12 max-w-7xl mx-auto"
-                        initial={{ y: 30, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                    >
-                        Dominanz in nobler Form.
-                    </MotionH2>
-                    <div className="w-[100px] h-[3px] bg-gold" />
-                    <MotionH3
-                        initial={{ y: 30, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="text-xl md:text-2xl mt-8 md:mt-12 max-w-7xl"
-                    >
-                        Der Unterschied der zählt.
-                    </MotionH3>
-                </div>
-
-                <div className="flex items-center justify-center gap-16 max-md:gap-4 h-full">
-                    <div className="w-full relative h-[400px] flex items-center justify-center">
-                        <div className="absolute inset-0 bg-gradient-to-b from-blue-light to-transparent opacity-40 -z-10" />
-
-                        {QA_ITEMS.map((item, index) => (
-                            <div
-                                key={index}
-                                ref={(el) => { itemsRef.current[index] = el }}
-                                className="absolute inset-0 flex flex-col items-center justify-center p-8 md:p-12 text-center opacity-0"
-                            >
-                                <h2 className="text-2xl md:text-3xl font-bold pb-4 md:pb-8">{item.question}</h2>
-                                <div className="qa-answer">
-                                    <p className="text-xl md:text-2xl">{item.answer}</p>
-                                </div>
-                            </div>
-                        ))}
+            <div className="px-[5%] md:px-[10%] h-full py-[10%]">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 h-full max-w-7xl mx-auto pt-20 md:pt-0">
+                    <div className="flex flex-col">
+                        <MotionH2
+                            className="text-4xl md:text-6xl font-bold mb-8 md:mb-12"
+                            initial={{ y: 30, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                        >
+                            Dominanz in nobler Form.
+                        </MotionH2>
+                        <div className="w-[100px] h-[3px] bg-gold" />
+                        <MotionH3
+                            initial={{ y: 30, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            className="text-xl md:text-2xl mt-8 md:mt-12"
+                        >
+                            Der Unterschied der zählt.
+                        </MotionH3>
                     </div>
-                    <div className="w-1 h-[60%] bg-gold rounded-full hidden md:block" />
+
+                    <div className="flex items-center justify-center gap-16 max-md:gap-4 h-full">
+                        <div className="w-full relative h-full flex items-center justify-center">
+                            <div className="absolute inset-0 bg-gradient-to-b from-blue-light to-transparent opacity-40 -z-10" />
+
+                            {QA_ITEMS.map((item, index) => (
+                                <div
+                                    key={index}
+                                    ref={(el) => { itemsRef.current[index] = el }}
+                                    className="absolute inset-0 flex flex-col items-center justify-center p-8 md:p-12 text-center opacity-0"
+                                >
+                                    <h2 className="text-2xl md:text-3xl font-bold pb-4 md:pb-8">{item.question}</h2>
+                                    <div className="qa-answer">
+                                        <p className="text-xl md:text-2xl">{item.answer}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="w-1 h-full bg-gold rounded-full hidden md:block" />
+                    </div>
                 </div>
             </div>
         </section>

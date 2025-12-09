@@ -15,7 +15,7 @@ const ZitatBlockSection = () => {
             <div className="m-auto max-w-7xl">
                 <div className="w-full md:w-3/4 lg:w-1/2 md:pr-24 relative z-20">
                     <MotionDiv
-                        className={cn("absolute right-0 bottom-0 font-bold text-primary-text text-[10rem] md:text-[20rem] -translate-x-4 md:-translate-x-10 translate-y-12 md:translate-y-24 z-10 pointer-events-none", archivo.className)}
+                        className={cn("absolute right-0 bottom-0 font-bold text-[#777674] text-[10rem] md:text-[20rem] -translate-x-4 md:-translate-x-10 translate-y-12 md:translate-y-24 z-10 pointer-events-none font-extralight scale-x-250", archivo.className)}
                         initial={{ opacity: 0, rotate: 180, scale: 0.8 }}
                         whileInView={{ opacity: 1, rotate: 180, scale: 1 }}
                         viewport={{ once: true }}
