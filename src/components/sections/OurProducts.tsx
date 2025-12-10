@@ -10,7 +10,7 @@ const OurProducts = async () => {
   return (
     <section
       id="produkte"
-      className="px-[10%] pb-20 bg-gradient-to-b to-gold/30 from-white relative"
+      className="px-[10%] pb-20 bg-gradient-to-b to-gold/30 from-white relative z-30"
     >
       <div className="absolute left-0 bottom-0 top-0 p-8 flex items-center">
         <ProgressIndicator activeIndex={2} />

@@ -80,7 +80,7 @@ const DominanzSection = () => {
     }, { scope: containerRef });
 
     return (
-        <section id="dominanz" ref={containerRef} className="relative text-white h-screen z-30">
+        <section id="dominanz" ref={containerRef} className="relative text-white h-screen z-20">
             <div className="absolute left-0 bottom-0 p-8 z-[9999]">
                 <ProgressIndicator activeIndex={1} />
             </div>

@@ -81,7 +81,7 @@ const BlocksSection = () => {
                             <div key={index} className="flex flex-row lg:flex-col items-start lg:items-center justify-start w-full lg:w-1/4 z-10 relative group gap-6 lg:gap-0 pb-8 lg:pb-0 h-full flex-1">
                                 {/* Vertical Connecting Line - Mobile */}
                                 {index < steps.length - 1 && (
-                                    <div className="lg:hidden absolute left-[3rem] -translate-x-1/2 top-[calc(6rem+6px)] bottom-0 w-[3px] bg-gold" />
+                                    <div className="lg:hidden absolute left-[3rem] -translate-x-1/2 top-[calc(6rem+6px)] bottom-[6px] w-[3px] bg-gold" />
                                 )}
 
                                 {/* Desktop Left Line */}
@@ -100,11 +100,11 @@ const BlocksSection = () => {
                                     <div
                                         className="lg:hidden absolute inset-0 border-[3px] border-gold rounded-3xl"
                                         style={{
-                                            maskImage: `${index === 0 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to right, #fff calc(50% - 8px), transparent calc(50% - 8px), transparent calc(50% + 8px), #fff calc(50% + 8px))'}, ${index === steps.length - 1 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to right, #fff calc(50% - 8px), transparent calc(50% - 8px), transparent calc(50% + 8px), #fff calc(50% + 8px))'}`,
+                                            maskImage: `${index === 0 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to right, #fff calc(50% - 12px), transparent 0, transparent calc(50% + 12px), #fff 0)'}, ${index === steps.length - 1 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to right, #fff calc(50% - 12px), transparent 0, transparent calc(50% + 12px), #fff 0)'}`,
                                             maskSize: "100% 51%",
                                             maskPosition: "top left, bottom left",
                                             maskRepeat: "no-repeat",
-                                            WebkitMaskImage: `${index === 0 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to right, #fff calc(50% - 8px), transparent calc(50% - 8px), transparent calc(50% + 8px), #fff calc(50% + 8px))'}, ${index === steps.length - 1 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to right, #fff calc(50% - 8px), transparent calc(50% - 8px), transparent calc(50% + 8px), #fff calc(50% + 8px))'}`,
+                                            WebkitMaskImage: `${index === 0 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to right, #fff calc(50% - 12px), transparent 0, transparent calc(50% + 12px), #fff 0)'}, ${index === steps.length - 1 ? 'linear-gradient(#fff, #fff)' : 'linear-gradient(to right, #fff calc(50% - 12px), transparent 0, transparent calc(50% + 12px), #fff 0)'}`,
                                             WebkitMaskSize: "100% 51%",
                                             WebkitMaskPosition: "top left, bottom left",
                                             WebkitMaskRepeat: "no-repeat"
@@ -126,14 +126,9 @@ const BlocksSection = () => {
                                         }}
                                     />
 
-                                    {/* Connecting Circles for Line */}
-                                    {/* Desktop: Left/Right */}
+                                    {/* Connecting Circles for Line */}                                  {/* Desktop: Left/Right */}
                                     {index > 0 && (
-                                        <>
-                                            <div className="lg:hidden absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border-[3px] border-gold bg-transparent z-20" />
-                                            {/* Desktop Left Circle */}
-                                            <div className="hidden lg:block absolute left-[-8px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-[3px] border-gold bg-transparent z-20" />
-                                        </>
+                                        <div className="hidden lg:block absolute left-[-8px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full border-[3px] border-gold bg-transparent z-20" />
                                     )}
                                     {index < steps.length - 1 && (
                                         <>

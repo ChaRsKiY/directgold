@@ -6,7 +6,7 @@ const archivo = Archivo();
 
 const GoldIsGeldSection = () => {
     return (
-        <div className="relative py-20 md:py-32 px-[5%] md:px-[10%] overflow-hidden min-h-[50vh] md:min-h-[80vh] flex items-center">
+        <div className="relative py-20 md:py-32 px-[5%] md:px-[10%] overflow-hidden min-h-[70vh] md:min-h-[90vh] flex items-center">
             <div className="relative z-10 flex justify-center max-w-4xl mx-auto w-full">
                 <div className="flex flex-col relative w-fit mx-auto">
                     <MotionH1
